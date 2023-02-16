@@ -1,6 +1,6 @@
 # Instalación de Linux en Máquina Virtual
 
-En éste tutorial instalaremos paso a paso Ubuntu Linux 22.04.1 LTS en una máquina virtual de Oracle VM VirtualBox 7.0.6 para Windows.
+En este tutorial instalaremos paso a paso Ubuntu Linux 22.04.1 LTS en una máquina virtual de Oracle VM VirtualBox 7.0.6 para Windows.
 
 Antes de empezar, instala [VirtualBox](https://www.virtualbox.org/) y descarga la [ISO de Ubuntu Desktop](https://ubuntu.com/download/desktop).
 
