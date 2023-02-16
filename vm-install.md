@@ -32,7 +32,7 @@ Antes de empezar, instala [VirtualBox](https://www.virtualbox.org/) y descarga l
 4. Ahora toca configurar los recursos dedicados a la máquina Virtual.  
 Éstos recursos de tu ordenador serán usados por la VM en vez del SO principal (Windows) de tu ordenador. Lo recomendable es siempre dejar recursos para tu SO principal.
     - Memoria base: La cantidad de memoria RAM dedicada a la VM.  
-    Lo recomendable son 4096MB (4GB), pero depende de la cantidad de memoria con la que cuente tu ordenador.  
+    Lo recomendable son 4096MB (4GiB), pero depende de la cantidad de memoria con la que cuente tu ordenador.  
     Más memoria implica que puedes hacer más cosas en la VM.
     - Processors: El número de núcleos de la CPU dedicados a la VM.  
     Lo mínimo recomendable son 2 núcleos.
