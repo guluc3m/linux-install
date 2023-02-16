@@ -87,7 +87,8 @@ Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quier
     - Tienes que cargar con el disco externo
 - **Recomendado para:** Portátiles con poco almacenamiento, pero que quieran tener toda la experiencia Linux
 - **Cosas que preparar:** 
-    - Disco duro externo (preferible USB 3.0)
+    - Disco duro externo (preferible USB 3.0)  
+      **IMPORTANTE:** Todos los datos del disco duro externo se borrarán. Estás avisado.
     - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
 
 **NOTA**: También se puede tener Windows en un disco externo...
