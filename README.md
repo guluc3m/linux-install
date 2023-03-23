@@ -1,10 +1,8 @@
 # Linux 404<sup>2</sup>: Introducción a GNU/Linux
 
-## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
-Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
-Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
+## 1. Formas de instalar Linux
 
-Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.  
+Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que mas os convenga.  
 
 ### Prefacio: Nota para gente con Apple Macs
 Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/Pro de 2020 o posterior), la única forma que tenéis de correr Linux es correr una VM ([UTM](https://mac.getutm.app/)) con una versión de Linux para ARM-64 (por ejemplo, [Ubuntu para ARM-64](https://ubuntu.com/download/server/arm)).
@@ -39,7 +37,10 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
 
-### Método 3: Windows Subsystem for Linux (WSL)
+Guía de cómo instalarlo en [`dualboot-install.md`](dualboot-install.md).
+
+
+### Método 3: Windows Subsystem for Linux 2 (WSL2)
 WSL te permite "correr Linux" dentro de Windows, pero sólo mediante una terminal, con un excelente nivel de compatibilidad.
 - **Restricciones:** Tener Windows.
 - **Ventajas:** 
@@ -54,9 +55,13 @@ WSL te permite "correr Linux" dentro de Windows, pero sólo mediante una termina
 - **Recomendado para:** 
     - Gente que, por cualquier motivo, tenga que usar Windows y no tenga espacio para un segundo SO
     - Gente que no le tenga miedo a la terminal y decida usar Windows (por algún motivo)
-- **Cosas que preparar:** Te puedes instalar [Ubuntu 22.04 LTS desde la Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW), o corriendo el comando:
+- **Cosas que preparar:** Te puedes instalar [Ubuntu 22.04 LTS desde la Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW), o corriendo los comandos:
     ```powershell
     wsl.exe --install
+    ```
+    [Restart]
+    ```powershell
+    wsl.exe --install Ubuntu
     ```
 
 ### Método 4: Virtual Machine (VM)
@@ -73,6 +78,7 @@ Una máquina virtual (VM) te permite correr un SO virtual por encima de tu propi
     - Instalar [VirtualBox](https://www.virtualbox.org/) o similar
     - Descargarse la [ISO de Ubuntu](https://ubuntu.com/download/desktop)
 
+Guía de cómo instalarlo en [`vm-install.md`](vm-install.md).
 
 ### Método 5: Disco externo
 Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quieras usar Linux. Viene a ser lo mismo que [dual boot](#método-2-dual-boot).
@@ -110,3 +116,6 @@ Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
 
 ## Ruegos y preguntas
 Si tienes alguna duda, nos puedes escribir a info@gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
+
+## Transparencias
+Puedes ver las transparencias de la charla [aquí](https://cloud-gul.uc3m.es/s/4qXKozr7DmDSZiN).
