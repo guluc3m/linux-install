@@ -30,6 +30,8 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
     - Puede ser un poco coñazo usar y mantener (configurar y actualizar) ambos sistemas operativos.  
     - Problemas de almacenamiento si tienes un disco pequeño.
     - Archivos en distintas particiones del disco
+    - A las actualizaciones de Windows les gusta romper el Grub (bootloader)
+    - Se desconfigura la zona horaria cada dos por tres
 - **Recomendado para:** 
     - Estudiantes que necesiten Linux para la carrera pero que quieran seguir usando su PC para jugar al Fortnite (u otras cosas de Windows)
     - Personas a la que gente malvada le obligue a usar Windows
