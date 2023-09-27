@@ -129,4 +129,4 @@ Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
 Si tienes alguna duda, nos puedes escribir a info@gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
 
 ## Transparencias
-Puedes ver las transparencias de la charla [aquí](https://cloud-gul.uc3m.es/s/4qXKozr7DmDSZiN).
+- [Linux 404: Introducción a GNU/Linux](https://cloud-gul.uc3m.es/s/4qXKozr7DmDSZiN) (2022)
