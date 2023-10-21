@@ -158,3 +158,7 @@ Al igual que Ubuntu, pero puede que cambie algún paso.
 ## 6. Wrap-Up
 Ya hemos terminado `:)`. Al reiniciar verás el GRUB, selecciona primero Windows
 y asegúrate de que funciona. Reinicia y entra en Ubuntu.
+
+## Links de interés
+- [Dual boot with Windows - ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows)
+- [Multi-boot - Linux Mint Instalation Guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/multiboot.html)
