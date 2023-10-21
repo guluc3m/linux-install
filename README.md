@@ -1,17 +1,17 @@
-# Linux Install Party
-<!-- # Guía del GUL para la instalación de Linux -->
+<!-- # Linux Install Party -->
+# Guía del GUL para la instalación de Linux
 
+<!--
 ## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
 Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
 Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
 
 Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
+-->
 
-<!--
 ## 1. Formas de instalar Linux
 
 Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que mas os convenga.
--->
 
 ### Prefacio: Nota para gente con Apple Macs
 Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/Pro de 2020 o posterior), la única forma que tenéis de correr Linux es correr una VM ([UTM](https://mac.getutm.app/)) con una versión de Linux para ARM-64 (por ejemplo, [Ubuntu para ARM-64](https://ubuntu.com/download/server/arm)).
@@ -126,7 +126,7 @@ Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
 7. Haz click en "Flash"
 
 ## Ruegos y preguntas
-Si tienes alguna duda, nos puedes escribir a info@gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
+Si tienes alguna duda, nos puedes escribir a info AT gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
 
 ## Transparencias
 - [Linux 404: Introducción a GNU/Linux](https://cloud-gul.uc3m.es/s/4qXKozr7DmDSZiN) (2022)
