@@ -1,13 +1,13 @@
-<!-- # Linux Install Party -->
-# Guía del GUL para la instalación de Linux
+<!-- # Guía del GUL para la instalación de Linux -->
 
-<!--
+
+# Linux Install Party
 ## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
 Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
 Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
 
 Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
--->
+
 
 ## 1. Formas de instalar Linux
 
