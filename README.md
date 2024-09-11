@@ -1,7 +1,15 @@
-<!-- # Guía del GUL para la instalación de Linux -->
+<!--
+# Guía del GUL para la instalación de Linux
+
+
+## 1. Formas de instalar Linux
+
+Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que mas os convenga.
+-->
 
 
 # Linux Install Party
+
 ## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
 Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
 Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
@@ -9,12 +17,11 @@ Para agilizar éste proceso, es recomendable que leáis la siguiente informació
 Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
 
 
-## 1. Formas de instalar Linux
-
-Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que mas os convenga.
-
 ### Prefacio: Nota para gente con Apple Macs
-Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/Pro de 2020 o posterior), una de las formas que tenéis de correr Linux es correr una VM ([UTM](https://mac.getutm.app/)) con una versión de Linux para ARM-64 (por ejemplo, [Ubuntu para ARM-64](vm-install-mac.md)). La otra es hacer una instalación con [Dual Boot](dualboot-mac-install.md), pero es un proceso más largo y complicado.
+Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/Pro de 2020 o posterior), debido a que _es un MAC_ y lleva un procesador [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family), sólo hay dos formas de ejecutar Linux:
+1. Hacer un dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/). Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md)
+2. Correr Linux es correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/). Guía en [`vm-install-mac.md`](vm-install-mac.md))
+
 
 ### Método 1: Full Linux
 Este método consiste en decir "fuck Microsoft", borrar Windows, y correr sólo Linux.  
@@ -22,7 +29,7 @@ Este método consiste en decir "fuck Microsoft", borrar Windows, y correr sólo 
 Bueno sí, un ordenador con menos de 20 años.
 - **Ventajas:** Todas las ventajas de Linux, sin los posibles problemas derivados de tener Dual Boot.
 - **Desventajas:** Tu ordenador no va a tener Windows.  
-Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o algún programa o juego (cualquiera con AntiCheat) específico de Windows (y [Wine](https://www.winehq.org/) no te puede ayudar), sí.
+Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o algún programa o juego (cualquiera con AntiCheat) específico de Windows (y [Wine](https://www.winehq.org/) o [Proton](https://github.com/ValveSoftware/Proton) no te puede ayudar), sí.
 - **Recomendado para:** 
     - Linuxeros (frikis)
     - Un segundo ordenador portátil que uses para la uni
@@ -30,6 +37,7 @@ Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o
 - **Cosas que preparar:** 
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
+
 
 ### Método 2: Dual Boot
 Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS y Linux.
@@ -52,28 +60,38 @@ Guía de cómo instalarlo en [`dualboot-install.md`](dualboot-install.md).
 
 
 ### Método 3: Windows Subsystem for Linux 2 (WSL2)
-WSL te permite "correr Linux" dentro de Windows, pero sólo mediante una terminal, con un excelente nivel de compatibilidad.
-- **Restricciones:** Tener Windows.
+WSL te permite "correr Linux" dentro de Windows, pero sólo mediante una terminal, con un buen nivel de compatibilidad.
+- **Restricciones:** Windows 10/11.
 - **Ventajas:** 
     - Fácil y rápido de instalar
     - Ligero
-    - Puedes lanzarlo desde CMD o PowerShell
     - Fácil acceso a los archivos
-    - Soporte en ciertas aplicaciones (Jetbrains, etc.)
+    - Soporte en bastantes aplicaciones: [Vs Code](https://code.visualstudio.com/docs/remote/wsl), IDEs de Jetbrains ([CLion](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html), [PyCharm](https://www.jetbrains.com/help/pycharm/using-wsl-as-a-remote-interpreter.html), etc.), [CUDA](https://docs.nvidia.com/cuda/wsl-user-guide/index.html), y muchas más.
 - **Desventajas:** 
     - No hay GUI, sólo puedes usar una terminal
-    - Limitado número de distros
+    - Número de distros limitado
+    - Eficiencia algo limitada
 - **Recomendado para:** 
     - Gente que, por cualquier motivo, tenga que usar Windows y no tenga espacio para un segundo SO
-    - Gente que no le tenga miedo a la terminal y decida usar Windows (por algún motivo)
-- **Cosas que preparar:** Te puedes instalar [Ubuntu 22.04 LTS desde la Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW), o corriendo los comandos:
+    - Gente que no le tenga miedo a la terminal y decida seguir usando Windows (por algún motivo)
+- **Cosas que preparar:** Nada, simplemente trae tu portátil
+
+<!--
+Te puedes instalar [Ubuntu 22.04 LTS desde la Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW), o corriendo los comandos:
+    Enable virtualization in BIOS
     ```powershell
+    Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     wsl.exe --install
     ```
     [Restart]
     ```powershell
     wsl.exe --install Ubuntu
     ```
+
+Guía de cómo instalarlo en [`wsl-install.md`](wsl-install.md).
+-->
+
 
 ### Método 4: Virtual Machine (VM)
 Una máquina virtual (VM) te permite correr un SO virtual por encima de tu propio sistema operativo.
@@ -90,6 +108,7 @@ Una máquina virtual (VM) te permite correr un SO virtual por encima de tu propi
     - Descargarse la [ISO de Ubuntu](https://ubuntu.com/download/desktop)
 
 Guía de cómo instalarlo en [`vm-install.md`](vm-install.md).
+
 
 ### Método 5: Disco externo
 Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quieras usar Linux. Viene a ser lo mismo que [dual boot](#método-2-dual-boot).
@@ -110,8 +129,13 @@ Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quier
 
 **NOTA**: También se puede tener Windows en un disco externo...
 
+Guía de cómo instalarlo en [`dualboot-external-install.md`](dualboot-external-install.md).
+
+
 ### Método 6: "Sólo la puntita"
 Si quieres seguir el taller pero no quieres liarte a instalar nada (_cobarde_), un [live USB](#2-cómo-crear-un-live-usb-de-ubuntu) te permite correr Linux desde él mismo, sin necesidad de instalar ninguna cosa.
+
+
 
 ## 2. Cómo crear un Live USB de Ubuntu
 Lo primero, necesitas un USB con al menos 8GB de almacenamiento.  
@@ -124,6 +148,8 @@ Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
 5. Selecciona "Flash from file" y la ISO que te has descargado
 6. Selecciona "Select target" y el USB
 7. Haz click en "Flash"
+
+
 
 ## Ruegos y preguntas
 Si tienes alguna duda, nos puedes escribir a info AT gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
