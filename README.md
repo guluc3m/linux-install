@@ -155,4 +155,6 @@ Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
 Si tienes alguna duda, nos puedes escribir a info AT gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
 
 ## Transparencias
+- [Mi primer Linux](https://cloud-gul.uc3m.es/s/HQseLfimS2THFgg) ([vídeo disponible](https://youtu.be/-8oo17P29VU?si=PSGMAl-zqWNDO_XA)) (2021)
 - [Linux 404: Introducción a GNU/Linux](https://cloud-gul.uc3m.es/s/4qXKozr7DmDSZiN) (2022)
+- [Linux 404: Cómo Instalar Linux](https://github.com/joseaverde/linux-install-party/blob/master/traspas.pdf) (2023/2024)
