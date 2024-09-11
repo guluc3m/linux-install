@@ -14,7 +14,7 @@ Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mis
 Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que mas os convenga.
 
 ### Prefacio: Nota para gente con Apple Macs
-Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/Pro de 2020 o posterior), la única forma que tenéis de correr Linux es correr una VM ([UTM](https://mac.getutm.app/)) con una versión de Linux para ARM-64 (por ejemplo, [Ubuntu para ARM-64](https://ubuntu.com/download/server/arm)).
+Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/Pro de 2020 o posterior), una de las formas que tenéis de correr Linux es correr una VM ([UTM](https://mac.getutm.app/)) con una versión de Linux para ARM-64 (por ejemplo, [Ubuntu para ARM-64](vm-install-mac.md)). La otra es hacer una instalación con [Dual Boot](dualboot-mac-install.md), pero es un proceso más largo y complicado.
 
 ### Método 1: Full Linux
 Este método consiste en decir "fuck Microsoft", borrar Windows, y correr sólo Linux.  
