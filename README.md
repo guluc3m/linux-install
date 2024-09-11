@@ -76,21 +76,7 @@ WSL te permite "correr Linux" dentro de Windows, pero sólo mediante una termina
     - Gente que no le tenga miedo a la terminal y decida seguir usando Windows (por algún motivo)
 - **Cosas que preparar:** Nada, simplemente trae tu portátil
 
-<!--
-Te puedes instalar [Ubuntu 22.04 LTS desde la Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW), o corriendo los comandos:
-    Enable virtualization in BIOS
-    ```powershell
-    Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
-    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-    wsl.exe --install
-    ```
-    [Restart]
-    ```powershell
-    wsl.exe --install Ubuntu
-    ```
-
 Guía de cómo instalarlo en [`wsl-install.md`](wsl-install.md).
--->
 
 
 ### Método 4: Virtual Machine (VM)
