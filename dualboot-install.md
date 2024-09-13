@@ -175,3 +175,4 @@ y asegúrate de que funciona. Reinicia y entra en Ubuntu.
 - [Dual boot with Windows - ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows)
 - [Multi-boot - Linux Mint Instalation Guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/multiboot.html)
 - [How to set up Linux dual-boot on a MacBook Pro](https://gist.github.com/Tomasvrba/f91f7399d99d3e25b62116cbe54794f8)
+- [Dual Boot Windows and Linux With rEFInd](https://www.youtube.com/watch?v=1vEkn_kcXas)
