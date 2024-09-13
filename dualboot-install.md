@@ -17,12 +17,14 @@ LiveUSB.
  por ejemplo 18GiB. Esta opción es opcional.
 
 ## 1. Dejar espacio para la partición de Linux
-Para instalar Linux tenemos que reducir la partición de Windows, y quién mejor
-para hacerlo que el mismísimo Windows. Es más seguro que Windows haga lo que
-quiera para reducir la partición que hacerlo desde Linux y Windows se lleve la
-sorpresa de que ha encogido.
+Para instalar Linux tenemos que reducir la partición de Windows/MacOS, y quién
+mejor para hacerlo que el mismísimo Windows/MacOS. Es más seguro que Windows/MacOS
+haga lo que quiera para reducir la partición que hacerlo desde Linux y Windows se
+lleve la sorpresa de que ha encogido.
 
 ### Encoger particiones
+
+#### Windows
  1. Click derecho en el icono de Windows
  2. Selecciona "Administración de Discos"
  3. Click derecho en la partición a reducir
@@ -33,7 +35,13 @@ sorpresa de que ha encogido.
  de 64GiB libres (deberías tenerlo si te has leído el README `>:(`),
  defragmenta el disco.
 
-### Defragmentación del Disco
+#### MacOS
+<!--
+TODO
+https://www.makeuseof.com/tag/install-linux-macbook-pro/
+-->
+
+### Defragmentación del Disco (sólo Windows)
 #### Windows 10
  1. Abre el explorador de archivos
  2. Ve a "Este Equipo"
@@ -51,7 +59,8 @@ sorpresa de que ha encogido.
  6. Clica en "Optimizar"
  7. Clica en "Optimizar" e inserta tu contraseña si fuera necesario.
 
-## 2. Desactivar encripción BitLocker
+
+## 2. Desactivar encripción BitLocker (sólo Windows)
 Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
 "Encripción BitLocker". Si no aparece, genial pasa al paso 3, si no continúa.
 
@@ -62,7 +71,8 @@ Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
  4. Cuando aparezca que lo vuelvas a activar, significa que se ha desactivado
  corréctamente.
 
-## 3. Desactivar inicio rápido
+
+## 3. Desactivar inicio rápido (sólo Windows)
 Sigue los pasos para comprobar que lo tienes desactivado.
 
 ### Windows 10
@@ -87,6 +97,7 @@ Y cuando termines
 
 > powercfg.exe /h off
 
+
 ## 4. Arrancar en Linux
 Apaga el ordenador, mete el pincho en el ordenador y arranca la BIOS. El botón
 para entrar en la BIOS depende del ordenador, así que prueba teclas hasta que
@@ -106,6 +117,7 @@ Cambia el orden de arranque de los discos y pon que el USB esté primero.
 Guarda cambios y sal.
 
 Debería arrancar el LiveUSB.
+
 
 ## 5. Instalar Linux
 ### Ubuntu
@@ -162,3 +174,4 @@ y asegúrate de que funciona. Reinicia y entra en Ubuntu.
 ## Links de interés
 - [Dual boot with Windows - ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows)
 - [Multi-boot - Linux Mint Instalation Guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/multiboot.html)
+- [How to set up Linux dual-boot on a MacBook Pro](https://gist.github.com/Tomasvrba/f91f7399d99d3e25b62116cbe54794f8)
