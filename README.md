@@ -22,6 +22,7 @@ Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/P
 1. Hacer un dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/). Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md)
 2. Correr Linux es correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/). Guía en [`vm-install-mac.md`](vm-install-mac.md))
 
+Si tenéis un ordenador con procesador Intel (pre-2020), los métodos de instalación son fundamentalmente los mismos (quitando obviamente WSL). Aplican las mismas características, y en las guías se marcan los pasos que difieren para MacOS.
 
 ### Método 1: Full Linux
 Este método consiste en decir "fuck Microsoft", borrar Windows, y correr sólo Linux.  
