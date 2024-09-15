@@ -31,11 +31,11 @@ Bueno sí, un ordenador con menos de 20 años.
 - **Ventajas:** Todas las ventajas de Linux, sin los posibles problemas derivados de tener Dual Boot.
 - **Desventajas:** Tu ordenador no va a tener Windows.  
 Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o algún programa o juego (cualquiera con AntiCheat) específico de Windows (y [Wine](https://www.winehq.org/) o [Proton](https://github.com/ValveSoftware/Proton) no te puede ayudar), sí.
-- **Recomendado para:** 
+- **Recomendado para:**
     - Linuxeros (frikis)
     - Un segundo ordenador portátil que uses para la uni
     - Tu tía la del pueblo que sólo usa Internet Explorer
-- **Cosas que preparar:** 
+- **Cosas que preparar:**
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
 
@@ -51,7 +51,7 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
     - A las actualizaciones de Windows les gusta romper el Grub (bootloader)
     - Se desconfigura la zona horaria cada dos por tres
 - **Recomendado para:** 
-    - Estudiantes que necesiten Linux para la carrera pero que quieran seguir usando su PC para jugar al Fortnite (u otras cosas de Windows)
+    - Estudiantes que necesiten Linux para la carrera, pero que quieran seguir usando su PC para jugar al Fortnite (u otras cosas de Windows)
     - Personas a la que gente malvada le obligue a usar Windows
 - **Cosas que preparar:** 
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)

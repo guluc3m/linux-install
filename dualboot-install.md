@@ -2,12 +2,14 @@
 
 En este tutorial vamos a explicar cómo instalar Linux junto a Windows
 (dualboot). Este tutorial está pensado para instalar ambos sistemas operativos
-en el disco duro interno / los discos duros internos que tengas en el
+en el disco duro interno `/` los discos duros internos que tengas en el
 ordenador.
 
 En el caso en el que quieras instalar el sistema operativo en un disco externo,
 puedes saltarte el primer paso, las particiones se pueden hacer desde el
 LiveUSB.
+
+
 
 ## Requisitos
  * Mínimo 64GiB de almacenamiento disponible para la partición de Linux.
@@ -16,15 +18,15 @@ LiveUSB.
  grande que el tamaño de tu memoria RAM. Si tienes 16GiB de RAM, hacerla de,
  por ejemplo 18GiB. Esta opción es opcional.
 
+
+
 ## 1. Dejar espacio para la partición de Linux
-Para instalar Linux tenemos que reducir la partición de Windows/MacOS, y quién
-mejor para hacerlo que el mismísimo Windows/MacOS. Es más seguro que Windows/MacOS
-haga lo que quiera para reducir la partición que hacerlo desde Linux y Windows se
-lleve la sorpresa de que ha encogido.
+Para instalar Linux tenemos que reducir la partición del SO (Windows/MacOS),
+y quién mejor para hacerlo que el mismísimo SO. Es más seguro que el SO haga lo
+que quiera para reducir la partición que hacerlo desde Linux y el SO se lleve
+la sorpresa de que ha encogido.
 
-### Encoger particiones
-
-#### Windows
+### 1.W. Windows
  1. Click derecho en el icono de Windows
  2. Selecciona "Administración de Discos"
  3. Click derecho en la partición a reducir
@@ -35,14 +37,25 @@ lleve la sorpresa de que ha encogido.
  de 64GiB libres (deberías tenerlo si te has leído el README `>:(`),
  defragmenta el disco.
 
-#### MacOS
-<!--
-TODO
-https://www.makeuseof.com/tag/install-linux-macbook-pro/
--->
+### 1.M. MacOS
+ 1. Abre la aplicación 'Disk Utility' (`Applications` > `Utilities` en Finder)
+ 2. En la barra de menú, ve a `View` > `Show All Devices`
+ 3. En el menú de la izquierda, selecciona el SSD
+ 4. En el menú de arriba a la derecha, selecciona `Partition`, y en la ventana
+ nueva haz click en el `+`. Crea una partición de mínimo 64GB, y ponle de nombre
+ 'Linux' (por ej.). En el formato, selecciona `MS-DOS (FAT)`.
 
-### Defragmentación del Disco (sólo Windows)
-#### Windows 10
+> [!NOTE]
+> Si no te deja crear nuevas particiones, es posible que tu disco esté
+> encriptado por FileVault. Ve a `System Settings` > `Network` > `FileVault`
+> para desactivarlo.
+
+
+
+## 2. Preparar el SO
+
+### 2.W.1. Defragmentar el Disco (sólo Windows)
+##### Windows 10
  1. Abre el explorador de archivos
  2. Ve a "Este Equipo"
  3. Selecciona el Disco a defragmentar.
@@ -60,66 +73,89 @@ https://www.makeuseof.com/tag/install-linux-macbook-pro/
  7. Clica en "Optimizar" e inserta tu contraseña si fuera necesario.
 
 
-## 2. Desactivar encripción BitLocker (sólo Windows)
+### 2.W.2. Desactivar encripción BitLocker (sólo Windows)
+
 Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
 "Encripción BitLocker". Si no aparece, genial pasa al paso 3, si no continúa.
 
  1. Abre la configuración que has buscado antes ("Encripción BitLocker")
  2. Haz una copia de seguridad de tu clave de recuperación de BitLocker.
  Guárdala como un archivo y súbela a Drive o a un disco duro externo.
- 3. Haz click en Desactivar BitLocker.
- 4. Cuando aparezca que lo vuelvas a activar, significa que se ha desactivado
+ 1. Haz click en `Desactivar BitLocker`.
+ 2. Cuando aparezca que lo vuelvas a activar, significa que se ha desactivado
  corréctamente.
 
 
-## 3. Desactivar inicio rápido (sólo Windows)
+### 2.W.3. Desactivar inicio rápido (sólo Windows)
 Sigue los pasos para comprobar que lo tienes desactivado.
 
-### Windows 10
+#### Windows 10
  1. Entra en el "Panel de Control"
  2. Busca "Opciones de Energía"
  3. Elegir el "Comportamiento de los botones inicio/apagado"
  4. Desactiva inicio rápido
  5. "Guardar Cambios"
 
-### Windows 11
+#### Windows 11
  1. Busca "Opciones de Energía" en el "Panel de Control"
- (Panel de Control > Hardware y sonido > Opciones de Energía)
+ (`Panel de Control` > `Hardware y sonido` > `Opciones de Energía`)
  2. Elegir la acción de los botones de inicio/apagado
  3. Desactiva el Inicio Rápido
  4. "Guardar Cambios"
 
-Si no aparece la opciones de energía, ejecutar en una CMD
+Si no aparecen la opciones de energía, ejecuta en CMD:
 
-> powercfg.exe /h on
+```cmd
+powercfg.exe /h on
+```
 
-Y cuando termines
+Y cuando termines:
+```cmd
+powercfg.exe /h off
+```
 
-> powercfg.exe /h off
+
+### 2.M.1. Permitir bootear desde disco externo (sólo MacOS)
+Para Macs con chip de seguridad T2 (2018-2020), es necesario habilitar que pueda
+arrancar el SO desde un disco externo. Para ello:
+ 1. Reinicia el Mac en _recovery mode_ (Mantén `Command`+`R` mientras arranca)
+ 2. Selecciona tu usuario (debe tener permisos de administrador) y pon la
+ contraseña
+ 4. En la barra de herramientas, ve a `Utilities` > `Startup Secutiry Utility`
+ 5. En el apartado `Allowed Boot Media`, selecciona `Allow booting from external
+ or removable media`
+ 6. Reinicia el ordenador
 
 
-## 4. Arrancar en Linux
-Apaga el ordenador, mete el pincho en el ordenador y arranca la BIOS. El botón
-para entrar en la BIOS depende del ordenador, así que prueba teclas hasta que
-alguna funcione. Por lo general son: `ESC`, `F11`, `F12` o `DEL` (Suprimir). Si
-no consigues arrancar la BIOS busca en internet tu modelo de ordenador y qué
+
+## 3. Arrancar en Linux
+
+> [!INFO]
+> Dependiendo del ordenador, es posible que puedas entrar directamente al _boot
+> menu_ y seleccionar qué bootear. Por ejemplo, en Mac es manteniendo la tecla
+> `Option` durante el arranque.
+
+1. Apaga el ordenador, mete el pincho en el ordenador y arranca la BIOS. El
+botón para entrar en la BIOS depende del ordenador, así que prueba teclas hasta
+que alguna funcione. Por lo general son: `ESC`, `F11`, `F12` o `DEL` (Suprimir).
+Si no consigues arrancar la BIOS busca en internet tu modelo de ordenador y qué
 tecla utilizar.
-
-Ya que estamos en la BIOS asegúrate de que "Intel(R) Rapid Start Technology"
+2. Ya que estamos en la BIOS asegúrate de que "Intel(R) Rapid Start Technology"
 está **desactivado**.
-
-No es necesario desactivar "Secure Boot" para Ubuntu, si estás instalando otra
-distro, desactívalo por si acaso, es posible que no te deje arrancar desde el
-USB.
-
-Cambia el orden de arranque de los discos y pon que el USB esté primero.
-
-Guarda cambios y sal.
+3. Desactiva "Secure Boot"
+> [!INFO]
+> No es necesario desactivar el Secure Boot para distros como Ubuntu, pero si
+> estás instalando otra distro, o estás teniendo problemas al arrancar,
+> desactívalo
+4. Cambia el orden de arranque de los discos y pon que el USB esté primero.
+5. Guarda cambios y sal.
 
 Debería arrancar el LiveUSB.
 
 
-## 5. Instalar Linux
+
+## 4. Instalar Linux
+
 ### Ubuntu
  1. Instalar Ubuntu.
  2. Selecciona el idioma.
@@ -167,12 +203,60 @@ Dispositivo    Tipo     Punto de Montaje     Formatear   Tamaño
 ### Otras Distribuciones
 Al igual que Ubuntu, pero puede que cambie algún paso.
 
-## 6. Wrap-Up
+
+
+## 5. Wrap-Up
 Ya hemos terminado `:)`. Al reiniciar verás el GRUB, selecciona primero Windows
 y asegúrate de que funciona. Reinicia y entra en Ubuntu.
 
+> [!NOTE]
+> Si después de reiniciar no aparece GRUB, entra en la BIOS y selecciónalo
+> como opción de boot principal.
+
+
+## Extra: Instalar rEFInd
+[rEFInd](https://www.rodsbooks.com/refind/) es un boot manager, al igual que
+GRUB, pero más moderno y customizable. Es recomendable instalarlo en ordenadores
+más modernos, y **no es recomendable instalarlo en ordenadores antiguos**.
+
+### MacOS
+Es recomendable instalarlo desde Mac antes que desde Linux
+
+1. Desactiva System Integrity Protection (SIP)
+   1. Reinicia el Mac en _recovery mode_ (Mantén `Command`+`R` mientras arranca)
+   2. Selecciona tu usuario (debe tener permisos de administrador) y pon la
+   contraseña
+   3. En la barra de herramientas, ve a `Utilities` > `Terminal`
+   4. Ejecuta el siguiente comando:
+      ```
+      csrutil disable
+      ```
+2. Reinicia
+3. [Descarga rEFInd](https://sourceforge.net/projects/refind/)
+4. Descomprime el ZIP y entra en la carpeta.
+5. Abre un terminal en la carpeta (desde Finder, `Ctrl`+`click` en la barra de
+ruta y selecciona `Abrir en Terminal`)
+6. Ejecuta `./refind-install`
+7. Vuelve a activar System Integrity Protection (SIP), siguiendo los mismos
+pasos que para desactivarlo, pero ejecutando el comando
+   ```
+   csrutil enable
+   ```
+8. Reinicia. Debería salirte el boot manager de rEFInd
+
+
+### Linux
+1. Instala el paquete `refind` (suele estar en el gestor de paquetes)
+2. Reinicia. Debería salirte el boot manager de rEFInd
+
+> [!NOTE]
+> Si después de reiniciar no aparece rEFInd, entra en la BIOS y selecciónalo
+> como opción de boot principal.
+
+
+
 ## Links de interés
-- [Dual boot with Windows - ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows)
+- [Dual boot with Windows - ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows)
 - [Multi-boot - Linux Mint Instalation Guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/multiboot.html)
-- [How to set up Linux dual-boot on a MacBook Pro](https://gist.github.com/Tomasvrba/f91f7399d99d3e25b62116cbe54794f8)
 - [Dual Boot Windows and Linux With rEFInd](https://www.youtube.com/watch?v=1vEkn_kcXas)
+- [How to set up Linux dual-boot on a MacBook Pro](https://gist.github.com/Tomasvrba/f91f7399d99d3e25b62116cbe54794f8)
