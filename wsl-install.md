@@ -54,6 +54,8 @@ wsl.exe --install Ubuntu
 ## 4. Setup
 Una vez instalada la distro, te pedirá que crees un usuario, con nombre de usuario y contraseña.
 
+Recuerda que siempre puedes volver a entrar en WSL mediante el comando `wsl`, o desde la aplicación 'Windows Terminal'.
+
 <!-- TODO: how to disable sudo password -->
 
 ## Más info
