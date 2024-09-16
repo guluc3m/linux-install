@@ -234,8 +234,7 @@ Es recomendable instalarlo desde Mac antes que desde Linux
 2. Reinicia
 3. [Descarga rEFInd](https://sourceforge.net/projects/refind/)
 4. Descomprime el ZIP y entra en la carpeta.
-5. Abre un terminal en la carpeta (desde Finder, `Ctrl`+`click` en la barra de
-ruta y selecciona `Abrir en Terminal`)
+5. Abre un terminal en la carpeta (desde Finder, Click derecho en la carpeta, y selecciona `Servicios` > `Abrir en terminal`)
 6. Ejecuta `./refind-install`
 7. Vuelve a activar System Integrity Protection (SIP), siguiendo los mismos
 pasos que para desactivarlo, pero ejecutando el comando
