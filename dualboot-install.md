@@ -1,6 +1,6 @@
-# Instalación de Linux con Windows en dualboot
+# Instalación de Linux en dualboot
 
-En este tutorial vamos a explicar cómo instalar Linux junto a Windows
+En este tutorial vamos a explicar cómo instalar Linux junto a Windows/MacOS
 (dualboot). Este tutorial está pensado para instalar ambos sistemas operativos
 en el disco duro interno `/` los discos duros internos que tengas en el
 ordenador.
