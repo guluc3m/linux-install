@@ -1,13 +1,11 @@
-<!--
 # Guía del GUL para la instalación de Linux
 
 
 ## 1. Formas de instalar Linux
 
-Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que mas os convenga.
--->
+Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que más os convenga.
 
-
+<!--
 # Linux Install Party
 
 ## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
@@ -15,14 +13,37 @@ Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.
 Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
 
 Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
+-->
 
 
 ### Prefacio: Nota para gente con Apple Macs
-Si tenéis un ordenador con un procesador M1/M1Pro/M1Max/M2/M2Pro (Macbook Air/Pro de 2020 o posterior), debido a que _es un MAC_ y lleva un procesador [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family), sólo hay dos formas de ejecutar Linux:
-1. Hacer un dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/). Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md)
-2. Correr Linux es correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/). Guía en [`vm-install-mac.md`](vm-install-mac.md))
+La instalación de Linux depende del modelo y, más importante, del microprocesador. En cualquier caso, debido a que _es un MAC_, sólo hay dos formas de ejecutar Linux: en dual boot y en VM.
 
-Si tenéis un ordenador con procesador Intel (pre-2020), los métodos de instalación son fundamentalmente los mismos (quitando obviamente WSL). Aplican las mismas características, y en las guías se marcan los pasos que difieren para MacOS.
+#### Apple Silicon
+Ordenadores con un procesador de la familia M1/M2 (Macbook Air/Pro de 2020 o posterior) con lleva un procesador [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family).
+
+Las opciones son:
+1. Dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/). Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md)
+2. Correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/). Guía en [`vm-install-mac.md`](vm-install-mac.md)
+
+
+#### Intel
+Ordenadores con procesador Intel (pre-2020).
+
+Las opciones son:
+1. Dual boot (tener MacOS y Linux en el mismo ordenador).
+    - Si es un ordenador sin [chip de seguridad T2](https://support.apple.com/es-es/103265) (pre-2018), no suele haber demasiados problemas al instalar, y los pasos generales para la instalación son fundamentalmente iguales que para cualquier otra máquina. Te recomendamos la [siguiente guía](https://www.makeuseof.com/tag/install-linux-macbook-pro/).
+    - Para ordenadores con chip T2 (2018-2019), lo más recomendable es usar [t2linux](https://t2linux.org/). Son parches específicos para múltiples distribuciones de Linux, ya que cosas como el Wi-Fi o el teclado y el trackpad no suelen funcionar con una ISO normal debido a los drivers.
+2. Correr una VM como en cualquier otro ordenador. Guía en [`vm-install.md`](vm-install.md)
+
+
+> [!NOTE]
+> Para más información sobre _troubleshooting_ y resolución de problemas en portátiles Mac, ve a [Laptop/Apple - ArchWiki](https://wiki.archlinux.org/title/Laptop/Apple).
+
+
+> [!INFO]
+> Si tienes problemas para bootear rEFInd en Mac, quizás te pueda ayudar lo siguiente: [rEFInd bootloader doesn't launch on start](https://apple.stackexchange.com/questions/446575/refind-bootloader-doesnt-launch-on-start).
+
 
 ### Método 1: Full Linux
 Este método consiste en decir "fuck Microsoft", borrar Windows, y correr sólo Linux.  

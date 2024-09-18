@@ -12,11 +12,11 @@ LiveUSB.
 
 
 ## Requisitos
- * Mínimo 64GiB de almacenamiento disponible para la partición de Linux.
- * Si quieres hacer una partición `swap` (memoria virtual) para poder hibernar
- el ordenador (por ejemplo). Se recomienda dejar una partición un poco más
- grande que el tamaño de tu memoria RAM. Si tienes 16GiB de RAM, hacerla de,
- por ejemplo 18GiB. Esta opción es opcional.
+* Mínimo 64GiB de almacenamiento disponible para la partición de Linux.
+* Si quieres hacer una partición `swap` (memoria virtual) para poder hibernar
+el ordenador (por ejemplo). Se recomienda dejar una partición un poco más
+grande que el tamaño de tu memoria RAM. Si tienes 16GiB de RAM, hacerla de,
+por ejemplo 18GiB. Esta opción es opcional.
 
 
 
@@ -26,35 +26,21 @@ y quién mejor para hacerlo que el mismísimo SO. Es más seguro que el SO haga 
 que quiera para reducir la partición que hacerlo desde Linux y el SO se lleve
 la sorpresa de que ha encogido.
 
-### 1.W. Windows
- 1. Click derecho en el icono de Windows
- 2. Selecciona "Administración de Discos"
- 3. Click derecho en la partición a reducir
- 4. Selecciona "Reducir Volumen..."
- 5. Cambia "Tamaño del espacio que desea reducir en MB" por el tamaño que le
- quieras dejar a la partición de Linux mínimo 65536 MiB (64GiB). Y clica
- reducir. Si no puedes reducir el espacio dicha cantidad y sabes que tienes más
- de 64GiB libres (deberías tenerlo si te has leído el README `>:(`),
- defragmenta el disco.
-
-### 1.M. MacOS
- 1. Abre la aplicación 'Disk Utility' (`Applications` > `Utilities` en Finder)
- 2. En la barra de menú, ve a `View` > `Show All Devices`
- 3. En el menú de la izquierda, selecciona el SSD
- 4. En el menú de arriba a la derecha, selecciona `Partition`, y en la ventana
- nueva haz click en el `+`. Crea una partición de mínimo 64GB, y ponle de nombre
- 'Linux' (por ej.). En el formato, selecciona `MS-DOS (FAT)`.
-
-> [!NOTE]
-> Si no te deja crear nuevas particiones, es posible que tu disco esté
-> encriptado por FileVault. Ve a `System Settings` > `Network` > `FileVault`
-> para desactivarlo.
+1. Click derecho en el icono de Windows
+2. Selecciona "Administración de Discos"
+3. Click derecho en la partición a reducir
+4. Selecciona "Reducir Volumen..."
+5. Cambia "Tamaño del espacio que desea reducir en MB" por el tamaño que le
+quieras dejar a la partición de Linux mínimo 65536 MiB (64GiB). Y clica
+reducir. Si no puedes reducir el espacio dicha cantidad y sabes que tienes más
+de 64GiB libres (deberías tenerlo si te has leído el README `>:(`),
+defragmenta el disco.
 
 
 
 ## 2. Preparar el SO
 
-### 2.W.1. Defragmentar el Disco (sólo Windows)
+### 2.1. Defragmentar el Disco (sólo Windows)
 ##### Windows 10
  1. Abre el explorador de archivos
  2. Ve a "Este Equipo"
@@ -73,7 +59,7 @@ la sorpresa de que ha encogido.
  7. Clica en "Optimizar" e inserta tu contraseña si fuera necesario.
 
 
-### 2.W.2. Desactivar encripción BitLocker (sólo Windows)
+### 2.2. Desactivar encripción BitLocker (sólo Windows)
 
 Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
 "Encripción BitLocker". Si no aparece, genial pasa al paso 3, si no continúa.
@@ -86,7 +72,7 @@ Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
  corréctamente.
 
 
-### 2.W.3. Desactivar inicio rápido (sólo Windows)
+### 2.3. Desactivar inicio rápido (sólo Windows)
 Sigue los pasos para comprobar que lo tienes desactivado.
 
 #### Windows 10
@@ -113,18 +99,6 @@ Y cuando termines:
 ```cmd
 powercfg.exe /h off
 ```
-
-
-### 2.M.1. Permitir bootear desde disco externo (sólo MacOS)
-Para Macs con chip de seguridad T2 (2018-2020), es necesario habilitar que pueda
-arrancar el SO desde un disco externo. Para ello:
- 1. Reinicia el Mac en _recovery mode_ (Mantén `Command`+`R` mientras arranca)
- 2. Selecciona tu usuario (debe tener permisos de administrador) y pon la
- contraseña
- 4. En la barra de herramientas, ve a `Utilities` > `Startup Secutiry Utility`
- 5. En el apartado `Allowed Boot Media`, selecciona `Allow booting from external
- or removable media`
- 6. Reinicia el ordenador
 
 
 
@@ -211,38 +185,15 @@ y asegúrate de que funciona. Reinicia y entra en Ubuntu.
 
 > [!NOTE]
 > Si después de reiniciar no aparece GRUB, entra en la BIOS y selecciónalo
-> como opción de boot principal.
+> como opción de boot principal. Suele venir 'camuflado' con el nombre de la
+> distribución, e.g. `ubuntu`.
+
 
 
 ## Extra: Instalar rEFInd
 [rEFInd](https://www.rodsbooks.com/refind/) es un boot manager, al igual que
 GRUB, pero más moderno y customizable. Es recomendable instalarlo en ordenadores
 más modernos, y **no es recomendable instalarlo en ordenadores antiguos**.
-
-### MacOS
-Es recomendable instalarlo desde Mac antes que desde Linux
-
-1. Desactiva System Integrity Protection (SIP)
-   1. Reinicia el Mac en _recovery mode_ (Mantén `Command`+`R` mientras arranca)
-   2. Selecciona tu usuario (debe tener permisos de administrador) y pon la
-   contraseña
-   3. En la barra de herramientas, ve a `Utilities` > `Terminal`
-   4. Ejecuta el siguiente comando:
-      ```
-      csrutil disable
-      ```
-2. Reinicia
-3. [Descarga rEFInd](https://sourceforge.net/projects/refind/)
-4. Descomprime el ZIP y entra en la carpeta.
-5. Abre un terminal en la carpeta (desde Finder, Click derecho en la carpeta, y selecciona `Servicios` > `Abrir en terminal`)
-6. Ejecuta `./refind-install`
-7. Vuelve a activar System Integrity Protection (SIP), siguiendo los mismos
-pasos que para desactivarlo, pero ejecutando el comando
-   ```
-   csrutil enable
-   ```
-8. Reinicia. Debería salirte el boot manager de rEFInd
-
 
 ### Linux
 1. Instala el paquete `refind` (suele estar en el gestor de paquetes)
@@ -256,6 +207,7 @@ pasos que para desactivarlo, pero ejecutando el comando
 
 ## Links de interés
 - [Dual boot with Windows - ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows)
+- [GRUB - ArchWiki](https://wiki.archlinux.org/title/GRUB)
+- [rEFInd - ArchWiki](https://wiki.archlinux.org/title/REFInd)
 - [Multi-boot - Linux Mint Instalation Guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/multiboot.html)
 - [Dual Boot Windows and Linux With rEFInd](https://www.youtube.com/watch?v=1vEkn_kcXas)
-- [How to set up Linux dual-boot on a MacBook Pro](https://gist.github.com/Tomasvrba/f91f7399d99d3e25b62116cbe54794f8)
