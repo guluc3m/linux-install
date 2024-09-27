@@ -60,6 +60,7 @@ Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
 
+Guía de como instalarlo en [`full-install.md`](full-install.md)
 
 ### Método 2: Dual Boot
 Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS y Linux.
