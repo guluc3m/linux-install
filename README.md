@@ -1,23 +1,16 @@
 # Guía del GUL para la instalación de Linux
 
 
-## 1. Formas de instalar Linux
+## Prefacio
 
-Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que más os convenga.
+### Apple Macs
+La instalación de Linux depende del modelo y, más importante, del microprocesador.En cualquier caso, debido a que _es un MAC_, sólo hay dos formas de ejecutar Linux: en dual boot y en VM.
 
-<!--
-# Linux Install Party
+> [!WARNING]
+> MacOS tiene la tendencia de **eliminar el sistema operativo de la faz de la tierra** a la hora de hacer una partición. Es algo aleatorio y que te hará replantearte volver a comprar un Mac, y la única forma de "protegerte" es **haciendo una copia de seguridad** si vas a hacer un dual booot.
+> 
+> Te recomendamos usar [Time Machine](https://support.apple.com/es-es/104984), una herramienta del propio Apple.
 
-## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
-Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
-Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
-
-Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
--->
-
-
-### Prefacio: Nota para gente con Apple Macs
-La instalación de Linux depende del modelo y, más importante, del microprocesador. En cualquier caso, debido a que _es un MAC_, sólo hay dos formas de ejecutar Linux: en dual boot y en VM.
 
 #### Apple Silicon
 Ordenadores con un procesador de la familia M1/M2 (Macbook Air/Pro de 2020 o posterior) con lleva un procesador [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family).
@@ -41,8 +34,43 @@ Las opciones son:
 > Para más información sobre _troubleshooting_ y resolución de problemas en portátiles Mac, ve a [Laptop/Apple - ArchWiki](https://wiki.archlinux.org/title/Laptop/Apple).
 
 
-> [!INFO]
+> [!TIP]
 > Si tienes problemas para bootear rEFInd en Mac, quizás te pueda ayudar lo siguiente: [rEFInd bootloader doesn't launch on start](https://apple.stackexchange.com/questions/446575/refind-bootloader-doesnt-launch-on-start).
+
+
+### Microsoft Surface
+Dado que algunos de los drivers son privativos, para los casos de full install o dual boot es recomendable instalar un kernel específico para Surface, como [linux-surface](https://github.com/linux-surface/linux-surface). Guía de instalación [aquí](https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup).
+
+
+
+## Distribuciones
+Una distribución, o _distro_, es una serie de aplicaciones y herramientas que se empaquetan encima del [kernel de Linux](https://github.com/torvalds/linux) para tener un Sistema Operativo completo.
+
+Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.com/), pero aquí te dejamos nuestras recomendaciones:
+- Si eres principiante, te recomendamos [Ubuntu](https://ubuntu.com/desktop) o [Linux Mint](https://linuxmint.com/), basadas en [Debian](https://www.debian.org/), ya que son estables* y fáciles de usar _out of the box_.
+- Si quieres paquetes algo más actualizados, te recomendamos [Fedora](https://fedoraproject.org/workstation).
+- Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide).
+
+
+> [!TIP]
+> Es recomendable, especialmente antes de instalar Linux en físico (full install / dual boot), comprobar la compatibilidad de tu ordenador con la distro específica. Si es un portátil relativamente nuevo, es posible que algunos drivers todavía no estén en los repositorios. Buscando en Google se suelen encontrar respuestas.
+
+
+
+## Formas de instalar Linux
+
+Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que más os convenga.
+
+<!--
+# Linux Install Party
+
+## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
+Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
+Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
+
+Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
+-->
+
 
 
 ### Método 1: Full Linux
@@ -58,7 +86,7 @@ Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o
     - Tu tía la del pueblo que sólo usa Internet Explorer
 - **Cosas que preparar:**
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
-    - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
+    - Un [live USB con Linux](#2-cómo-crear-un-live-usb) .
 
 Guía de como instalarlo en [`full-install.md`](full-install.md)
 
@@ -77,7 +105,7 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
     - Personas a la que gente malvada le obligue a usar Windows
 - **Cosas que preparar:** 
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
-    - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
+    - Un [live USB con Linux](#2-cómo-crear-un-live-usb) .
 
 Guía de cómo instalarlo en [`dualboot-install.md`](dualboot-install.md).
 
@@ -134,7 +162,7 @@ Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quier
 - **Cosas que preparar:** 
     - Disco duro externo (preferible USB 3.0)  
       **IMPORTANTE:** Todos los datos del disco duro externo se borrarán. Estás avisado.
-    - Un [live USB con Linux](#2-cómo-crear-un-live-usb-de-ubuntu).
+    - Un [live USB con Linux](#2-cómo-crear-un-live-usb).
 
 **NOTA**: También se puede tener Windows en un disco externo...
 
@@ -142,28 +170,15 @@ Guía de cómo instalarlo en [`dualboot-external-install.md`](dualboot-external-
 
 
 ### Método 6: "Sólo la puntita"
-Si quieres seguir el taller pero no quieres liarte a instalar nada (_cobarde_), un [live USB](#2-cómo-crear-un-live-usb-de-ubuntu) te permite correr Linux desde él mismo, sin necesidad de instalar ninguna cosa.
-
-
-
-## 2. Cómo crear un Live USB de Ubuntu
-Lo primero, necesitas un USB con al menos 8GB de almacenamiento.  
-Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
-
-1. Descárgate la [ISO de Ubuntu](https://ubuntu.com/download/desktop).
-2. Descarga [Balena Etcher](https://www.balena.io/etcher), puedes usar la versión portable (sin necesidad de instalar nada), o instalar la aplicación entera.
-3. Inserta el USB
-4. Corre Balena Etcher
-5. Selecciona "Flash from file" y la ISO que te has descargado
-6. Selecciona "Select target" y el USB
-7. Haz click en "Flash"
+Si quieres seguir el taller pero no quieres liarte a instalar nada (_cobarde_), un [live USB](#2-cómo-crear-un-live-usb)  te permite correr Linux desde él mismo, sin necesidad de instalar ninguna cosa.
 
 
 
 ## Ruegos y preguntas
 Si tienes alguna duda, nos puedes escribir a info AT gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
 
-## Transparencias
+
+## Transparencias de _install partys_ anteriores
 - [Mi primer Linux](https://cloud-gul.uc3m.es/s/HQseLfimS2THFgg) ([vídeo disponible](https://youtu.be/-8oo17P29VU?si=PSGMAl-zqWNDO_XA)) (2021)
 - [Linux 404: Introducción a GNU/Linux](https://cloud-gul.uc3m.es/s/4qXKozr7DmDSZiN) (2022)
 - [Linux 404: Cómo Instalar Linux](https://github.com/joseaverde/linux-install-party/blob/master/traspas.pdf) (2023/2024)

@@ -23,8 +23,8 @@ Con este comando descargaremos la herramienta de instalación de Asahi Linux. Ah
 ## 3. Configuración de la partición
 Lo primero que nos pedirá es que queremos hacer. En este caso, queremos redimensionar la partición que tiene MacOS para dejar espacio para Linux. Para ello, presionamos la tecla r y luego la tecla Enter. A continuaicón, nos pedirá cuánto espacio queremos dejar para Linux. Tenemos varias opciones:
 - Si queremos dejar 55GB, escribimos 55G y presionamos Enter.
-- Si queremos dejar un % del disco para mac, pondremos el porcentaje con el símbolo de % y presionamos Enter. Cabe recalcar que 100-<porcenaje_introducido> es lo que se dejará para Linux.
-- "min" + Ent er-> Reduce al máximo la partición de MacOS.
+- Si queremos dejar un % del disco para mac, pondremos el porcentaje con el símbolo de % y presionamos `Enter`. Cabe recalcar que 100-<porcenaje_introducido> es lo que se dejará para Linux.
+- "min" + `Enter` -> Reduce al máximo la partición de MacOS.
 
 Cuando hayamos seleccionado una opción nos pedirá confirmación. Para confirmar, como ocurre muchas veces en la terminal, escribimos una "y" y presionamos Enter. 
 Es completamente normal que este proceso tarde un poco, ya que está redimensionando la partición de MacOS. Y se puede quedar congelado en el proceso, pero no te preocupes, déjalo un rato. 
@@ -58,3 +58,6 @@ Cuando se reinicie, ya arrancará en Linux.
 
 ## 5. Links de interés
 - [Asahi Linux](https://asahilinux.org)
+
+
+## Troubleshooting
