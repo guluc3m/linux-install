@@ -4,9 +4,33 @@ En este tutorial vamos a explicar cómo instalar Linux en un disco duro externo 
 
 
 ## Requisitos
- * Un disco externo con un Mínimo de 64GiB de almacenamiento disponible. Mantén este disco conectado al ordenador durante todo el proceso.
- * Si quieres hacer una partición `swap` (memoria virtual) para poder hibernar  el ordenador (por ejemplo). Se recomienda dejar una partición un poco más grande que el tamaño de tu memoria RAM. Si tienes 16GiB de RAM, hacerla de,  por ejemplo 18GiB (aparte de los 64 GiB anteriores). Esta partición es opcional.
- * Dos puertos USB disponibles, uno para el disco externo, y otro para el instalador (LiveUSB).
+- Un disco externo con un Mínimo de 64GiB de almacenamiento disponible. Mantén este disco conectado al ordenador durante todo el proceso.
+- Si quieres hacer una partición `swap` (memoria virtual) para poder hibernar  el ordenador (por ejemplo). Se recomienda dejar una partición un poco más grande que el tamaño de tu memoria RAM. Si tienes 16GiB de RAM, hacerla de,  por ejemplo 18GiB (aparte de los 64 GiB anteriores). Esta partición es opcional.
+- Dos puertos USB disponibles, uno para el disco externo, y otro para el instalador (LiveUSB).
+
+
+## Prefacio: Sistemas UEFI
+
+Hay dos maneras de instalar y arrancar un sistema operativo actualmente:
+- Normal: El sistema inicia con el basic input output system (BIOS), la cual realiza varias tareas iniciales (escaneo de memoria, detección de periféricos, etc...) y da paso a la primera línea de código del sistema operativo, que se encuentra en el sector de arranque del disco principal (el primero en la lista de arranque en la configuración de BIOS).
+- UEFI Boot: El arranque se configura durante la instalación del sistema operativo, y se guarda la configuración de la bios, incluyendo en ID del disco en el que se instala el sistema, de forma que ese arranque solamente funcionará para ése sistema operativo y en ese disco.
+
+Muchos sistemas preinstalados (windows sobre todo) tienen arranque UEFI y algunos tienen SecureBoot (que impide arrancar desde cualquier otro disco). Por eso para instalar cualquier otro sistema operativo tendremos que lidiar con éstos conceptos y probablemente deshabilitarlos (al menos SecureBoot).
+
+### Arranque en dual boot con UEFI
+
+La forma más cómoda y que se recomienda para arrancar un PC con varios sistemas operativos es GRUB (Linux).
+
+Éste programita (realmente, es muy pequeño) se instala en el sector de arranque del disco principal (vuelve a leer dessde el pricipio si no entiendes éste párrafo), y muestra un diálogo que permite elegir entre varios sistemas operativos instalados (Linux, windows, ...).
+
+En un sistema windows UEFI, el arranque irá directamente al sistema operativo sin pasar por el sector de arranque, por lo que si instalamos GRUB en el disco principal, nunca se ejecutará, y no tendremos acceso a Linux.
+
+Por otra parte, si instalamos GRUB en el disco externo y lo configuramos como disco principal desde la BIOS, funcionará correctamente hasta que desconectemos el disco externo y encendamos el PC. En este caso, la BIOS elegirá el siguiente disco disponible y arrancará desde ése, o no arrancará si no hay ninguno. Si queremos recuperar el arranque en GRUB, hay que entrar a la configuración de BIOS con el disco externo conectado y volver a configurarlo como disco principal.
+
+Muchos sistemas tienen la opción de elegir el disco principal en el momento de arranque si se pulsa una tecla (suele ser F8) al principio del arranque del PC, en la pantalla de POST.
+
+Si no te convence ninguna de estas opciones de arranque, lo mejor es que consideres otra opción de instalación, como hacer una partición en un disco interno, o añadir un nuevo disco a tu ordenador.
+
 
 
 ## 1. Desactivar inicio rápido
@@ -34,44 +58,10 @@ Y cuando termines
 
 > powercfg.exe /h off
 
+
 ## 2. Arrancar en Linux
-Apaga el ordenador, asegúrate de tener el disco externo conectado, mete el LiveUSB, arranca el ordenador y entra en la BIOS. El botón para entrar en la BIOS depende del ordenador y normalmente lo pone en la pantalla de arranque. Si no es así, prueba teclas hasta que alguna funcione. Por lo general son: `ESC`, `F11`, `F12` o `DEL` (Suprimir). Si no consigues arrancar la BIOS busca en internet tu modelo de ordenador y qué tecla utilizar. En equipos UEFI también se puede acceder desde el sistema operativo.
+Ver [Arrancar desde el Live USB](common.md#arrancar-desde-el-liveusb).
 
-Ya que estamos en la BIOS asegúrate de que "Intel(R) Rapid Start Technology" está **desactivado**.
-
-No es necesario desactivar "Secure Boot" para Ubuntu, pero si estás instalando otra distro, desactívalo en caso de que no te deje arrancar desde el USB.
-
-Cambia el orden de arranque de los discos y pon que el USB esté primero.
-
-Guarda cambios y sal.
-
-Debería arrancar el Linux LiveUSB.
-
-## 2. Sistemas UEFI
-
-Hay dos maneras de instalar y arrancar un sistema operativo actualmente:
-
- * Normal: El sistema inicia con el basic input output system (BIOS), la cual realiza varias tareas iniciales (escaneo de memoria, detección de periféricos, etc...) y da paso a la primera línea de código del sistema operativo, que se encuentra en el sector de arranque del disco principal (el primero en la lista de arranque en la configuración de BIOS).
-
- * UEFI Boot: El arranque se configura durante la instalación del sistema operativo, y se guarda la configuración de la bios, incluyendo en ID del disco en el que se instala el sistema, de forma que ese arranque solamente funcionará para ése sistema operativo y en ese disco.
-
-Muchos sistemas preinstalados (windows sobre todo) tienen arranque UEFI y algunos tienen SecureBoot (que impide arrancar desde cualquier otro disco). Por eso para instalar cualquier otro sistema operativo tendremos que lidiar con éstos conceptos y probablemente deshabilitarlos (al menos SecureBoot).
-
-## 3. Arranque en dual boot con UEFI
-
-La forma más cómoda y que se recomienda para arrancar un PC con varios sistemas operativos es GRUB (Linux).
-
-Éste programita (realmente, es muy pequeño) se instala en el sector de arranque del disco principal (vuelve a leer dessde el pricipio si no entiendes éste párrafo), y muestra un diálogo que permite elegir entre varios sistemas operativos instalados (Linux, windows, ...).
-
-En un sistema windows UEFI, el arranque irá directamente al sistema operativo sin pasar por el sector de arranque, por lo que si instalamos GRUB en el disco principal, nunca se ejecutará, y no tendremos acceso a Linux.
-
-Por otra parte, si instalamos GRUB en el disco externo y lo configuramos como disco principal desde la BIOS, funcionará correctamente hasta que desconectemos el disco externo y encendamos el PC. En este caso, la BIOS elegirá el siguiente disco disponible y arrancará desde ése, o no arrancará si no hay ninguno. Si queremos recuperar el arranque en GRUB, hay que entrar a la configuración de BIOS con el disco externo conectado y volver a configurarlo como disco principal.
-
-Muchos sistemas tienen la opción de elegir el disco principal en el momento de arranque si se pulsa una tecla (suele ser F8) al principio del arranque del PC, en la pantalla de POST.
-
-Si no te convence ninguna de estas opciones de arranque, lo mejor es que consideres otra opción de instalación, como hacer una partición en un disco interno, o añadir un nuevo disco a tu ordenador.
-
-Una vez que has elegido la forma de arrancar, puedes continuar con el siguiente paso.
 
 ## 4. Instalar Linux
 ### Ubuntu
@@ -122,9 +112,22 @@ Dispositivo    Tipo     Punto de Montaje     Formatear   Tamaño
 ### Otras Distribuciones
 Al igual que Ubuntu, pero puede que cambie algún paso.
 
-## 6. Wrap-Up
+
+## 5. Wrap-Up
 Ya hemos terminado `:)`. Al reiniciar verás el GRUB, selecciona primero Windows
 y asegúrate de que funciona. Reinicia y entra en Ubuntu.
+
+> [!NOTE]
+> Si después de reiniciar no aparece GRUB, entra en la BIOS y selecciónalo
+> como opción de boot principal. Suele venir 'camuflado' con el nombre de la
+> distribución, e.g. `ubuntu`.
+
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](common.md#post-install).
+
+
+## Troubleshooting
+- [Solucionar drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)
+
 
 ## Links de interés
 - [Dual boot with Windows - ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows)

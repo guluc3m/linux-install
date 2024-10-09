@@ -64,30 +64,30 @@ defragmenta el disco.
 Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
 "Encripción BitLocker". Si no aparece, genial pasa al paso 3, si no continúa.
 
- 1. Abre la configuración que has buscado antes ("Encripción BitLocker")
- 2. Haz una copia de seguridad de tu clave de recuperación de BitLocker.
- Guárdala como un archivo y súbela a Drive o a un disco duro externo.
- 1. Haz click en `Desactivar BitLocker`.
- 2. Cuando aparezca que lo vuelvas a activar, significa que se ha desactivado
- corréctamente.
+1. Abre la configuración que has buscado antes ("Encripción BitLocker")
+2. Haz una copia de seguridad de tu clave de recuperación de BitLocker.
+   Guárdala como un archivo y súbela a Drive o a un disco duro externo.
+3. Haz click en `Desactivar BitLocker`.
+4. Cuando aparezca que lo vuelvas a activar, significa que se ha desactivado
+   corréctamente.
 
 
 ### 2.3. Desactivar inicio rápido (sólo Windows)
 Sigue los pasos para comprobar que lo tienes desactivado.
 
 #### Windows 10
- 1. Entra en el "Panel de Control"
- 2. Busca "Opciones de Energía"
- 3. Elegir el "Comportamiento de los botones inicio/apagado"
- 4. Desactiva inicio rápido
- 5. "Guardar Cambios"
+1. Entra en el "Panel de Control"
+2. Busca "Opciones de Energía"
+3. Elegir el "Comportamiento de los botones inicio/apagado"
+4. Desactiva inicio rápido
+5. "Guardar Cambios"
 
 #### Windows 11
- 1. Busca "Opciones de Energía" en el "Panel de Control"
- (`Panel de Control` > `Hardware y sonido` > `Opciones de Energía`)
- 2. Elegir la acción de los botones de inicio/apagado
- 3. Desactiva el Inicio Rápido
- 4. "Guardar Cambios"
+1. Busca "Opciones de Energía" en el "Panel de Control"
+(`Panel de Control` > `Hardware y sonido` > `Opciones de Energía`)
+1. Elegir la acción de los botones de inicio/apagado
+2. Desactiva el Inicio Rápido
+3. "Guardar Cambios"
 
 Si no aparecen la opciones de energía, ejecuta en CMD:
 
@@ -103,28 +103,7 @@ powercfg.exe /h off
 
 
 ## 3. Arrancar en Linux
-
-> [!INFO]
-> Dependiendo del ordenador, es posible que puedas entrar directamente al _boot
-> menu_ y seleccionar qué bootear. Por ejemplo, en Mac es manteniendo la tecla
-> `Option` durante el arranque.
-
-1. Apaga el ordenador, mete el pincho en el ordenador y arranca la BIOS. El
-botón para entrar en la BIOS depende del ordenador, así que prueba teclas hasta
-que alguna funcione. Por lo general son: `ESC`, `F11`, `F12` o `DEL` (Suprimir).
-Si no consigues arrancar la BIOS busca en internet tu modelo de ordenador y qué
-tecla utilizar.
-2. Ya que estamos en la BIOS asegúrate de que "Intel(R) Rapid Start Technology"
-está **desactivado**.
-3. Desactiva "Secure Boot"
-> [!INFO]
-> No es necesario desactivar el Secure Boot para distros como Ubuntu, pero si
-> estás instalando otra distro, o estás teniendo problemas al arrancar,
-> desactívalo
-4. Cambia el orden de arranque de los discos y pon que el USB esté primero.
-5. Guarda cambios y sal.
-
-Debería arrancar el LiveUSB.
+Ver [Arrancar desde el Live USB](common.md#arrancar-desde-el-liveusb).
 
 
 
@@ -188,20 +167,11 @@ y asegúrate de que funciona. Reinicia y entra en Ubuntu.
 > como opción de boot principal. Suele venir 'camuflado' con el nombre de la
 > distribución, e.g. `ubuntu`.
 
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](common.md#post-install).
 
 
-## Extra: Instalar rEFInd
-[rEFInd](https://www.rodsbooks.com/refind/) es un boot manager, al igual que
-GRUB, pero más moderno y customizable. Es recomendable instalarlo en ordenadores
-más modernos, y **no es recomendable instalarlo en ordenadores antiguos**.
-
-### Linux
-1. Instala el paquete `refind` (suele estar en el gestor de paquetes)
-2. Reinicia. Debería salirte el boot manager de rEFInd
-
-> [!NOTE]
-> Si después de reiniciar no aparece rEFInd, entra en la BIOS y selecciónalo
-> como opción de boot principal.
+## Troubleshooting
+- [Solucionar drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)
 
 
 
