@@ -97,6 +97,17 @@ Según [Arch Wiki](https://wiki.archlinux.org/title/NVIDIA):
 sudo pacman -Ss nvidia-open
 ```
 
+#### EndeavourOS
+Según la [documentación de Endeavouros discovery](https://discovery.endeavouros.com/nvidia/new-nvidia-driver-installer-nvidia-inst/2022/03/).
+
+Este instala la version closed source de NVIDIA.
+```bash
+nvidia-inst
+```
+Para gráficas mas viejas hay que usar el open-source nouveau.
+```bash
+nvidia-inst --nouveau
+```
 
 #### Más información
 - [NVIDIA - Arch Wiki](https://wiki.archlinux.org/title/NVIDIA)
