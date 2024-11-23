@@ -119,6 +119,7 @@ nvidia-inst --nouveau
 - [EnvyControl](https://github.com/bayasdev/envycontrol): Aplicación para configurar el uso de GPUs dedicadas, integradas, e híbridas, extremadamente útil para cuando tienes tanto gráfica integrada como gráfica dedicada
 - [OpenRGB](https://github.com/CalcProgrammer1/OpenRGB): Controlador para luces RGB
 - [Vesktop](https://github.com/Vencord/Vesktop): Discord para Linux, pero bien hecho
+- [Redshift](https://github.com/jonls/redshift): Screen filter al estilo del protector de vista de Windows
 
 
 ### Instalar rEFInd
