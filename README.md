@@ -4,16 +4,16 @@
 ## Prefacio
 
 ### Apple Macs
-La instalación de Linux depende del modelo y, más importante, del microprocesador.En cualquier caso, debido a que _es un MAC_, sólo hay dos formas de ejecutar Linux: en dual boot y en VM.
+La instalación de Linux depende del modelo y, más importante, del microprocesador. En cualquier caso, debido a que _es un Mac_, sólo hay dos formas de ejecutar Linux: en dual boot y en VM.
 
 > [!WARNING]
-> MacOS tiene la tendencia de **eliminar el sistema operativo de la faz de la tierra** a la hora de hacer una partición. Es algo aleatorio y que te hará replantearte volver a comprar un Mac, y la única forma de "protegerte" es **haciendo una copia de seguridad** si vas a hacer un dual booot.
+> MacOS tiene la tendencia de formatear el disco a la hora de hacer una partición, **eliminando el sistema operativo y todos tus archivos de la faz de la tierra**. Es algo aleatorio y que te hará replantearte el volver a comprar un Mac, y la única forma de "protegerte" es **haciendo una copia de seguridad** si vas a hacer un dual boot.
 > 
 > Te recomendamos usar [Time Machine](https://support.apple.com/es-es/104984), una herramienta del propio Apple.
 
 
 #### Apple Silicon
-Ordenadores con un procesador de la familia M1/M2 (Macbook Air/Pro de 2020 o posterior) con lleva un procesador [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family).
+Ordenadores con un procesador de la familia M (M1/M2/...) (2020 o posterior, dependiendo del modelo del dispositivo), los cuales están basados en la arquitectura [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family).
 
 Las opciones son:
 1. Dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/). Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md)
@@ -21,7 +21,7 @@ Las opciones son:
 
 
 #### Intel
-Ordenadores con procesador Intel (pre-2020).
+Ordenadores con procesador Intel (pre-2020), los cuales están basados en la arquitectura [AMD64](https://es.wikipedia.org/wiki/X86-64).
 
 Las opciones son:
 1. Dual boot (tener MacOS y Linux en el mismo ordenador).
@@ -53,7 +53,9 @@ Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.
 
 
 > [!TIP]
-> Es recomendable, especialmente antes de instalar Linux en físico (full install / dual boot), comprobar la compatibilidad de tu ordenador con la distro específica. Si es un portátil relativamente nuevo, es posible que algunos drivers todavía no estén en los repositorios. Buscando en Google se suelen encontrar respuestas.
+> Es recomendable, especialmente antes de instalar Linux en físico (_full install_ / _dual boot_), comprobar la compatibilidad de tu ordenador con la distro específica.
+> Si es un portátil relativamente nuevo, es posible que algunos drivers todavía no estén en los repositorios.  
+> Buscando en [Google](https://google.com) o preguntándole [al patito](https://duckduckgo.com/) se suelen encontrar respuestas.
 
 
 
@@ -86,7 +88,7 @@ Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o
     - Tu tía la del pueblo que sólo usa Internet Explorer
 - **Cosas que preparar:**
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
-    - Un [live USB con Linux](#2-cómo-crear-un-live-usb) .
+    - Un [live USB con Linux](common.md#cómo-crear-un-liveusb) .
 
 Guía de como instalarlo en [`full-install.md`](full-install.md)
 
@@ -105,7 +107,7 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
     - Personas a la que gente malvada le obligue a usar Windows
 - **Cosas que preparar:** 
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
-    - Un [live USB con Linux](#2-cómo-crear-un-live-usb) .
+    - Un [live USB con Linux](common.md#cómo-crear-un-liveusb) .
 
 Guía de cómo instalarlo en [`dualboot-install.md`](dualboot-install.md).
 
@@ -162,7 +164,7 @@ Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quier
 - **Cosas que preparar:** 
     - Disco duro externo (preferible USB 3.0)  
       **IMPORTANTE:** Todos los datos del disco duro externo se borrarán. Estás avisado.
-    - Un [live USB con Linux](#2-cómo-crear-un-live-usb).
+    - Un [live USB con Linux](common.md#cómo-crear-un-liveusb).
 
 **NOTA**: También se puede tener Windows en un disco externo...
 
@@ -170,7 +172,7 @@ Guía de cómo instalarlo en [`dualboot-external-install.md`](dualboot-external-
 
 
 ### Método 6: "Sólo la puntita"
-Si quieres seguir el taller pero no quieres liarte a instalar nada (_cobarde_), un [live USB](#2-cómo-crear-un-live-usb)  te permite correr Linux desde él mismo, sin necesidad de instalar ninguna cosa.
+Si quieres seguir el taller pero no quieres liarte a instalar nada (_cobarde_), un [live USB](common.md#cómo-crear-un-liveusb)  te permite correr Linux desde él mismo, sin necesidad de instalar ninguna cosa.
 
 
 
