@@ -119,7 +119,9 @@ nvidia-inst --nouveau
 - [EnvyControl](https://github.com/bayasdev/envycontrol): Aplicación para configurar el uso de GPUs dedicadas, integradas, e híbridas, extremadamente útil para cuando tienes tanto gráfica integrada como gráfica dedicada
 - [OpenRGB](https://github.com/CalcProgrammer1/OpenRGB): Controlador para luces RGB
 - [Vesktop](https://github.com/Vencord/Vesktop): Discord para Linux, pero bien hecho
-- [Redshift](https://github.com/jonls/redshift): Screen filter al estilo del protector de vista de Windows
+- [Redshift](https://github.com/jonls/redshift): _Screen filter_ al estilo del protector de vista de Windows
+- [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ (y otros como el Logitech MX Master 3)
+- [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
 
 
 ### Instalar rEFInd
