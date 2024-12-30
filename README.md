@@ -27,12 +27,17 @@ Las opciones son:
 1. Dual boot (tener MacOS y Linux en el mismo ordenador).
     - Si es un ordenador sin [chip de seguridad T2](https://support.apple.com/es-es/103265) (pre-2018), no suele haber demasiados problemas al instalar, y los pasos generales para la instalación son fundamentalmente iguales que para cualquier otra máquina. Te recomendamos la [siguiente guía](https://www.makeuseof.com/tag/install-linux-macbook-pro/).
     - Para ordenadores con chip T2 (2018-2019), lo más recomendable es usar [t2linux](https://t2linux.org/). Son parches específicos para múltiples distribuciones de Linux, ya que cosas como el Wi-Fi o el teclado y el trackpad no suelen funcionar con una ISO normal debido a los drivers.
+
+>  [!TIP]
+> Si has instalado una distribución sin [t2linux](https://t2linux.org/), puedes encontrar _firmware_ ya compilado en Internet.
+> Por ejemplo:
+> - [Macbook Air 8](https://github.com/ztybigcat/brcm43xx)
+
 2. Correr una VM como en cualquier otro ordenador. Guía en [`vm-install.md`](vm-install.md)
 
 
 > [!NOTE]
 > Para más información sobre _troubleshooting_ y resolución de problemas en portátiles Mac, ve a [Laptop/Apple - ArchWiki](https://wiki.archlinux.org/title/Laptop/Apple).
-
 
 > [!TIP]
 > Si tienes problemas para bootear rEFInd en Mac, quizás te pueda ayudar lo siguiente: [rEFInd bootloader doesn't launch on start](https://apple.stackexchange.com/questions/446575/refind-bootloader-doesnt-launch-on-start).
