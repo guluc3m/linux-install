@@ -11,7 +11,7 @@ Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
 7. Haz click en "Flash"
 
 > [!TIP]
-> Si quieres poder bootear distintas ISOs desde el mismo USB, te recomendamos [Ventoy](https://www.ventoy.net/).
+> Si quieres poder bootear distintas ISOs desde el mismo USB, te recomendamos [Ventoy](https://www.ventoy.net/). _Hasta puedes usar nuestro [tema para Ventoy](https://github.com/guluc3m/ventoy-theme)_.
 >
 > Échale un vistazo también a [netbook.xyz](https://netboot.xyz/) para bootear ISOs a través de Internet.
 
@@ -26,7 +26,7 @@ De cualquier forma, es recomendable entrar en la BIOS para hacer algunas otras c
 
 ### Desde la BIOS
 La alternativa es cambiar la configuración de la BIOS para que arranque el LiveUSB por defecto. Para ello, hay que entrar en la BIOS. Se suele poder acceder a través de alguna tecla nada más encender el ordenador.  
-El botón para entrar en la BIOS depende del ordenador. Por lo general son `ESC`, `F11`, `F12` o `DEL`/`Supr`. Si no consigues arrancar la BIOS busca en internet tu modelo de ordenador y qué tecla utilizar.  
+El botón para entrar en la BIOS depende del ordenador. Por lo general son `ESC`, `F11`, `F12`, `F2`, o `DEL`/`Supr`. Si no consigues arrancar la BIOS busca en internet tu modelo de ordenador y qué tecla utilizar.  
 Desde Windows, puedes hacer click click en 'Reiniciar'
 manteniendo pulsado SHIFT para reiniciar en modo seguro. De ahí, `Menú de recuperacion` → `Solucionar problemas` → `Opciones Avanzadas` → `Firmware UEFI o relacionados`.
 
@@ -94,7 +94,7 @@ Si tienes el secure boot, échale un vistazo al repositorio [roworu/nvidia-fedor
 #### Arch
 Según [Arch Wiki](https://wiki.archlinux.org/title/NVIDIA):
 ```bash
-sudo pacman -Ss nvidia-open
+sudo pacman -Syu nvidia-open
 ```
 
 #### EndeavourOS
@@ -142,7 +142,7 @@ más modernos, y **no es recomendable instalarlo en ordenadores antiguos**.
 ## Solucionar drivers Wi-Fi
 Es relativamente común que los _drivers_ de la tarjeta de red Wi-Fi de los portátiles no vengan instalados por defecto en Linux.
 
-Una forma de obtener conexión a Internet es usando un cable Ethernet, ya sea mediante el puerto Ethernet del ordenador (si lo tiene), o mediante el uso de un adaptador. Si no tienes nada de eso a mano, siempre puedes conectar el ordenador a tu móvil por USB, poner los datos, y compartirlos mediante _Módem USB_ (en Android suele estar en Ajustes > Redes e Internet > Punto de acceso y anclaje de red > Compartir conexión por USB).
+Una forma de obtener conexión a Internet es usando un cable Ethernet, ya sea mediante el puerto Ethernet del ordenador (si lo tiene), o mediante el uso de un adaptador. Si no tienes nada de eso a mano, siempre puedes conectar el ordenador a tu móvil por USB, poner los datos, y compartirlos mediante _Módem USB_ (en Android suele estar en `Ajustes` > `Redes e Internet` > `Punto de acceso y anclaje de red` > `Compartir conexión por USB`).
 
 En ocasiones los _drivers_ se actualizan solos al actualizar el sistema (e.g. `sudo apt update && sudo apt upgrade` para Ubuntu/Mint/Debian, `sudo dnf upgrade` para Fedora, `sudo pacman -Syu` para Arch/Manjaro).
 
