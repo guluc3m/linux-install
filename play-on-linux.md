@@ -55,7 +55,8 @@ Toda la información se puede encontrar en la [documentación de ArchWiki](https
 
 
 #### Distribuciones basadas en Red Hat (Fedora, RedStar, Nobara ...)
-Basta con habilitar el repositorio `rpmfusion Nonfree`:
+
+De acuerdo con la [documentación de Fedora](https://docs.fedoraproject.org/gaming/proton/), basta con habilitar el repositorio `rpmfusion Nonfree`:
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf config-manager --enable fedora-cisco-openh264 -y
