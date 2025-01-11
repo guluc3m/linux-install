@@ -16,6 +16,8 @@ Para [Epic Games](https://www.epicgames.com/) existe el [Heroic Games Launcher](
 ### Instalación de Steam
 Dependiendo de la plataforma en la que te encuentres, habrá un método de instalación u otro.
 
+Toda la información se puede encontrar en la [guia oficial de Fedora](https://docs.fedoraproject.org/en-US/gaming/proton/).
+
 
 #### Distribuciones basadas en Debian (Ubuntu, Mint, ...)
 Puedes descargártelo directamente de APT:
@@ -64,7 +66,13 @@ E instalar desde DNF:
 sudo dnf install steam
 ```
 
-Toda la información se puede encontrar en la [guia oficial de Fedora](https://docs.fedoraproject.org/en-US/gaming/proton/).
+
+#### Configuración básica
+Para habilitar el uso de Proton en juegos no verificados por Steam, ve a _Steam_ → _Settings_ → _Compatibility_ y habilita _Enable Steam Play for all other titles_. Lo recomendable es seleccionar la última versión estable (a la hora de escribir, esa es `Proton 9.0-4`). Las versiones `Proton-Hotfix` y `Proton-Experimental` son versiones _bleeding edge_ que puede que funcionen o que no.
+
+De cualquier forma, puedes seleccionar la versión de Proton para cada juego, en los ajustes (ruedecita) → `Properties` → `Compatibility` → `Force the use of a specific Steam Play compatibility tool`.
+
+
 
 
 <!-- TODO: #### Distribuciones basadas en Jurix (OpenSUSE, ...) -->
