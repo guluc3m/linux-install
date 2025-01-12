@@ -59,7 +59,9 @@ Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.
 
 > [!TIP]
 > Es recomendable, especialmente antes de instalar Linux en físico (_full install_ / _dual boot_), comprobar la compatibilidad de tu ordenador con la distro específica.
-> Si es un portátil relativamente nuevo, es posible que algunos drivers todavía no estén en los repositorios.  
+> - Si es un portátil relativamente nuevo, es posible que algunos drivers todavía no estén en los repositorios (tocará añadirlos manualmente, ver[Solucionar Drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)).
+> - Si es un portátil relativamente antiguo, es posible que las _distros_ más _bleeding edge_ te den problemas.
+> 
 > Buscando en [Google](https://google.com) o preguntándole [al patito](https://duckduckgo.com/) se suelen encontrar respuestas.
 
 
@@ -81,7 +83,7 @@ Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mis
 
 
 ### Método 1: Full Linux
-Este método consiste en decir "fuck Microsoft", borrar Windows, y correr sólo Linux.  
+Este método consiste en decir [_fuck Microsoft_](https://www.youtube.com/watch?v=2zpCOYkdvTQ), borrar Windows, y correr sólo Linux.  
 - **Restricciones:** Ninguna.  
 Bueno sí, un ordenador con menos de 20 años.
 - **Ventajas:** Todas las ventajas de Linux, sin los posibles problemas derivados de tener Dual Boot.
