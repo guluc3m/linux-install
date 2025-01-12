@@ -124,6 +124,28 @@ nvidia-inst --nouveau
 - [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
 
 
+#### Aplicaciones de terminal
+Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Linux:
+- [eza](https://github.com/eza-community/eza): Versión mejorada de `ls`
+- [bat](https://github.com/sharkdp/bat): Versión mejorada de `cat`
+- [btop](https://github.com/aristocratos/btop): Versión mejorada de `top`
+- [fd](https://github.com/sharkdp/fd): Versión mejorada de `find`
+- [rigpgrep](https://github.com/BurntSushi/ripgrep): Versión mejorada de `grep`
+- [zoxide](https://github.com/ajeetdsouza/zoxide): Versión mejorada de `cd`
+- [dust](https://github.com/bootandy/dust): Versión mejorada de `du`
+- [trash-cli](https://github.com/andreafrancia/trash-cli): Envía archivos a la papelera desde la terminal (alternativa segura a `rm`)
+- [glow](https://github.com/charmbracelet/glow): Visor de Markdown en terminal
+- [The Fuck](https://github.com/nvbn/thefuck): Corrector de comandos
+- [Lazygit](https://github.com/jesseduffield/lazygit): TUI para Git (probablemente la mejor interfaz gráfica para Git)
+- [Lazydocker](https://github.com/jesseduffield/lazydocker): TUI para Docker
+- [yazi](https://github.com/sxyazi/yazi): Explorador de archivos en terminal
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch): Muestra información del sistema
+- [tealdeer](https://github.com/tealdeer-rs/tealdeer): Mini-manuales (TL;DR) para comandos
+- [coltrane](https://github.com/pedrozath/coltrane): Herramienta para teoría musical
+- [pokeget](https://github.com/talwat/pokeget-rs): Visor de _sprites_ de Pokémon en terminal
+
+
+
 ### Instalar rEFInd
 [rEFInd](https://www.rodsbooks.com/refind/) es un boot manager, al igual que
 GRUB, pero más moderno y customizable. Es recomendable instalarlo en ordenadores
