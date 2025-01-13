@@ -133,6 +133,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [rigpgrep](https://github.com/BurntSushi/ripgrep): Versión mejorada de `grep`
 - [zoxide](https://github.com/ajeetdsouza/zoxide): Versión mejorada de `cd`
 - [dust](https://github.com/bootandy/dust): Versión mejorada de `du`
+- [micro](https://github.com/zyedidia/micro): Editor de texto simple en terminal (alternativa a `nano`)
 - [trash-cli](https://github.com/andreafrancia/trash-cli): Envía archivos a la papelera desde la terminal (alternativa segura a `rm`)
 - [glow](https://github.com/charmbracelet/glow): Visor de Markdown en terminal
 - [The Fuck](https://github.com/nvbn/thefuck): Corrector de comandos
