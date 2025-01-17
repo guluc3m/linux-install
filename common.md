@@ -122,6 +122,7 @@ nvidia-inst --nouveau
 - [Redshift](https://github.com/jonls/redshift): _Screen filter_ al estilo del protector de vista de Windows
 - [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ (y otros como el Logitech MX Master 3)
 - [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
+- [downgrade](https://github.com/archlinux-downgrade/downgrade) [Exclusivo de Arch]: _Rollback_ de versiones de paquetes
 
 
 #### Aplicaciones de terminal
@@ -133,6 +134,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [rigpgrep](https://github.com/BurntSushi/ripgrep): Versión mejorada de `grep`
 - [zoxide](https://github.com/ajeetdsouza/zoxide): Versión mejorada de `cd`
 - [dust](https://github.com/bootandy/dust): Versión mejorada de `du`
+- [Difftastic](https://github.com/Wilfred/difftastic): `diff`, pero para humanos
 - [micro](https://github.com/zyedidia/micro): Editor de texto simple en terminal (alternativa a `nano`)
 - [trash-cli](https://github.com/andreafrancia/trash-cli): Envía archivos a la papelera desde la terminal (alternativa segura a `rm`)
 - [glow](https://github.com/charmbracelet/glow): Visor de Markdown en terminal
