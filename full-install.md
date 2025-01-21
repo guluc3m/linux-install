@@ -39,7 +39,7 @@ Al igual que Ubuntu, pero puede que cambie algún paso.
 ## 3. Wrap-Up
 Ya hemos terminado `:)`. Al reiniciar verás el GRUB, de donde puedes entrar directamente a la BIOS o iniciar otro sistema operativo en caso de que tengamos mas de uno instalado.
 
-También te recomendamos echarle un vistazo a nuestra sección [Post-Install](common.md#post-install).
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
 
 
 

@@ -122,7 +122,7 @@ y asegúrate de que funciona. Reinicia y entra en Ubuntu.
 > como opción de boot principal. Suele venir 'camuflado' con el nombre de la
 > distribución, e.g. `ubuntu`.
 
-También te recomendamos echarle un vistazo a nuestra sección [Post-Install](common.md#post-install).
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
 
 
 ## Troubleshooting
