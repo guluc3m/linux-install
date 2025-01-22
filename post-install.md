@@ -114,9 +114,10 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 ### Aplicaciones para hardware específico
 Muchos portátiles vienen con herramientas específicas para controlar aspectos del hardware, como la la batería, ventiladores, etc., pero normalmente están disponibles exclusivamente para Windows. Aquí os dejamos algunas alternativas:
 - [Lenovo Legion Linux](https://github.com/johnfanv2/LenovoLegionLinux): Herramientas para configurar portátiles de la gama _Legion_ de Lenovo (alternativa a [Lenovo Vantage](https://support.lenovo.com/eg/es/solutions/ht505081))
+- [Solaar](https://github.com/pwr-Solaar/Solaar): Herramienta para configurar dispositivos de Logitech (ratones, teclados, etc.)
+
 
 ### Ejecutando programas de Windows (`.exe`s)
-
 Aunque la compatibilidad de Windows varía de programa en programa, existen herramientas que te permiten ejecutar aplicaciones nativas de Windows en Linux, sin necesidad de crear una máquina virtual (lo cual [también se puede hacer](#usando-una-maquina-virtual)).
 - [Wine](https://www.winehq.org/) (y [winetricks](https://github.com/Winetricks/winetricks)): La herramienta original y más usada, crea una capa de compatibilidad entre Windows y Linux
 - [Winapps](https://github.com/Fmstrat/winapps): Permite una integración transparente con una máquina virtual de Windows, permitiendo ejecutar aplicaciones de Windows como si fueran ventanas en Linux
