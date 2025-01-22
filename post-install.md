@@ -82,11 +82,10 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [EnvyControl](https://github.com/bayasdev/envycontrol): Aplicación para configurar el uso de GPUs dedicadas, integradas, e híbridas, extremadamente útil para cuando tienes tanto gráfica integrada como gráfica dedicada
 - [OpenRGB](https://github.com/CalcProgrammer1/OpenRGB): Controlador para luces RGB
 - [Vesktop](https://github.com/Vencord/Vesktop): Discord para Linux, pero bien hecho
-- [Redshift](https://github.com/jonls/redshift): _Screen filter_ al estilo del protector de vista de Windows
-- [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ (y otros como el Logitech MX Master 3)
-- [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
+- [Redshift](https://github.com/jonls/redshift): _Screen filter_ (protector de vista)
 - [fwupd](https://github.com/fwupd/fwupd) (A.K.A. Linux Vendor Firmware Service): Utilidad para actualizar el _firmware_ de una [gran variedad de dispositivos](https://fwupd.org/lvfs/devices/), incluyendo portátiles
 - [downgrade](https://github.com/archlinux-downgrade/downgrade) [Exclusivo de Arch]: _Rollback_ de versiones de paquetes
+
 
 ### Aplicaciones de terminal
 Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Linux:
@@ -111,13 +110,16 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [coltrane](https://github.com/pedrozath/coltrane): Herramienta para teoría musical
 - [pokeget](https://github.com/talwat/pokeget-rs): Visor de _sprites_ de Pokémon en terminal
 
+
 ### Aplicaciones para hardware específico
-Muchos portátiles vienen con herramientas específicas para controlar aspectos del hardware, como la la batería, ventiladores, etc., pero normalmente están disponibles exclusivamente para Windows. Aquí os dejamos algunas alternativas:
+Muchos dispositivos vienen con herramientas específicas para controlar aspectos del hardware, (batería o ventiladores en portátiles, botones en ratones, etc.), pero normalmente están disponibles exclusivamente para Windows. Aquí os dejamos algunas alternativas:
 - [Lenovo Legion Linux](https://github.com/johnfanv2/LenovoLegionLinux): Herramientas para configurar portátiles de la gama _Legion_ de Lenovo (alternativa a [Lenovo Vantage](https://support.lenovo.com/eg/es/solutions/ht505081))
+- [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
+- [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ de diferentes marcas
 - [Solaar](https://github.com/pwr-Solaar/Solaar): Herramienta para configurar dispositivos de Logitech (ratones, teclados, etc.)
 
 
-### Ejecutando programas de Windows (`.exe`s)
+### Ejecutando programas de Windows (`.exe`)
 Aunque la compatibilidad de Windows varía de programa en programa, existen herramientas que te permiten ejecutar aplicaciones nativas de Windows en Linux, sin necesidad de crear una máquina virtual (lo cual [también se puede hacer](#usando-una-maquina-virtual)).
 - [Wine](https://www.winehq.org/) (y [winetricks](https://github.com/Winetricks/winetricks)): La herramienta original y más usada, crea una capa de compatibilidad entre Windows y Linux
 - [Winapps](https://github.com/Fmstrat/winapps): Permite una integración transparente con una máquina virtual de Windows, permitiendo ejecutar aplicaciones de Windows como si fueran ventanas en Linux
