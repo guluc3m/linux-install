@@ -15,10 +15,7 @@ Para [Epic Games](https://www.epicgames.com/) existe el [Heroic Games Launcher](
 
 ### Instalación de Steam
 Dependiendo de la plataforma en la que te encuentres, habrá un método de instalación u otro.
-
 Toda la información se puede encontrar en la [guia oficial de Fedora](https://docs.fedoraproject.org/en-US/gaming/proton/).
-
-
 #### Distribuciones basadas en Debian (Ubuntu, Mint, ...)
 Puedes descargártelo directamente de APT:
 ```
@@ -55,8 +52,8 @@ Toda la información se puede encontrar en la [documentación de ArchWiki](https
 
 
 #### Distribuciones basadas en Red Hat (Fedora, RedStar, Nobara ...)
-
 De acuerdo con la [documentación de Fedora](https://docs.fedoraproject.org/gaming/proton/), basta con habilitar el repositorio `rpmfusion Nonfree`:
+
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf config-manager --enable fedora-cisco-openh264 -y
@@ -67,14 +64,10 @@ E instalar desde DNF:
 sudo dnf install steam
 ```
 
-
 #### Configuración básica
 Para habilitar el uso de Proton en juegos no verificados por Steam, ve a _Steam_ → _Settings_ → _Compatibility_ y habilita _Enable Steam Play for all other titles_. Lo recomendable es seleccionar la última versión estable (a la hora de escribir, esa es `Proton 9.0-4`). Las versiones `Proton-Hotfix` y `Proton-Experimental` son versiones _bleeding edge_ que puede que funcionen o que no.
 
 De cualquier forma, puedes seleccionar la versión de Proton para cada juego, en los ajustes (ruedecita) → `Properties` → `Compatibility` → `Force the use of a specific Steam Play compatibility tool`.
-
-
-
 
 <!-- TODO: #### Distribuciones basadas en Jurix (OpenSUSE, ...) -->
 
@@ -82,7 +75,25 @@ De cualquier forma, puedes seleccionar la versión de Proton para cada juego, en
 <!-- TODO: ### Instalación de Heroic Games Launcher -->
 
 
-<!-- TODO: ### Instalación de Lutris -->
+### Instalación de Lutris 
+
+¿Pero si ya tengo Steam, para que quiero otra aplicación para jugar? Digamos que puedes jugar a juegos de Windows en Linux a través de Steam gracias a un componente llamado Wine, o como es la implementation específica de este para jugar, Proton. Al ser un componente a parte que no requiere de Steam ya que es open source, realmente puedes jugar a "cualquier cosa" que sea tenga un ejecutable (Los navegantes de los siete mares están incluidos).
+
+En esta caso, Lutris existe como launcher de juegos universal, el cual admite juegos instalados de una gran variedad de tiendas y de emuladores de consolas (Ver sección de emulación), disponibles como "Ejecutores" dentro de la configuración.
+
+Gracias a esto, y a una comunidad asombrosa, en la página de Lutris hay instrucciones para [instalar cualquier juego](https://lutris.net/games) que se te pueda venir a la cabeza. Estos son configuraciones programadas para instalar y parchear errores automáticamente.
+
+Al igual que con Steam, cada distribución tiene su propio paquete y tienen métodos de instalación diferentes.
+
+> [!NOTE]
+> A excepción de algunos programas, los métodos de instalación son casi siempre los mismos, buscas lo que quieras descargar en internet, seguido de tu distribución, y normalmente será un comando que tendrás que ejecutar o un paquete que tienes que descomprimir / instalar.
+#### Ubuntu
+[Descargar](https://github.com/lutris/lutris/releases) el paquete `.deb` de la última versión de Lutris.
+#### Arch
+`sudo pacman -S lutris`
+
+#### Fedora
+`sudo dnf install lutris`
 
 
 ## Ajustes
@@ -94,11 +105,8 @@ Incluso si instalas juegos que según ProtonDB u otros recursos deberían funcio
 Para juegos de Proton o Lutris, puedes probar otra versión de Proton o Wine. Algunos juegos pueden jugar mal con el Wine de tu sistema, así que puedes instalar otras versiones a través de [ProtonUp-Qt](#protonup-qt) o [ProtonPlus](#protonplus). Estas aplicaciones te permiten también descargar Proton-GE, que es una versión de Proton alternativa con patches no oficiales los que a veces pueden ayudarte a correr un juego muy reciente o uno que acaba de ser actualizado.
 
 
-### ProtonUp-Qt
-Guía de instalación en el [repositorio del proyecto](https://github.com/DavidoTek/ProtonUp-Qt)
-
-
 ### ProtonPlus
+
 En Arch Proton-GE se puede instalar desde el paquete de AUR `proton-ge-custom` o `proton-ge-custom-bin` (yay -Syu `proton-ge-custom`).
 
 Guía de instalación en el [repositorio del proyecto](https://github.com/Vysp3r/ProtonPlus).
@@ -109,6 +117,18 @@ WINE_FULLSCREEN_FSR_STRENGTH=valor
 ```
 Dónde el valor está en el rango entre `0` y `5`, `0` siendo nitidez máxima.
 
+#### ProtonUp-Qt
+Para el resto de distribuciones, o si quieres manejar varias instalaciones de Proton-GE en Lutris y Steam, esta aplicación os permite hacer justo eso, con una interfaz gráfica. ¿Para que me sirve a mi esto? te preguntaras. Hay casos bastante puntuales donde un juego solo funciona en una versión especifica de proton o algún fork que no esté disponible a través de otros medios. Es por esto que a veces tener varias versiones instaladas es necesario.
+
+Guía de instalación en el [repositorio del proyecto](https://github.com/DavidoTek/ProtonUp-Qt)
+##### Arch (AUR)
+`yay -S protonup-qt`
+
+##### AppImage
+Una aplicación empaquetada en un AppImage es el equivalente de un `.exe` en windows, doble click y se abre. A veces, para poder abrirlo, hay que decirle al sistema operativo que es un archivo ejecutable por el sistema mediante `chmod +x .\aplicación.AppImage`.
+
+Éste se puede [descargar](https://github.com/DavidoTek/ProtonUp-Qt/releases) desde el repositorio del proyecto.
+
 
 ### Gamescope
 [Guía de ArchWiki para su instalación y uso](https://wiki.archlinux.org/title/Gamescope)
@@ -118,7 +138,7 @@ Dónde el valor está en el rango entre `0` y `5`, `0` siendo nitidez máxima.
 ### Gamemode
 [Repositorio del proyecto](https://github.com/FeralInteractive/gamemode)
 Deshabilita efectos del Desktop, cambia el estado del CPU, y etc para mejorar rendimiento.
-
+<!--TODO: Documentarlo como usarlo-->
 
 ### Instalación de un kernel alternativo
 Tranquilo, no vas a tener ni que tocar la BIOS, ni usar la terminal para modificar nada (bueno, hay que ejecutar un comando, qué te esperabas). El kernel es lo que se encuentra entre el sistema operativo y tu hardware, y éste es posible modificarlo para optimizarlo en ciertas tareas como puede ser si no en esta guía, para jugar.
@@ -130,12 +150,33 @@ Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el qu
 
 
 
-## Grabación
+<!--## Grabación-->
 
-### OBS
+<!--### OBS-->
 
-### obs-vkcapture
+<!--### obs-vkcapture-->
 
-### gstreamer-vaapi
+<!--### gstreamer-vaapi-->
 
-### H264/H265 vs AV1
+<!--### H264/H265 vs AV1-->
+# Emulación
+
+No se lo contéis a Nintendo, pero si tu objetivo principal es emular juegos mas viejos o de otras consolas, Linux es la mejor opción ya que muchos emuladores se ejecutan nativamente en Linux y están específicamente optimizados para ello.
+
+En el caso en el que quieras emular, pero no tengas las ROMs de tus juegos comprados legalmente y de los cuales también tienes la consola, en [Vimm's Lair](https://vimm.net/) podrás encontrarlas para consolas de hace 4 generaciones, subidas y moderadas por la comunidad. Suponemos que no hace falta comentar que todos los juegos de Mario están quitados.
+
+En esta guía vamos a cubrir dos métodos para emular en Linux, de los cuales ambos tienen cierto público objetivo.
+## Standalone
+Si tu objetivo es emular un par de juegos, tocarlos a lo mejor una vez cada dos meses por recordar la nostalgia, o si quieres tenerlo ahí en caso de que hayas perdido la ultima ranked del LoL y te den ganas de desinstalarlo, lo mejor será descargar directamente el emulador para la consola que quieras jugar. Este es objetivamente el más "straightforward" y fácil de usar ya que no hay que toquetear demasiado (Plug and Play).
+
+A continuación están los emuladores de Nintendo que siguen siendo mantenidos y que miembros de GUL dan fe que funcionan:
+
+- [Switch](https://suyu.dev/)
+- [3DS](https://citra-emulator.com/)
+- [Wii / GameCube](https://es.dolphin-emu.org/?cr=es)
+- [nDS](https://melonds.kuribo64.net/)
+
+## RetroArch
+[RetroArch](https://www.retroarch.com/) no es un emulador como tal, sino una aplicación frontend para "núcleos" creados por desarrolladores vinculados al proyecto, que actúan como emuladores y aunque la curva de aprendizaje sea un poco alta, se convierte en una herramienta bastante útil.
+
+Este además de tener compatibilidad con cualquier mando que te puedas imaginar, tiene la opción de usar shaders personalizados, multiples guardados de partidas, interfaz customizable, núcleos actualizados, y una lista más de opciones que trae consigo.
