@@ -85,6 +85,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [Redshift](https://github.com/jonls/redshift): _Screen filter_ (protector de vista)
 - [fwupd](https://github.com/fwupd/fwupd) (A.K.A. Linux Vendor Firmware Service): Utilidad para actualizar el _firmware_ de una [gran variedad de dispositivos](https://fwupd.org/lvfs/devices/), incluyendo portátiles
 - [downgrade](https://github.com/archlinux-downgrade/downgrade) [Exclusivo de Arch]: _Rollback_ de versiones de paquetes
+- [gestures](https://gitlab.com/nokun/gestures): Aplicación para ejecutar comandos a partir de gestos en el _trackpad_
 
 
 ### Aplicaciones de terminal
