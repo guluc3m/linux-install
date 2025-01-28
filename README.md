@@ -103,16 +103,16 @@ Guía de como instalarlo en [`full-install.md`](full-install.md)
 Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS y Linux.
 - **Restricciones:** Mínimo 64GB de espacio libre en disco.
 - **Ventajas:** Todas las ventajas de Windows (si las hay) y todas las de Linux.
-- **Desventajas:** 
+- **Desventajas:**
     - Puede ser un poco coñazo usar y mantener (configurar y actualizar) ambos sistemas operativos.  
     - Problemas de almacenamiento si tienes un disco pequeño.
     - Archivos en distintas particiones del disco
     - A las actualizaciones de Windows les gusta romper el Grub (bootloader)
     - Se desconfigura la zona horaria cada dos por tres
-- **Recomendado para:** 
+- **Recomendado para:**
     - Estudiantes que necesiten Linux para la carrera, pero que quieran seguir usando su PC para jugar al Fortnite (u otras cosas de Windows)
     - Personas a la que gente malvada le obligue a usar Windows
-- **Cosas que preparar:** 
+- **Cosas que preparar:**
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [live USB con Linux](common.md#cómo-crear-un-liveusb) .
 
@@ -122,16 +122,16 @@ Guía de cómo instalarlo en [`dualboot-install.md`](dualboot-install.md).
 ### Método 3: Windows Subsystem for Linux 2 (WSL2)
 WSL te permite "correr Linux" dentro de Windows, pero sólo mediante una terminal, con un buen nivel de compatibilidad.
 - **Restricciones:** Windows 10/11.
-- **Ventajas:** 
+- **Ventajas:**
     - Fácil y rápido de instalar
     - Ligero
     - Fácil acceso a los archivos
+    - Puedes lanzar aplicaciones GUI, incluso desde el propio Windows
     - Soporte en bastantes aplicaciones: [Vs Code](https://code.visualstudio.com/docs/remote/wsl), IDEs de Jetbrains ([CLion](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html), [PyCharm](https://www.jetbrains.com/help/pycharm/using-wsl-as-a-remote-interpreter.html), etc.), [CUDA](https://docs.nvidia.com/cuda/wsl-user-guide/index.html), y muchas más.
-- **Desventajas:** 
-    - No hay GUI, sólo puedes usar una terminal
+- **Desventajas:**
     - Número de distros limitado
     - Eficiencia algo limitada
-- **Recomendado para:** 
+- **Recomendado para:**
     - Gente que, por cualquier motivo, tenga que usar Windows y no tenga espacio para un segundo SO
     - Gente que no le tenga miedo a la terminal y decida seguir usando Windows (por algún motivo)
 - **Cosas que preparar:** Nada, simplemente trae tu portátil
@@ -142,10 +142,10 @@ Guía de cómo instalarlo en [`wsl-install.md`](wsl-install.md).
 ### Método 4: Virtual Machine (VM)
 Una máquina virtual (VM) te permite correr un SO virtual por encima de tu propio sistema operativo.
 - **Restricciones:** Tener potencia de procesamiento suficiente para correr una VM.
-- **Ventajas:** 
+- **Ventajas:**
     - Entorno aislado del resto del PC
     - Fácil de desinstalar
-- **Desventajas:** 
+- **Desventajas:**
     - Mala eficiencia
     - Funciones, como usar la GPU dedicada, pueden estar detrás de pagos en VM managers
 - **Recomendado para:** Gente que quiera probar la "experiencia Linux" sin comprometerse, y/o que no tengan espacio suficiente.
@@ -158,17 +158,17 @@ Guía de cómo instalarlo en [`vm-install.md`](vm-install.md).
 
 ### Método 5: Disco externo
 Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quieras usar Linux. Viene a ser lo mismo que [dual boot](#método-2-dual-boot).
-- **Restricciones:** 
+- **Restricciones:**
     - Tener un disco duro externo (vacío)
     - Recomendable tener un puerto USB 3.0 para tener velocidades decentes
-- **Ventajas:** 
+- **Ventajas:**
     - Todas las de tener un Dual Boot
     - No necesitas usar/expandir el almacenamiento interno de tu PC
-- **Desventajas:** 
+- **Desventajas:**
     - Las mismas de un Dual Boot
     - Tienes que cargar con el disco externo
 - **Recomendado para:** Portátiles con poco almacenamiento, pero que quieran tener toda la experiencia Linux
-- **Cosas que preparar:** 
+- **Cosas que preparar:**
     - Disco duro externo (preferible USB 3.0)  
       **IMPORTANTE:** Todos los datos del disco duro externo se borrarán. Estás avisado.
     - Un [live USB con Linux](common.md#cómo-crear-un-liveusb).
