@@ -22,6 +22,9 @@ sudo -E gpclient connect --browser default myvpn.uc3m.es
 
 Más información en [la página del SDIC](https://www.uc3m.es/sdic/servicios/vpn).
 
+> [!NOTE]
+> Si quieres usar la VPN dentro de WSL, te recomendamos echarle un vistazo a [wsl-vpnkit](https://github.com/sakai135/wsl-vpnkit).
+
 
 
 ## Drivers de NVIDIA

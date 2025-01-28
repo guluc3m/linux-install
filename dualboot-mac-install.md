@@ -59,5 +59,7 @@ Cuando se reinicie, ya arrancará en Linux.
 ## 5. Links de interés
 - [Asahi Linux](https://asahilinux.org)
 
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
 
-## Troubleshooting
+
+<!--## TODO: Troubleshooting-->

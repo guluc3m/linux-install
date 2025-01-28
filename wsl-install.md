@@ -56,6 +56,8 @@ Una vez instalada la distro, te pedirá que crees un usuario, con nombre de usua
 
 Recuerda que siempre puedes volver a entrar en WSL mediante el comando `wsl`, o desde la aplicación 'Windows Terminal'.
 
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
+
 <!-- TODO: how to disable sudo password -->
 
 ## Más info

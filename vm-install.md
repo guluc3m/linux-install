@@ -65,5 +65,4 @@ Recomiendo usar un disco virtual (Virtual Hard Disk), que se irá expandiendo y 
 ## Notas extra
 Recuerda que siempre puedes escapar de la captura del teclado y ratón por parte de la VM usando la "Tecla de anfitrión", por defecto "CTRL derecha".
 
-
-
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).

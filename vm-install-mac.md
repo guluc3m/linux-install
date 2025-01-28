@@ -32,3 +32,5 @@ En esta ventana, en la pestaña de `System`, podemos elegir la cantidad de memor
 Puedes jugar con el resto de ajustes, pero lo recomendable es dejarlos por defecto.
 
 Ya podemos ejecutar la máquina dandole al botón de `Play` en la parte superior izquierda.
+
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
