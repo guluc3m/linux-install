@@ -1,3 +1,4 @@
+# Guía de _gaming_ en Linux
 A diferencia de lo que se podría suponer en principio, Linux ofrece una experiencia bastante buena en cuanto a los videojuegos. A pesar de todos los mitos, hoy en día, la gran mayoría de los juegos ofrecidos por plataformas como [Steam](https://store.steampowered.com/), [Epic Games](https://www.epicgames.com/), [GOG](https://www.gog.com), [EA](https://www.ea.com/), y los demás funcionan, y además, según benchmarks y evidencias empíricas de varios miembros de la GUL, en muchos casos corren incluso mejor que en Windows.
 
 Sin embargo, antes de hacer ningún cambio a tu PC gaming, es imprescindible que compruebes que todo lo que vayas a jugar y que no puedas vivir sin él esté soportado, especialmente juegos multijugador competitivos (los del _anticheat_ de kernel, os estoy mirando a vosotros), ya que muchos están completamente rotos en Linux. Para ello te dejamos los siguientes recursos:

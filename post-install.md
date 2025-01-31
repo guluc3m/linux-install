@@ -23,7 +23,11 @@ sudo -E gpclient connect --browser default myvpn.uc3m.es
 Más información en [la página del SDIC](https://www.uc3m.es/sdic/servicios/vpn).
 
 > [!NOTE]
-> Si quieres usar la VPN dentro de WSL, te recomendamos echarle un vistazo a [wsl-vpnkit](https://github.com/sakai135/wsl-vpnkit).
+> Si quieres que la VPN funcione dentro de WSL2, lo recomendable es poner la VPN en Windows y añadir la siguiente configuración al archivo `%USERPROFILE%\.wslconfig` (`C:\Users\<user>\.wslconfig`):
+> ```
+> [wsl2]
+> localhostForwarding=true
+> ```
 
 
 
@@ -123,11 +127,14 @@ Muchos dispositivos vienen con herramientas específicas para controlar aspectos
 - [Solaar](https://github.com/pwr-Solaar/Solaar): Herramienta para configurar dispositivos de Logitech (ratones, teclados, etc.)
 
 
+### _Gaming_
+Echa un vistazo a nuestra [guía de juegos en Linux](play-on-linux.md).
+
+
 ### Ejecutando programas de Windows (`.exe`)
 Aunque la compatibilidad de Windows varía de programa en programa, existen herramientas que te permiten ejecutar aplicaciones nativas de Windows en Linux, sin necesidad de crear una máquina virtual (lo cual [también se puede hacer](#usando-una-maquina-virtual)).
 - [Wine](https://www.winehq.org/) (y [winetricks](https://github.com/Winetricks/winetricks)): La herramienta original y más usada, crea una capa de compatibilidad entre Windows y Linux
 - [Winapps](https://github.com/Fmstrat/winapps): Permite una integración transparente con una máquina virtual de Windows, permitiendo ejecutar aplicaciones de Windows como si fueran ventanas en Linux
-<!-- TODO: link linux-gaming -->
 
 #### Usando una Máquina Virtual
 Al igual que puedes [ejecutar Linux en una VM desde Windows](vm-install.md), también puedes ejecutar Windows en una VM desde Linux, asegurándote una compatibilidad prácticamente perfecta, aunque sacrificando algo de _performance_.
