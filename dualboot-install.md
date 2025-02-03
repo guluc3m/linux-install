@@ -1,6 +1,6 @@
 # Instalación de Linux en dualboot
 
-En este tutorial vamos a explicar cómo instalar Linux junto a Windows/MacOS
+En este tutorial vamos a explicar cómo instalar Linux junto a Windows
 (dualboot). Este tutorial está pensado para instalar ambos sistemas operativos
 en el disco duro interno `/` los discos duros internos que tengas en el
 ordenador.
@@ -38,9 +38,9 @@ defragmenta el disco.
 
 
 
-## 2. Preparar el SO
+## 2. Preparar Windows
 
-### 2.1. Defragmentar el Disco (sólo Windows)
+### 2.1. Defragmentar el Disco
 ##### Windows 10
  1. Abre el explorador de archivos
  2. Ve a "Este Equipo"
@@ -59,7 +59,7 @@ defragmenta el disco.
  7. Clica en "Optimizar" e inserta tu contraseña si fuera necesario.
 
 
-### 2.2. Desactivar encripción BitLocker (sólo Windows)
+### 2.2. Desactivar encripción BitLocker
 
 Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
 "Encripción BitLocker". Si no aparece, genial pasa al paso 3, si no continúa.
@@ -72,7 +72,7 @@ Si tu ordenador tiene encripción BitLocker. Para ello, en el menú busca
    corréctamente.
 
 
-### 2.3. Desactivar inicio rápido (sólo Windows)
+### 2.3. Desactivar inicio rápido
 Sigue los pasos para comprobar que lo tienes desactivado.
 
 #### Windows 10
