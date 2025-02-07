@@ -1,5 +1,16 @@
+# Linux Install Party
+
+## Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
+Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
+Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
+
+Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
+
+<!--
+
 # Guía del GUL para la instalación de Linux
 
+-->
 
 ## Prefacio
 
@@ -65,21 +76,11 @@ Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.
 > Buscando en [Google](https://google.com) o preguntándole [al patito](https://duckduckgo.com/) se suelen encontrar respuestas.
 
 
-
+<!--
 ## Formas de instalar Linux
 
 Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis la que más os convenga.
-
-<!--
-# Linux Install Party
-
-## 1. Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
-Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
-Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
-
-Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
 -->
-
 
 
 ### Método 1: Full Linux
