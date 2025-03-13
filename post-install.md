@@ -155,3 +155,12 @@ más modernos, y **no es recomendable instalarlo en ordenadores antiguos**.
 > [!NOTE]
 > Si después de reiniciar no aparece rEFInd, entra en la BIOS y selecciónalo
 > como opción de boot principal.
+
+
+## Temas de GRUB
+Si usas el _bootloader_ [GRUB](https://www.gnu.org/software/grub/) (lo más probable es que sí), puedes usar un tema personalizado.
+
+Links de interés:
+- [Jacksaur/Gorgeous-GRUB](https://github.com/Jacksaur/Gorgeous-GRUB): Repositorio con una selección de temas _chulos_ de GRUB
+- [Gnome-look](https://www.gnome-look.org/browse?cat=109&ord=rating): Plataforma para compartir y descargar temas de GRUB
+- [Tutorial de creación de temas para GRUB2](http://web.archive.org/web/20241209100014/http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial)
