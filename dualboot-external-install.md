@@ -127,6 +127,7 @@ También te recomendamos echarle un vistazo a nuestra sección [Post-Install](po
 
 ## Troubleshooting
 - [Solucionar drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)
+- [Arreglar GRUB](https://askubuntu.com/a/88432)
 
 
 ## Links de interés
