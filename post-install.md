@@ -267,6 +267,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [EnvyControl](https://github.com/bayasdev/envycontrol): Aplicación para configurar el uso de GPUs dedicadas, integradas, e híbridas, extremadamente útil para cuando tienes tanto gráfica integrada como gráfica dedicada
 - [OpenRGB](https://github.com/CalcProgrammer1/OpenRGB): Controlador para luces RGB
 - [Vesktop](https://github.com/Vencord/Vesktop): Discord para Linux, pero bien hecho
+- [WasIstLos](https://github.com/xeco23/WasIstLos): Cliente de WhatsApp para Linux
 - [Redshift](https://github.com/jonls/redshift): _Screen filter_ (protector de vista)
 - [fwupd](https://github.com/fwupd/fwupd) (A.K.A. Linux Vendor Firmware Service): Utilidad para actualizar el _firmware_ de una [gran variedad de dispositivos](https://fwupd.org/lvfs/devices/), incluyendo portátiles
 - [downgrade](https://github.com/archlinux-downgrade/downgrade) [Exclusivo de Arch]: _Rollback_ de versiones de paquetes
