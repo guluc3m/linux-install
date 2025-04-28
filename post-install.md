@@ -10,8 +10,8 @@ La configuración de la red es la siguiente:
 - **Authentication**: _Tunnelled TLS_
 - Selecciona _No CA certificate is required_
 - **Inner authentication**: _MSCHAPv2 (no EAP)_
-- **Username**: El NIA
-- **Password**: La contraseña de Aula Global
+- **Username**: El correo de la universidad (`100XXXXXX@alumnos.uc3m.es`)
+- **Password**: La contraseña de dicho correo
 
 Alternativamente, puedes usar el [_script_ de Python proporcionado por GÉANT](https://cat.eduroam.org/) para configurar la red automágicamente (con certificado).
 
