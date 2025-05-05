@@ -7,6 +7,10 @@ Sin embargo, antes de hacer ningún cambio a tu PC gaming, es imprescindible que
 - [Compatibilidad de los anticheats y sus correspondientes juegos (Are we anticheat yet?)](https://areweanticheatyet.com/)
 - [Instalador automático de juegos a través de Lutris](https://lutris.net/games)
 
+> [!TIP]
+> Si quieres tener una máquina exclusiva para jugar, y sin tener que configurar mucho, (e.g. un PC en el salón, o una _handheld_) te recomendamos [Bazzite](https://bazzite.gg/).  
+> Es una _distro_ inmutable, lo cual quiere decir que está pensada para funcionar y que no se rompa nada, a cambio de tener limitaciones a la hora de modificar el sistema.
+> Sin embargo, viene con todo lo que puedas necesitar para jugar a tus jueguitos, y con muy buena [documentación y guías](https://docs.bazzite.gg/).
 
 ## Preparación
 Para obtener una experiencia _gaming_ semejante a la de Windows, lo único que hay que hacer es descargar unas aplicaciones que permiten instalar cualquier videojuego que puedas desear. Para los juegos de Steam, hay una versión nativa de la aplicación para las _distros_ de Linux más populares.  
