@@ -319,6 +319,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [rigpgrep](https://github.com/BurntSushi/ripgrep): Versión mejorada de `grep`
 - [zoxide](https://github.com/ajeetdsouza/zoxide): Versión mejorada de `cd`
 - [dust](https://github.com/bootandy/dust): Versión mejorada de `du`
+- [dysk](https://github.com/Canop/dysk): Versión mejorada de `df`
 - [Difftastic](https://github.com/Wilfred/difftastic): `diff`, pero para humanos
 - [fzf](https://github.com/junegunn/fzf): Buscador interactivo _fuzzy_, extremadamente útil usado en combinación con otros comandos
 - [micro](https://github.com/zyedidia/micro): Editor de texto simple en terminal (alternativa a `nano`)
