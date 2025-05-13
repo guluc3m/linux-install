@@ -314,6 +314,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Linux:
 - [eza](https://github.com/eza-community/eza): Versión mejorada de `ls`
 - [bat](https://github.com/sharkdp/bat): Versión mejorada de `cat`
+- [advcpmv](https://github.com/jarun/advcpmv): Parche para `cp` y `mv` que añade una barra de progreso
 - [btop](https://github.com/aristocratos/btop): Versión mejorada de `top`
 - [fd](https://github.com/sharkdp/fd): Versión mejorada de `find`
 - [rigpgrep](https://github.com/BurntSushi/ripgrep): Versión mejorada de `grep`
