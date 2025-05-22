@@ -323,7 +323,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [dysk](https://github.com/Canop/dysk): Versión mejorada de `df`
 - [Difftastic](https://github.com/Wilfred/difftastic): `diff`, pero para humanos
 - [fzf](https://github.com/junegunn/fzf): Buscador interactivo _fuzzy_, extremadamente útil usado en combinación con otros comandos
-- [micro](https://github.com/zyedidia/micro): Editor de texto simple en terminal (alternativa a `nano`)
+- [edit](https://github.com/microsoft/edit): Editor de texto simple en terminal (alternativa a `nano`)
 - [trash-cli](https://github.com/andreafrancia/trash-cli): Envía archivos a la papelera desde la terminal (alternativa segura a `rm`)
 - [glow](https://github.com/charmbracelet/glow): Visor de Markdown en terminal
 - [The Fuck](https://github.com/nvbn/thefuck): Corrector de comandos
