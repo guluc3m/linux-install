@@ -168,7 +168,7 @@ Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el qu
 # Emulación
 No se lo contéis a Nintendo, pero si tu objetivo principal es emular juegos mas viejos o de otras consolas, Linux es la mejor opción ya que muchos emuladores se ejecutan nativamente en Linux y están específicamente optimizados para ello.
 
-En el caso en el que quieras emular, pero no tengas las ROMs de tus juegos comprados legalmente y de los cuales también tienes la consola, en [Vimm's Lair](https://vimm.net/) podrás encontrarlas para consolas de hace 4 generaciones, subidas y moderadas por la comunidad. Suponemos que no hace falta comentar que todos los juegos de Mario están quitados.
+En el caso en el que quieras emular, pero no tengas las ROMs de tus juegos comprados legalmente y de los cuales también tienes la consola, en [Vimm's Lair](https://vimm.net/) podrás encontrarlas para consolas de hace 4 generaciones, subidas y moderadas por la comunidad. Suponemos que no hace falta comentar que todos los juegos de Mario están quitados. Otra alternativa es [r/ROMs Megathread](https://r-roms.github.io/), la cual contiene los enlaces más actualizados a todas las ROMs que puedas querer.
 
 En esta guía vamos a cubrir dos métodos para emular en Linux, de los cuales ambos tienen cierto público objetivo.
 
