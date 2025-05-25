@@ -378,6 +378,12 @@ más modernos, y **no es recomendable instalarlo en ordenadores antiguos**.
 ## Temas de GRUB
 Si usas el _bootloader_ [GRUB](https://www.gnu.org/software/grub/) (lo más probable es que sí), puedes usar un tema personalizado.
 
+Existe una aplicación con interfaz gráfica que te permite hacer todos los cambios de los que puedas requirir en GRUB, disponible para todas las distros, pero con un método de instalación diferente:
+
+- [Arch (AUR)](https://aur.archlinux.org/packages/grub-customizer)
+- [Debian (Incluyendo Ubuntu y Mint)](https://launchpad.net/grub-customizer)
+- [Fedora](https://packages.fedoraproject.org/pkgs/grub-customizer/grub-customizer/)
+
 Links de interés:
 - [Jacksaur/Gorgeous-GRUB](https://github.com/Jacksaur/Gorgeous-GRUB): Repositorio con una selección de temas _chulos_ de GRUB
 - [Gnome Look](https://www.gnome-look.org/browse?cat=109&ord=rating): Plataforma para compartir y descargar temas de GRUB
