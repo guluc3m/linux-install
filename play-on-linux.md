@@ -154,7 +154,6 @@ Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el qu
 > Para forzar a que aparezca GRUB en el arranque, presiona repetidamente la tecla `Esc`.
 
 
-
 <!--## Grabación-->
 
 <!--### OBS-->
@@ -164,24 +163,36 @@ Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el qu
 <!--### gstreamer-vaapi-->
 
 <!--### H264/H265 vs AV1-->
-# Emulación
 
+
+# Emulación
 No se lo contéis a Nintendo, pero si tu objetivo principal es emular juegos mas viejos o de otras consolas, Linux es la mejor opción ya que muchos emuladores se ejecutan nativamente en Linux y están específicamente optimizados para ello.
 
 En el caso en el que quieras emular, pero no tengas las ROMs de tus juegos comprados legalmente y de los cuales también tienes la consola, en [Vimm's Lair](https://vimm.net/) podrás encontrarlas para consolas de hace 4 generaciones, subidas y moderadas por la comunidad. Suponemos que no hace falta comentar que todos los juegos de Mario están quitados.
 
 En esta guía vamos a cubrir dos métodos para emular en Linux, de los cuales ambos tienen cierto público objetivo.
+
 ## Standalone
 Si tu objetivo es emular un par de juegos, tocarlos a lo mejor una vez cada dos meses por recordar la nostalgia, o si quieres tenerlo ahí en caso de que hayas perdido la ultima ranked del LoL y te den ganas de desinstalarlo, lo mejor será descargar directamente el emulador para la consola que quieras jugar. Este es objetivamente el más "straightforward" y fácil de usar ya que no hay que toquetear demasiado (Plug and Play).
 
-A continuación están los emuladores de Nintendo que siguen siendo mantenidos y que miembros de GUL dan fe que funcionan:
+A continuación están los emuladores que siguen siendo mantenidos y que miembros de GUL dan fe que funcionan:
+- [Wii / GameCube - Dolphin](https://es.dolphin-emu.org/?cr=es)
+- [WiiU - Cemu](https://cemu.info/)
+- [Switch - Suyu](https://suyu.dev/)
+- [GBA - VisualBoy Advance](https://visualboyadvance.org/)
+- [nDS - MelonDS](https://melonds.kuribo64.net/)
+- [3DS - Citra](https://citra-emulator.com/)
+- [PS1 - Duckstation](https://www.duckstation.org/)
+- [PS3 - RCPS3](https://rpcs3.net/)
 
-- [Switch](https://suyu.dev/)
-- [3DS](https://citra-emulator.com/)
-- [Wii / GameCube](https://es.dolphin-emu.org/?cr=es)
-- [nDS](https://melonds.kuribo64.net/)
 
-## RetroArch
-[RetroArch](https://www.retroarch.com/) no es un emulador como tal, sino una aplicación frontend para "núcleos" creados por desarrolladores vinculados al proyecto, que actúan como emuladores y aunque la curva de aprendizaje sea un poco alta, se convierte en una herramienta bastante útil.
+## Gestores y _frontends_
+En el caso de que tengas una librería extensa de emuladores y ROMs completamente legales, puede merecer la pena usar alguna aplicación para gestionar tus configuraciones y juegos.
+
+### EmuDeck
+[Emu](https://www.emudeck.com/) es un gestor originariamente concebido para simplificar el uso de emuladores en la SteamDeck, pero funciona perfectamente en cualquier _Desktop Enviroment_ de Linux. Tiene la ventaja de ser fácil de usar y de configurar automáticamente los emuladores, además de añadir los juegos con sus carátulas correspondientes a _frontends_ como [Steam](https://store.steampowered.com/), [EmulationStation](https://emulationstation.org/), o [Pegasus](https://pegasus-frontend.org/).
+
+### RetroArch
+[RetroArch](https://www.retroarch.com/) es un _frontend_ para "núcleos" creados por desarrolladores vinculados al proyecto, que actúan como emuladores y aunque la curva de aprendizaje sea un poco alta, se convierte en una herramienta bastante útil.
 
 Este además de tener compatibilidad con cualquier mando que te puedas imaginar, tiene la opción de usar shaders personalizados, multiples guardados de partidas, interfaz customizable, núcleos actualizados, y una lista más de opciones que trae consigo.
