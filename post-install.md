@@ -378,13 +378,14 @@ más modernos, y **no es recomendable instalarlo en ordenadores antiguos**.
 ## Temas de GRUB
 Si usas el _bootloader_ [GRUB](https://www.gnu.org/software/grub/) (lo más probable es que sí), puedes usar un tema personalizado.
 
-Existe una aplicación con interfaz gráfica que te permite hacer todos los cambios de los que puedas requirir en GRUB, disponible para todas las distros, pero con un método de instalación diferente:
+Además de editar los archivos de configuración directamente, puedes usar [Grub Customizer](https://launchpad.net/grub-customizer), una aplicación con interfaz gráfica y fácil de usar.  
+Para instalarla en las distintas distribuciones:
+- Arch (AUR): [`grub-customizer`](https://aur.archlinux.org/packages/grub-customizer)
+- Debian/Ubuntu/Mint (PPA): [`grub-customizer`](https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer)
+- Fedora: [`grub-customizer`](https://packages.fedoraproject.org/pkgs/grub-customizer/grub-customizer/)
 
-- [Arch (AUR)](https://aur.archlinux.org/packages/grub-customizer)
-- [Debian (Incluyendo Ubuntu y Mint)](https://launchpad.net/grub-customizer)
-- [Fedora](https://packages.fedoraproject.org/pkgs/grub-customizer/grub-customizer/)
-
-Links de interés:
+Otros links de interés:
 - [Jacksaur/Gorgeous-GRUB](https://github.com/Jacksaur/Gorgeous-GRUB): Repositorio con una selección de temas _chulos_ de GRUB
 - [Gnome Look](https://www.gnome-look.org/browse?cat=109&ord=rating): Plataforma para compartir y descargar temas de GRUB
 - [Tutorial de creación de temas para GRUB2](http://web.archive.org/web/20241209100014/http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial)
+- [ArchWiki - GRUB](https://wiki.archlinux.org/title/GRUB)
