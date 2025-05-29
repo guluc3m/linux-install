@@ -311,7 +311,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 
 
 ### Aplicaciones de terminal
-Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Linux:
+Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Unix:
 - [eza](https://github.com/eza-community/eza): Versión mejorada de `ls`
 - [bat](https://github.com/sharkdp/bat): Versión mejorada de `cat`
 - [advcpmv](https://github.com/jarun/advcpmv): Parche para `cp` y `mv` que añade una barra de progreso
@@ -324,7 +324,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [Difftastic](https://github.com/Wilfred/difftastic): `diff`, pero para humanos
 - [xh](https://github.com/ducaale/xh): Versión mejorada de `curl`
 - [fzf](https://github.com/junegunn/fzf): Buscador interactivo _fuzzy_, extremadamente útil usado en combinación con otros comandos
-- [edit](https://github.com/microsoft/edit): Editor de texto simple en terminal (alternativa a `nano`)
+- [edit](https://github.com/microsoft/edit) y [micro](https://github.com/zyedidia/micro): Editores de texto simple en terminal (alternativas a `nano`)
 - [trash-cli](https://github.com/andreafrancia/trash-cli): Envía archivos a la papelera desde la terminal (alternativa segura a `rm`)
 - [glow](https://github.com/charmbracelet/glow): Visor de Markdown en terminal
 - [The Fuck](https://github.com/nvbn/thefuck): Corrector de comandos
@@ -335,6 +335,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [tealdeer](https://github.com/tealdeer-rs/tealdeer): Mini-manuales (TL;DR) para comandos
 - [coltrane](https://github.com/pedrozath/coltrane): Herramienta para teoría musical
 - [pokeget](https://github.com/talwat/pokeget-rs): Visor de _sprites_ de Pokémon en terminal
+- [carbonyl](https://github.com/fathyb/carbonyl): Navegador en terminal
 
 
 ### Aplicaciones para hardware específico
