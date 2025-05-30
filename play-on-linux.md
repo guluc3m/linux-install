@@ -154,6 +154,34 @@ Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el qu
 > Para forzar a que aparezca GRUB en el arranque, presiona repetidamente la tecla `Esc`.
 
 
+### Uso de mandos
+
+Por defecto, en los ultimos años la compatibilidad con mandos en Linux se ha vuelto practicamente navita, y solo con conectar el mando ya puedes ponerte a jugar directamente. Pero puede haber casos donde el mando no es directamente detectado por el sistema operativo o por Steam, por lo que guías con la [ArchWiki](https://wiki.archlinux.org/title/Gamepad) pueden ayudar a solucionar el problema bastante rápido.
+
+Para probar que el mando está siendo detectado y no es problema del sistema operativo, existe [evtest](https://archlinux.org/packages/?name=evtest), el cual detecta todas las entradas de cualquier dispositivo.
+
+#### Bluetooth
+
+Por defecto, en algunas distribuciones, el modulo de kernel necesario para que el mando sea detectado no está cargado automaticamente, y aunque éste aparezca conectado, puede no estar funcionando. Para ello, para mandos de PlayStation (como el DualShock 4) es necesario tener cargaods los siguientes módulos:
+
+```
+sudo modprobe hid_sony
+sudo modprobe joydev
+```
+
+Por otro lado, si quieres que, teniendo el bluetooth activado, se conecte el mando automaticamente pulsando el botón de play, desde bluetoothctl, disponible con los paquetes [bluez](https://archlinux.org/packages/?name=bluez) y [bluez-utils](https://archlinux.org/packages/?name=bluez-utils), ejecutar los siguientes comandos:
+
+```
+bluetoothctl
+
+agent on
+default-agent
+power on
+discoverable on
+pairable on
+scan on
+```
+
 <!--## Grabación-->
 
 <!--### OBS-->
