@@ -237,11 +237,7 @@ sudo -E gpclient connect --browser default myvpn.uc3m.es
 Más información en [la página del SDIC](https://www.uc3m.es/sdic/servicios/vpn).
 
 > [!NOTE]
-> Si quieres que la VPN funcione dentro de WSL2, lo recomendable es poner la VPN en Windows y añadir la siguiente configuración al archivo `%USERPROFILE%\.wslconfig` (`C:\Users\<user>\.wslconfig`):
-> ```
-> [wsl2]
-> localhostForwarding=true
-> ```
+> Si quieres que la VPN funcione dentro de WSL2, lo recomendable es poner la VPN en Windows y usar [wsl-vpnkit](https://github.com/sakai135/wsl-vpnkit).
 
 
 
