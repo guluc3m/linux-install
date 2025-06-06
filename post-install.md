@@ -322,6 +322,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [fzf](https://github.com/junegunn/fzf): Buscador interactivo _fuzzy_, extremadamente útil usado en combinación con otros comandos
 - [edit](https://github.com/microsoft/edit) y [micro](https://github.com/zyedidia/micro): Editores de texto simple en terminal (alternativas a `nano`)
 - [trash-cli](https://github.com/andreafrancia/trash-cli): Envía archivos a la papelera desde la terminal (alternativa segura a `rm`)
+- [caligula](https://github.com/ifd3f/caligula): Herramienta para _flashear_ discos (alternativa a `dd`)
 - [glow](https://github.com/charmbracelet/glow): Visor de Markdown en terminal
 - [The Fuck](https://github.com/nvbn/thefuck): Corrector de comandos
 - [Lazygit](https://github.com/jesseduffield/lazygit): TUI para Git (probablemente la mejor interfaz gráfica para Git)
