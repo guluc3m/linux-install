@@ -302,9 +302,10 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [WasIstLos](https://github.com/xeco23/WasIstLos): Cliente de WhatsApp para Linux
 - [Redshift](https://github.com/jonls/redshift): _Screen filter_ (protector de vista)
 - [fwupd](https://github.com/fwupd/fwupd) (A.K.A. Linux Vendor Firmware Service): Utilidad para actualizar el _firmware_ de una [gran variedad de dispositivos](https://fwupd.org/lvfs/devices/), incluyendo portátiles
-- [downgrade](https://github.com/archlinux-downgrade/downgrade) [Exclusivo de Arch]: _Rollback_ de versiones de paquetes
+- [downgrade](https://github.com/archlinux-downgrade/downgrade) [Exclusivo para [pacman](https://wiki.archlinux.org/title/Pacman) (Arch Linux y derivados)]: _Rollback_ de versiones de paquetes
 - [gestures](https://gitlab.com/nokun/gestures): Aplicación para ejecutar comandos a partir de gestos en el _trackpad_
-
+- [nala](https://gitlab.com/volian/nala): [Exclusivo para APT (Debian/Ubuntu/Mint y derivados)] _Frontend_ alternativo para APT
+- [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
 
 ### Aplicaciones de terminal
 Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Unix:
