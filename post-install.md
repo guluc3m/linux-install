@@ -307,12 +307,24 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [nala](https://gitlab.com/volian/nala): [Exclusivo para APT (Debian/Ubuntu/Mint y derivados)] _Frontend_ alternativo para APT
 - [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
 
+
+### Emuladores de terminal
+Una de las grandes ventajas de Linux es el uso de la terminal (y sus [multiples aplicaciones](#aplicaciones-de-terminal)). Es un entorno que en muchos casos es preferible a usar frente a aplicaciones GUI, y en otros casos es obligatorio.
+
+En el caso de que seas un ávido usuario de ella, es recomendable cambiar el emulador de terminal (la aplicación que ejecuta la terminal) que venga por defecto por una más moderna, ya que añaden funcionalidades extra (como mostrar imágenes, las cuales son usadas en algunas aplicaciones), y permiten una mayor configuración.
+
+Hay una cantidad ingente de ellos, pero te recomendamos estos tres:
+- [kitty](https://sw.kovidgoyal.net/kitty/): El emulador con más funcionalidades y el mejor soportado.
+- [Ghostty](https://ghostty.org/): Emulador que combina una gran cantidad de funcionalidades con una "experiencia nativa" en entornos de escritorio y sin sacrificar el rendimiento.
+- [st](https://st.suckless.org/): Un emulador centrado en ser sencillo, rápido y ligero. Puedes añadir [_patches_](https://st.suckless.org/patches/) para funcionalidades extra.
+
+
 ### Aplicaciones de terminal
 Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Unix:
 - [eza](https://github.com/eza-community/eza): Versión mejorada de `ls`
 - [bat](https://github.com/sharkdp/bat): Versión mejorada de `cat`
 - [advcpmv](https://github.com/jarun/advcpmv): Parche para `cp` y `mv` que añade una barra de progreso
-- [btop](https://github.com/aristocratos/btop): Versión mejorada de `top`
+- [btop](https://github.com/aristocratos/btop): Versión mejorada de `top`, con soporte para GPUs
 - [fd](https://github.com/sharkdp/fd): Versión mejorada de `find`
 - [rigpgrep](https://github.com/BurntSushi/ripgrep): Versión mejorada de `grep`
 - [zoxide](https://github.com/ajeetdsouza/zoxide): Versión mejorada de `cd`
@@ -334,6 +346,8 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [coltrane](https://github.com/pedrozath/coltrane): Herramienta para teoría musical
 - [pokeget](https://github.com/talwat/pokeget-rs): Visor de _sprites_ de Pokémon en terminal
 - [carbonyl](https://github.com/fathyb/carbonyl): Navegador en terminal
+- [rmpc](https://mierak.github.io/rmpc/): Reproductor de música en terminal, con soporte para imágenes
+- [beets](https://beets.io/): Gestor de archivos de música
 
 
 ### Aplicaciones para hardware específico
