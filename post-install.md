@@ -357,6 +357,18 @@ Muchos dispositivos vienen con herramientas específicas para controlar aspectos
 - [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ de diferentes marcas
 - [Solaar](https://github.com/pwr-Solaar/Solaar): Herramienta para configurar dispositivos de Logitech (ratones, teclados, etc.)
 
+### Timeshift
+Esta aplicación se ocupa de crear algo llamado _snapshots_ de tu sistema. Estos snapshots son copias del estado de tu sistema en un momento particular, que sirven como backups para poder restaurarlo en el caso de que se rompa. Se instala a través del gestor de paquetes, y es universal para todas las distros.
+
+Los usuarios de Arch tienen a su disposición [este paquete de AUR](https://aur.archlinux.org/packages/timeshift-autosnap) que implementa un [Pacman Hook](https://wiki.archlinux.org/title/Pacman#Hooks), el que hace un snapshot de tu sistema antes de cada actualización que ejecutas, pero los usuarios de otras distros también pueden utilizar la herramienta GUI, los servicios de Systemd, y los cron jobs, para especificar momentos en los cuales Timeshift va a hacer un snapshot automatico (por ejemplo cada semana).
+
+> [!IMPORTANT]
+> Timeshift hace copias solo de los archivos de sistema, **NO DE LA CARPETA /home**, así que si no quieres perder tus archivos personales, tendrás que usar otro método. Este sirve solo para restaurar un sistema roto.
+
+#### Diferencias entre sistemas de archivos
+En sistemas de archivos que no son BTRFS, el primer snapshot hace una copia física de los archivos con RSYNC. Las siguientes solo hacen copias de los archivos que han cambiado, y para el resto se usan _enlaces duros_, lo que es más eficiente que copiarlos cada vez manualmente, pero igualmente es un backup que ocupa un espacio igual de grande que tu sistema, así que tendrás que tener espacio libre para hacer el snapshot.
+
+Mientras que en sistemas BTRFS, todos los snapshots solo hacen copias de las diferencias de archivos entre un snapshot y el otro. Esto significa que no ocupan casi nada de espacio, pero solo funcionan en sistemas que tienen un diseño de subvolumen tipo Ubuntu (con subvolúmenes `@` y `@home`). Esto incluye distros basados en Debian y Arch, pero excluye Fedora, al no ser que lo instalas cambiando la partición `root` a `@` y la `home` a `@home`.
 
 ### _Gaming_
 Echa un vistazo a nuestra [guía de juegos en Linux](play-on-linux.md).
