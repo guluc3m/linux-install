@@ -18,7 +18,7 @@ Sí, todo lo que haya ahí dentro va a desaparecer, así que estás avisado.
 
 
 ## Arrancar desde el LiveUSB
-Para instalar Linux es necesario _bootear_ (arrancar) desde el instalador de Linux que tenemos en el [LiveUSB](README.md#cómo-crear-un-live-usb). Para ello, apaga el ordenador y conecta el LiveUSB. Dado que el ordenador _bootea_ automáticamente en el Sistema Operativo que esté configurado, hay que cambiar esto antes de que arranque.
+Para instalar Linux es necesario _bootear_ (arrancar) desde el instalador de Linux que tenemos en el [LiveUSB](#cómo-crear-un-live-usb). Para ello, apaga el ordenador y conecta el LiveUSB. Dado que el ordenador _bootea_ automáticamente en el Sistema Operativo que esté configurado, hay que cambiar esto antes de que arranque.
 
 ### Desde el _boot menu_
 Algunos ordenadores tienen lo que se conoce como un _boot menu_, el cual te permite elegir desde qué disco arrancar el ordenador. Se suele poder acceder a través de alguna tecla como `F11`, `F12` o `DEL`/`Supr` nada más encender el ordenador (antes de entrar al SO). Puedes buscar en Google si tu ordenador lo tiene y cómo acceder a él.  

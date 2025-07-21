@@ -1,7 +1,7 @@
 ## Cómo salvar un sistema que no arranca
 Si despues de una actualización o configuración que hiciste, lo único que ves son errores de GRUB en la pantalla y no logras llegar a tu login manager, tu mejor amigo es el [chroot](https://wiki.archlinux.org/title/Chroot).
 
-A pesar de que el artículo pertenece a la Arch Wiki, el paso [3.3](https://wiki.archlinux.org/title/Chroot#Using_chroot) se puede aplicar en otras distribuciones también. Este artículo existe también en [Español](https://wiki.archlinux.org/title/Chroot_(Espa%C3%B1ol)), pero es un poco menos completo.
+A pesar de que el artículo pertenece a la Arch Wiki, el paso [4.3](https://wiki.archlinux.org/title/Chroot#Using_chroot) se puede aplicar en otras distribuciones también. Este artículo existe también en [Español](https://wiki.archlinux.org/title/Chroot_(Espa%C3%B1ol)), pero es un poco menos completo.
 
 Para esto necesitaras un disco o memoria USB externa desde la que podrás cargar un GNU/Linux en modo LiveOS (preferiblemente el mismo distributivo que el que tienes instalado). Para obtener información sobre como crear un LiveUSB, accede a [este artículo](common.md#cómo-crear-un-live-usb) en la Guía.
 
