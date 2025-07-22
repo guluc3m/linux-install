@@ -363,7 +363,7 @@ Esta aplicación se ocupa de crear algo llamado _snapshots_ de tu sistema. Estos
 Los usuarios de Arch tienen a su disposición [este paquete de AUR](https://aur.archlinux.org/packages/timeshift-autosnap) que implementa un [Pacman Hook](https://wiki.archlinux.org/title/Pacman#Hooks), el que hace un snapshot de tu sistema antes de cada actualización que ejecutas, pero los usuarios de otras distros también pueden utilizar la herramienta GUI, los servicios de Systemd, y los cron jobs, para especificar momentos en los cuales Timeshift va a hacer un snapshot automatico (por ejemplo cada semana).
 
 > [!IMPORTANT]
-> Timeshift hace copias solo de los archivos de sistema, **NO DE LA CARPETA /home**, así que si no quieres perder tus archivos personales, tendrás que usar otro método. Este sirve solo para restaurar un sistema roto.
+> Timeshift hace copias solo de los archivos de sistema, **NO DE LA CARPETA `/home`**, así que si no quieres perder tus archivos personales, tendrás que usar otro método. Este sirve solo para restaurar un sistema roto.
 
 #### Diferencias entre sistemas de archivos
 En sistemas de archivos que no son BTRFS, el primer snapshot hace una copia física de los archivos con RSYNC. Las siguientes solo hacen copias de los archivos que han cambiado, y para el resto se usan _enlaces duros_, lo que es más eficiente que copiarlos cada vez manualmente, pero igualmente es un backup que ocupa un espacio igual de grande que tu sistema, así que tendrás que tener espacio libre para hacer el snapshot.
