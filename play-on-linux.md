@@ -223,3 +223,12 @@ En el caso de que tengas una librería extensa de emuladores y ROMs completament
 [RetroArch](https://www.retroarch.com/) es un _frontend_ para "núcleos" creados por desarrolladores vinculados al proyecto, que actúan como emuladores y aunque la curva de aprendizaje sea un poco alta, se convierte en una herramienta bastante útil.
 
 Este además de tener compatibilidad con cualquier mando que te puedas imaginar, tiene la opción de usar shaders personalizados, multiples guardados de partidas, interfaz customizable, núcleos actualizados, y una lista más de opciones que trae consigo.
+
+## Lossless Scaling Frame Generation
+Actualmente hay una herramienta llamada [lsfg-vk](https://github.com/PancakeTAS/lsfg-vk) en desarrollo, que permite usar [Lossless Scaling](https://losslessscaling.com) (generación de fotogramas) en juegos nativos de Vulkan, y los que usan DXVK. Esta herramienta funciona oficialmente con cualquier juego de 64 bits, y no oficialmente, a través de WOW64, en juegos de 32 bits (lo que se puede activar aplicando la variable de entorno `PROTON_USE_WOW64=1` en versiones _bleeding edge_ de Proton, Proton-GE y Wine-GE).
+
+Esta herramienta permite correr videojuegos con _framerates_ limitados a más FPS de los que está diseñado el juego (o los que logra renderizar tu GPU), sin tener que modificar archivos, ni romper la lógica del juego, aunque con latencia de entrada añadida.
+> [!NOTE]
+> ¡Funciona incluso en los emuladores y aplicaciones que no son juegos, como el reproductor de videos MPV!
+
+Para instalarla, se puede seguir o la [guía de instalación del repositorio oficial](https://github.com/PancakeTAS/lsfg-vk/wiki), o, instalando el [paquete de AUR](https://aur.archlinux.org/packages/lsfg-vk-git), en el caso de usar Arch _btw_.
