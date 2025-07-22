@@ -366,7 +366,7 @@ Los usuarios de Arch tienen a su disposición [este paquete de AUR](https://aur.
 > Timeshift hace copias solo de los archivos de sistema, **NO DE LA CARPETA `/home`**, así que si no quieres perder tus archivos personales, tendrás que usar otro método. Este sirve solo para restaurar un sistema roto.
 
 #### Diferencias entre sistemas de archivos
-En sistemas de archivos que no son BTRFS, el primer snapshot hace una copia física de los archivos con RSYNC. Las siguientes solo hacen copias de los archivos que han cambiado, y para el resto se usan _enlaces duros_, lo que es más eficiente que copiarlos cada vez manualmente, pero igualmente es un backup que ocupa un espacio igual de grande que tu sistema, así que tendrás que tener espacio libre para hacer el snapshot.
+En sistemas de archivos que no son [BTRFS](https://wiki.archlinux.org/title/Btrfs), el primer snapshot hace una copia física de los archivos con [RSYNC](https://wiki.archlinux.org/title/Rsync). Las siguientes solo hacen copias de los archivos que han cambiado, y para el resto se usan _enlaces duros_, lo que es más eficiente que copiarlos cada vez manualmente, pero igualmente es un backup que ocupa un espacio igual de grande que tu sistema, así que tendrás que tener espacio libre para hacer el snapshot.
 
 Mientras que en sistemas BTRFS, todos los snapshots solo hacen copias de las diferencias de archivos entre un snapshot y el otro. Esto significa que no ocupan casi nada de espacio, pero solo funcionan en sistemas que tienen un diseño de subvolumen tipo Ubuntu (con subvolúmenes `@` y `@home`). Esto incluye distros basados en Debian y Arch, pero excluye Fedora, al no ser que lo instalas cambiando la partición `root` a `@` y la `home` a `@home`.
 
