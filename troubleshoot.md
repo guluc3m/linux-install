@@ -6,6 +6,11 @@ A pesar de que el artículo pertenece a la Arch Wiki, el paso [4.3](https://wiki
 Para esto necesitaras un disco o memoria USB externa desde la que podrás cargar un GNU/Linux en modo LiveOS (preferiblemente el mismo distributivo que el que tienes instalado). Para obtener información sobre como crear un LiveUSB, accede a [este artículo](common.md#cómo-crear-un-live-usb) en la Guía.
 
 Despues de haber conseguido el chroot, básicamente obtienes acceso a tu sistema original, en el que puedes hacer las modificaciones necesarias para obtener un sistema funcional otra vez. Esto incluye actualizarla, regenerar GRUB, cambiar el mirrorlist y descargar versiones antiguas de paquetes, correr Timeshift, etc.
+> [!NOTE]
+> Cuando la actualizas, tienes que actualizar la partición que has montado con chroot, no el root original del sistema LiveUSB. La manera en la que se hace depende de tu distro:
+> - Arch: `pacman -Syu --sysroot /mnt`
+> - Ubuntu/Debian: `chroot /mnt apt update && chroot /mnt apt upgrade`
+> - Fedora: `dnf --installroot=/mnt --releasever=XX update`
 
 Cuando crees que el error ya está arreglado, ¡puedes reiniciar tu dispositivo y rezar que lo que has hecho era suficiente para restaurarlo!
 
