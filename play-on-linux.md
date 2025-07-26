@@ -192,14 +192,14 @@ scan on
 <!--### H264/H265 vs AV1-->
 
 
-# Emulación
+## Emulación
 No se lo contéis a Nintendo, pero si tu objetivo principal es emular juegos mas viejos o de otras consolas, Linux es la mejor opción ya que muchos emuladores se ejecutan nativamente en Linux y están específicamente optimizados para ello.
 
 En el caso en el que quieras emular, pero no tengas las ROMs de tus juegos comprados legalmente y de los cuales también tienes la consola, en [Vimm's Lair](https://vimm.net/) podrás encontrarlas para consolas de hace 4 generaciones, subidas y moderadas por la comunidad. Suponemos que no hace falta comentar que todos los juegos de Mario están quitados. Otra alternativa es [r/ROMs Megathread](https://r-roms.github.io/), la cual contiene los enlaces más actualizados a todas las ROMs que puedas querer.
 
 En esta guía vamos a cubrir dos métodos para emular en Linux, de los cuales ambos tienen cierto público objetivo.
 
-## Standalone
+### Standalone
 Si tu objetivo es emular un par de juegos, tocarlos a lo mejor una vez cada dos meses por recordar la nostalgia, o si quieres tenerlo ahí en caso de que hayas perdido la ultima ranked del LoL y te den ganas de desinstalarlo, lo mejor será descargar directamente el emulador para la consola que quieras jugar. Este es objetivamente el más "straightforward" y fácil de usar ya que no hay que toquetear demasiado (Plug and Play).
 
 A continuación están los emuladores que siguen siendo mantenidos y que miembros de GUL dan fe que funcionan:
@@ -213,16 +213,17 @@ A continuación están los emuladores que siguen siendo mantenidos y que miembro
 - [PS3 - RCPS3](https://rpcs3.net/)
 
 
-## Gestores y _frontends_
+### Gestores y _frontends_
 En el caso de que tengas una librería extensa de emuladores y ROMs completamente legales, puede merecer la pena usar alguna aplicación para gestionar tus configuraciones y juegos.
 
-### EmuDeck
-[Emu](https://www.emudeck.com/) es un gestor originariamente concebido para simplificar el uso de emuladores en la SteamDeck, pero funciona perfectamente en cualquier _Desktop Enviroment_ de Linux. Tiene la ventaja de ser fácil de usar y de configurar automáticamente los emuladores, además de añadir los juegos con sus carátulas correspondientes a _frontends_ como [Steam](https://store.steampowered.com/), [EmulationStation](https://emulationstation.org/), o [Pegasus](https://pegasus-frontend.org/).
+#### EmuDeck
+[EmuDeck](https://www.emudeck.com/) es un gestor originariamente concebido para simplificar el uso de emuladores en la SteamDeck, pero funciona perfectamente en cualquier _Desktop Enviroment_ de Linux. Tiene la ventaja de ser fácil de usar y de configurar automáticamente los emuladores, además de añadir los juegos con sus carátulas correspondientes a _frontends_ como [Steam](https://store.steampowered.com/), [EmulationStation](https://emulationstation.org/), o [Pegasus](https://pegasus-frontend.org/).
 
-### RetroArch
+#### RetroArch
 [RetroArch](https://www.retroarch.com/) es un _frontend_ para "núcleos" creados por desarrolladores vinculados al proyecto, que actúan como emuladores y aunque la curva de aprendizaje sea un poco alta, se convierte en una herramienta bastante útil.
 
 Este además de tener compatibilidad con cualquier mando que te puedas imaginar, tiene la opción de usar shaders personalizados, multiples guardados de partidas, interfaz customizable, núcleos actualizados, y una lista más de opciones que trae consigo.
+
 
 ## Lossless Scaling Frame Generation
 Actualmente hay una herramienta llamada [lsfg-vk](https://github.com/PancakeTAS/lsfg-vk) en desarrollo, que permite usar [Lossless Scaling](https://losslessscaling.com) (generación de fotogramas) en juegos nativos de Vulkan, y los que usan DXVK. Esta herramienta funciona oficialmente con cualquier juego de 64 bits, y no oficialmente, a través de WOW64, en juegos de 32 bits (lo que se puede activar aplicando la variable de entorno `PROTON_USE_WOW64=1` en versiones _bleeding edge_ de Proton, Proton-GE y Wine-GE).
@@ -231,4 +232,4 @@ Esta herramienta permite correr videojuegos con _framerates_ limitados a más FP
 > [!NOTE]
 > ¡Funciona incluso en los emuladores y aplicaciones que no son juegos, como el reproductor de videos MPV!
 
-Para instalarla, se puede seguir o la [guía de instalación del repositorio oficial](https://github.com/PancakeTAS/lsfg-vk/wiki), o, instalando el [paquete de AUR](https://aur.archlinux.org/packages/lsfg-vk-git), en el caso de usar Arch _btw_.
+Para instalarla, se puede seguir o la [guía de instalación del repositorio oficial](https://github.com/PancakeTAS/lsfg-vk/wiki), o instalando el [paquete de AUR](https://aur.archlinux.org/packages/lsfg-vk-git) (en el caso de usar Arch, _btw_).
