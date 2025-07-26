@@ -208,7 +208,7 @@ A continuación están los emuladores que siguen siendo mantenidos y que miembro
 - [Switch - Suyu](https://suyu.dev/)
 - [GBA - VisualBoy Advance](https://visualboyadvance.org/)
 - [nDS - MelonDS](https://melonds.kuribo64.net/)
-- [3DS - Citra](https://citra-emulator.com/)
+- [3DS - Azahar](https://azahar-emu.org/)
 - [PS1 - Duckstation](https://www.duckstation.org/)
 - [PS3 - RCPS3](https://rpcs3.net/)
 
