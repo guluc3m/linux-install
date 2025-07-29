@@ -1,5 +1,5 @@
 # Guía de _gaming_ en Linux
-A diferencia de lo que se podría suponer en principio, Linux ofrece una experiencia bastante buena en cuanto a los videojuegos. A pesar de todos los mitos, hoy en día, la gran mayoría de los juegos ofrecidos por plataformas como [Steam](https://store.steampowered.com/), [Epic Games](https://www.epicgames.com/), [GOG](https://www.gog.com), [EA](https://www.ea.com/), y los demás funcionan, y además, según benchmarks y evidencias empíricas de varios miembros de la GUL, en muchos casos corren incluso mejor que en Windows.
+A diferencia de lo que se podría suponer en principio, Linux ofrece una experiencia bastante buena en cuanto a los videojuegos. A pesar de todos los mitos, hoy en día, la gran mayoría de los juegos ofrecidos por plataformas como [Steam](https://store.steampowered.com/), [Epic Games](https://www.epicgames.com/), [GOG](https://www.gog.com), [EA](https://www.ea.com/), y los demás funcionan, y además, según _benchmarks_ y evidencias empíricas de varios miembros de la GUL, en muchos casos corren incluso mejor que en Windows.
 
 Sin embargo, antes de hacer ningún cambio a tu PC gaming, es imprescindible que compruebes que todo lo que vayas a jugar y que no puedas vivir sin él esté soportado, especialmente juegos multijugador competitivos (los del _anticheat_ de kernel, os estoy mirando a vosotros), ya que muchos están completamente rotos en Linux. Para ello te dejamos los siguientes recursos:
 
@@ -12,6 +12,8 @@ Sin embargo, antes de hacer ningún cambio a tu PC gaming, es imprescindible que
 > Es una _distro_ inmutable, lo cual quiere decir que está pensada para funcionar y que no se rompa nada, a cambio de tener limitaciones a la hora de modificar el sistema.
 > Sin embargo, viene con todo lo que puedas necesitar para jugar a tus jueguitos, y con muy buena [documentación y guías](https://docs.bazzite.gg/).
 
+
+
 ## Preparación
 Para obtener una experiencia _gaming_ semejante a la de Windows, lo único que hay que hacer es descargar unas aplicaciones que permiten instalar cualquier videojuego que puedas desear. Para los juegos de Steam, hay una versión nativa de la aplicación para las _distros_ de Linux más populares.  
 
@@ -21,6 +23,7 @@ Para [Epic Games](https://www.epicgames.com/) existe el [Heroic Games Launcher](
 ### Instalación de Steam
 Dependiendo de la plataforma en la que te encuentres, habrá un método de instalación u otro.
 Toda la información se puede encontrar en la [guia oficial de Fedora](https://docs.fedoraproject.org/en-US/gaming/proton/).
+
 #### Distribuciones basadas en Debian (Ubuntu, Mint, ...)
 Puedes descargártelo directamente de APT:
 ```
@@ -42,8 +45,7 @@ Include = /etc/pacman.d/mirrorlist
 
 Y finalmente instalar el paquete usando:
 ```
-sudo pacman -Syu
-sudo pacman -S steam
+sudo pacman -Syu steam
 ```
 
 > [!TIP]
@@ -51,7 +53,6 @@ sudo pacman -S steam
 
 > [!NOTE]
 > Al instalar, es posible que os pidan elegir qué paquete del driver de [Vulkan](https://wiki.archlinux.org/title/Vulkan#Installation) instalar. En cualquier caso, para gráficas integradas de Intel o las nuevas Arc, elegir `vulkan-intel`. Para gráficas NVIDIA, `nvidia-utils`. Finalmente, para gráficas AMD, usar `vulkan-radeon`.
-
 
 Toda la información se puede encontrar en la [documentación de ArchWiki](https://wiki.archlinux.org/title/Steam).
 
@@ -81,7 +82,6 @@ De cualquier forma, puedes seleccionar la versión de Proton para cada juego, en
 
 
 ### Instalación de Lutris 
-
 ¿Pero si ya tengo Steam, para que quiero otra aplicación para jugar? Digamos que puedes jugar a juegos de Windows en Linux a través de Steam gracias a un componente llamado Wine, o como es la implementation específica de este para jugar, Proton. Al ser un componente a parte que no requiere de Steam ya que es open source, realmente puedes jugar a "cualquier cosa" que sea tenga un ejecutable (Los navegantes de los siete mares están incluidos).
 
 En esta caso, Lutris existe como launcher de juegos universal, el cual admite juegos instalados de una gran variedad de tiendas y de emuladores de consolas (Ver sección de emulación), disponibles como "Ejecutores" dentro de la configuración.
@@ -92,58 +92,51 @@ Al igual que con Steam, cada distribución tiene su propio paquete y tienen mét
 
 > [!NOTE]
 > A excepción de algunos programas, los métodos de instalación son casi siempre los mismos, buscas lo que quieras descargar en internet, seguido de tu distribución, y normalmente será un comando que tendrás que ejecutar o un paquete que tienes que descomprimir / instalar.
-#### Ubuntu
-[Descargar](https://github.com/lutris/lutris/releases) el paquete `.deb` de la última versión de Lutris.
-#### Arch
-`sudo pacman -S lutris`
 
-#### Fedora
-`sudo dnf install lutris`
+#### Distribuciones basadas en Debian (Ubuntu, Mint, ...)
+[Descargar](https://github.com/lutris/lutris/releases) el paquete `.deb` de la última versión de Lutris.
+
+#### Distribuciones basada en Arch (Manjaro, Endeavour, ...)
+```
+sudo pacman -Syu lutris
+```
+
+#### Distribuciones basadas en Red Hat (Fedora, RedStar, Nobara ...)
+```
+sudo dnf install lutris
+```
 
 
 ## Ajustes
-
 Ante cualquier problema con el que puedas encontrar, [ArchWiki](https://wiki.archlinux.org/title/Main_page) es tu navaja suiza. Gracias a la gran cantidad de contribuidores han conseguido lograr una guía para todo lo que te pueda ocurrir. Es por ello que la gran mayoría de soluciones están presentes ahí.
 
 Incluso si instalas juegos que según ProtonDB u otros recursos deberían funcionar bien, puedes llegar a tener alguna incompatiblidad o dependencia que falta. Estos problemas se pueden resolver de varias maneras.
 
-Para juegos de Proton o Lutris, puedes probar otra versión de Proton o Wine. Algunos juegos pueden jugar mal con el Wine de tu sistema, así que puedes instalar otras versiones a través de [ProtonUp-Qt](#protonup-qt) o [ProtonPlus](#protonplus). Estas aplicaciones te permiten también descargar Proton-GE, que es una versión de Proton alternativa con patches no oficiales los que a veces pueden ayudarte a correr un juego muy reciente o uno que acaba de ser actualizado.
+Para juegos de Proton o Lutris, puedes probar versiones alternativas de Proton o Wine, como [Proton-GE](#proton-ge). Te recomendamos instalarlas a través de [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt) o [ProtonPlus](#protonplus).
 
+> [!NOTE]
+> "¿Para que me sirve a mi esto?", te preguntarás. Hay casos bastante puntuales donde un juego solo funciona en una versión especifica de proton o algún fork que no esté disponible a través de otros medios. Es por esto que a veces tener varias versiones instaladas es necesario.
 
-### ProtonPlus
+### Proton-GE
+[Proton-GE](https://github.com/GloriousEggroll/proton-ge-custom) es una versión de Proton alternativa con patches no oficiales los que a veces pueden ayudarte a correr un juego muy reciente o uno que acaba de ser actualizado.
 
-En Arch Proton-GE se puede instalar desde el paquete de AUR `proton-ge-custom` o `proton-ge-custom-bin` (yay -Syu `proton-ge-custom`).
-
-Guía de instalación en el [repositorio del proyecto](https://github.com/Vysp3r/ProtonPlus).
-
-Proton-GE viene con varias ventajas que pueden mejorar tu experiencia dentro de Steam (fuera de Steam puedes instalar Wine-GE, aunque con Lutris y Heroic las ventajas están integradas en el launcher). Una de estas es el FSR1 (AMD FidelityFX Super Resolution 1) habilitado por defecto. Este filtro hace el juego parecer más nítido en el caso de que lo estes jugando con una resolución más baja que la de tu pantalla. Puedes modificar el valor de nitidez poniendo esto en los _Launch Parameters_ del juego en Steam:
+Viene con varias ventajas que pueden mejorar tu experiencia dentro de Steam (fuera de Steam puedes instalar Wine-GE, aunque con Lutris y Heroic las ventajas están integradas en el launcher). Una de estas es el FSR1 (AMD FidelityFX Super Resolution 1) habilitado por defecto. Este filtro hace el juego parecer más nítido en el caso de que lo estes jugando con una resolución más baja que la de tu pantalla. Puedes modificar el valor de nitidez poniendo esto en los _Launch Parameters_ del juego en Steam:
 ```
 WINE_FULLSCREEN_FSR_STRENGTH=valor
 ```
 Dónde el valor está en el rango entre `0` y `5`, `0` siendo nitidez máxima.
 
-#### ProtonUp-Qt
-Para el resto de distribuciones, o si quieres manejar varias instalaciones de Proton-GE en Lutris y Steam, esta aplicación os permite hacer justo eso, con una interfaz gráfica. ¿Para que me sirve a mi esto? te preguntaras. Hay casos bastante puntuales donde un juego solo funciona en una versión especifica de proton o algún fork que no esté disponible a través de otros medios. Es por esto que a veces tener varias versiones instaladas es necesario.
-
-Guía de instalación en el [repositorio del proyecto](https://github.com/DavidoTek/ProtonUp-Qt)
-##### Arch (AUR)
-`yay -S protonup-qt`
-
-##### AppImage
-Una aplicación empaquetada en un AppImage es el equivalente de un `.exe` en windows, doble click y se abre. A veces, para poder abrirlo, hay que decirle al sistema operativo que es un archivo ejecutable por el sistema mediante `chmod +x .\aplicación.AppImage`.
-
-Éste se puede [descargar](https://github.com/DavidoTek/ProtonUp-Qt/releases) desde el repositorio del proyecto.
-
 
 ### Gamescope
-[Guía de ArchWiki para su instalación y uso](https://wiki.archlinux.org/title/Gamescope)
+[Guía de ArchWiki para su instalación y uso](https://wiki.archlinux.org/title/Gamescope).
 <!-- TODO: HDR, escalado, captura de cursor, ... -->
 
 
 ### Gamemode
-[Repositorio del proyecto](https://github.com/FeralInteractive/gamemode)
-Deshabilita efectos del Desktop, cambia el estado del CPU, y etc para mejorar rendimiento.
+[Gamemode](https://github.com/FeralInteractive/gamemode) deshabilita efectos del Desktop, cambia el estado del CPU, etc. para mejorar rendimiento mientras juegas.
+
 <!--TODO: Documentarlo como usarlo-->
+
 
 ### Instalación de un kernel alternativo
 Tranquilo, no vas a tener ni que tocar la BIOS, ni usar la terminal para modificar nada (bueno, hay que ejecutar un comando, qué te esperabas). El kernel es lo que se encuentra entre el sistema operativo y tu hardware, y éste es posible modificarlo para optimizarlo en ciertas tareas como puede ser si no en esta guía, para jugar.
@@ -155,7 +148,6 @@ Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el qu
 
 
 ### Uso de mandos
-
 Por defecto, en los ultimos años la compatibilidad con mandos en Linux se ha vuelto practicamente nativo, y solo con conectar el mando ya puedes ponerte a jugar directamente. Pero puede haber casos donde el mando no es directamente detectado por el sistema operativo o por Steam, por lo que guías con la [ArchWiki](https://wiki.archlinux.org/title/Gamepad) pueden ayudar a solucionar el problema bastante rápido.
 
 Para probar que el mando está siendo detectado y no es problema del sistema operativo, existe [evtest](https://archlinux.org/packages/?name=evtest), el cual detecta todas las entradas de cualquier dispositivo.
@@ -163,16 +155,17 @@ Para probar que el mando está siendo detectado y no es problema del sistema ope
 #### Bluetooth
 Para mandos de XBox (One S y posteriores), basta con instalar el driver [xpadneo](https://atar-axis.github.io/xpadneo/).
 
-Para mandos de PlayStation (como el DualShock 4), el modulo de kernel necesario para que el mando sea detectado puede no está cargado automaticamente y, aunque éste aparezca conectado, puede no estar funcionando. Es necesario tener cargaods los siguientes módulos:
+Para mandos de PlayStation (como el DualShock 4), el modulo de kernel necesario para que el mando sea detectado puede no está cargado automaticamente y, aunque éste aparezca conectado, puede no estar funcionando. Es necesario tener cargados los siguientes módulos:
 ```
 sudo modprobe hid_sony
 sudo modprobe joydev
 ```
 
-Por otro lado, si quieres que, teniendo el bluetooth activado, se conecte el mando automaticamente pulsando el botón de play, desde bluetoothctl, disponible con los paquetes [bluez](https://archlinux.org/packages/?name=bluez) y [bluez-utils](https://archlinux.org/packages/?name=bluez-utils), ejecutar los siguientes comandos:
+Por otro lado, si quieres que, teniendo el bluetooth activado, se conecte el mando automaticamente pulsando el botón de play, deberás configurarlo desde [`bluetoothctl`](https://wiki.archlinux.org/title/Bluetooth), ejecutando los siguientes comandos:
 ```
-bluetoothctl
-
+$ bluetoothctl
+```
+```
 agent on
 default-agent
 power on

@@ -9,15 +9,15 @@ Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mis
 -->
 
 
-# Guía del GUL para la instalación de Linux
+# Guía del GUL-UC3M para la instalación de Linux
 
 ## Prefacio
 
 ### Apple Macs
-La instalación de Linux depende del modelo y, más importante, del microprocesador. En cualquier caso, debido a que _es un Mac_, sólo hay dos formas de ejecutar Linux: en dual boot y en VM.
+La instalación de Linux depende del modelo y, más importante, del microprocesador. En cualquier caso, debido a que _es un Mac_, sólo hay dos formas de ejecutar Linux: en _dual boot_ y en máquina virtual (VM).
 
 > [!WARNING]
-> MacOS tiene la tendencia de formatear el disco a la hora de hacer una partición, **eliminando el sistema operativo y todos tus archivos de la faz de la tierra**. Es algo aleatorio y que te hará replantearte el volver a comprar un Mac, y la única forma de "protegerte" es **haciendo una copia de seguridad** si vas a hacer un dual boot.
+> MacOS tiene la tendencia de formatear el disco a la hora de hacer una partición, **eliminando el sistema operativo y todos tus archivos de la faz de la tierra**. Es algo aleatorio y que te hará replantearte el volver a comprar un Mac, y la única forma de "protegerte" es **haciendo una copia de seguridad** si vas a hacer un _dual boot_.
 > 
 > Te recomendamos usar [Time Machine](https://support.apple.com/es-es/104984), una herramienta del propio Apple.
 
@@ -26,8 +26,10 @@ La instalación de Linux depende del modelo y, más importante, del microprocesa
 Ordenadores con un procesador de la familia M (M1/M2/...) (2020 o posterior, dependiendo del modelo del dispositivo), los cuales están basados en la arquitectura [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family).
 
 Las opciones son:
-1. Dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/). Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md)
-2. Correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/). Guía en [`vm-install-mac.md`](vm-install-mac.md)
+1. Dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/).  
+   Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md).
+2. Correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/).  
+   Guía en [`vm-install-mac.md`](vm-install-mac.md).
 
 
 #### Intel
@@ -36,7 +38,7 @@ Ordenadores con procesador Intel (pre-2020), los cuales están basados en la arq
 Las opciones son:
 1. Dual boot (tener MacOS y Linux en el mismo ordenador).
     - Si es un ordenador sin [chip de seguridad T2](https://support.apple.com/es-es/103265) (pre-2018), no suele haber demasiados problemas al instalar, y los pasos generales para la instalación son fundamentalmente iguales que para cualquier otra máquina. Te recomendamos la [siguiente guía](https://www.makeuseof.com/tag/install-linux-macbook-pro/).
-    - Para ordenadores con chip T2 (2018-2019), lo más recomendable es usar [t2linux](https://t2linux.org/). Son parches específicos para múltiples distribuciones de Linux, ya que cosas como el Wi-Fi o el teclado y el trackpad no suelen funcionar con una ISO normal debido a los drivers.
+    - Para ordenadores con chip T2 (2018-2019), lo más recomendable es usar [t2linux](https://t2linux.org/). Son parches específicos para múltiples distribuciones de Linux, ya que cosas como el Wi-Fi o el teclado y el _trackpad_ no suelen funcionar con una ISO normal debido a los _drivers_.
 
 >  [!TIP]
 > Si has instalado una distribución sin [t2linux](https://t2linux.org/), puedes encontrar _firmware_ ya compilado en Internet.
@@ -54,7 +56,7 @@ Las opciones son:
 
 
 ### Microsoft Surface
-Dado que algunos de los drivers son privativos, para los casos de full install o dual boot es recomendable instalar un kernel específico para Surface, como [linux-surface](https://github.com/linux-surface/linux-surface). Guía de instalación [aquí](https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup).
+Dado que algunos de los drivers son privativos, para los casos de full install o _dual boot_ es recomendable instalar un kernel específico para Surface, como [linux-surface](https://github.com/linux-surface/linux-surface). Guía de instalación [aquí](https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup).
 
 
 
@@ -86,7 +88,7 @@ Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mis
 Este método consiste en decir [_fuck Microsoft_](https://www.youtube.com/watch?v=2zpCOYkdvTQ), borrar Windows, y correr sólo Linux.  
 - **Restricciones:** Ninguna.  
 Bueno sí, un ordenador con menos de 20 años.
-- **Ventajas:** Todas las ventajas de Linux, sin los posibles problemas derivados de tener Dual Boot.
+- **Ventajas:** Todas las ventajas de Linux, sin los posibles problemas derivados de tener _dual boot_.
 - **Desventajas:** Tu ordenador no va a tener Windows.  
 Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o algún programa o juego (cualquiera con AntiCheat) específico de Windows (y [Wine](https://www.winehq.org/) o [Proton](https://github.com/ValveSoftware/Proton) no te puede ayudar), sí.
 - **Recomendado para:**
@@ -153,19 +155,27 @@ Una máquina virtual (VM) te permite correr un SO virtual por encima de tu propi
     - Instalar [VirtualBox](https://www.virtualbox.org/) o similar
     - Descargarse la [ISO de Ubuntu](https://ubuntu.com/download/desktop)
 
+
+> [!NOTE]
+> También puedes [correr Windows en una VM](post-install.md#usando-una-máquina-virtual).
+>
+> Esto es lo recomendable si tienes un ordenador lo suficientemente potente y sólo necesitas hacer unas pocas cosas en Windows.
+
+
+
 Guía de cómo instalarlo en [`vm-install.md`](vm-install.md).
 
 
 ### Método 5: Disco externo
-Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quieras usar Linux. Viene a ser lo mismo que [dual boot](#método-2-dual-boot).
+Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quieras usar Linux. Viene a ser lo mismo que [_dual boot_](#método-2-dual-boot).
 - **Restricciones:**
     - Tener un disco duro externo (vacío)
     - Recomendable tener un puerto USB 3.0 para tener velocidades decentes
 - **Ventajas:**
-    - Todas las de tener un Dual Boot
+    - Todas las de tener un _dual boot_
     - No necesitas usar/expandir el almacenamiento interno de tu PC
 - **Desventajas:**
-    - Las mismas de un Dual Boot
+    - Las mismas de un _dual boot_
     - Tienes que cargar con el disco externo
 - **Recomendado para:** Portátiles con poco almacenamiento, pero que quieran tener toda la experiencia Linux
 - **Cosas que preparar:**
@@ -173,7 +183,8 @@ Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quier
       **IMPORTANTE:** Todos los datos del disco duro externo se borrarán. Estás avisado.
     - Un [live USB con Linux](common.md#cómo-crear-un-liveusb).
 
-**NOTA**: También se puede tener Windows en un disco externo...
+> [!NOTE]
+> También se puede tener Windows en un disco externo, lo cual puede dar hasta menos problemas.
 
 Guía de cómo instalarlo en [`dualboot-external-install.md`](dualboot-external-install.md).
 
