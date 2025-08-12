@@ -112,7 +112,7 @@ Ante cualquier problema con el que puedas encontrar, [ArchWiki](https://wiki.arc
 
 Incluso si instalas juegos que según ProtonDB u otros recursos deberían funcionar bien, puedes llegar a tener alguna incompatiblidad o dependencia que falta. Estos problemas se pueden resolver de varias maneras.
 
-Para juegos de Proton o Lutris, puedes probar versiones alternativas de Proton o Wine, como [Proton-GE](#proton-ge). Te recomendamos instalarlas a través de [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt) o [ProtonPlus](#protonplus).
+Para juegos de Proton o Lutris, puedes probar versiones alternativas de Proton o Wine, como [Proton-GE](#proton-ge). Te recomendamos instalarlas a través de [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt) o [ProtonPlus](https://github.com/Vysp3r/ProtonPlus).
 
 > [!NOTE]
 > "¿Para que me sirve a mi esto?", te preguntarás. Hay casos bastante puntuales donde un juego solo funciona en una versión especifica de proton o algún fork que no esté disponible a través de otros medios. Es por esto que a veces tener varias versiones instaladas es necesario.
