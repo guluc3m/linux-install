@@ -152,6 +152,9 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [caligula](https://github.com/ifd3f/caligula): Herramienta para _flashear_ discos (alternativa a `dd`)
 - [glow](https://github.com/charmbracelet/glow): Visor de Markdown en terminal
 - [The Fuck](https://github.com/nvbn/thefuck): Corrector de comandos
+- [impala](https://github.com/pythops/impala): TUI para Wi-Fi
+- [bluetui](https://github.com/pythops/bluetui): TUI para Bluetooth
+- [wiremix](https://github.com/tsowell/wiremix): TUI para control de audio
 - [Lazygit](https://github.com/jesseduffield/lazygit): TUI para Git (probablemente la mejor interfaz gráfica para Git)
 - [Lazydocker](https://github.com/jesseduffield/lazydocker): TUI para Docker
 - [yazi](https://github.com/sxyazi/yazi): Explorador de archivos en terminal

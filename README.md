@@ -63,18 +63,31 @@ Dado que algunos de los drivers son privativos, para los casos de full install o
 ## Distribuciones
 Una distribución, o _distro_, es una serie de aplicaciones y herramientas que se empaquetan encima del [kernel de Linux](https://github.com/torvalds/linux) para tener un Sistema Operativo completo.
 
+> [!TIP]
+> Es recomendable, especialmente antes de instalar Linux en físico (_full install_ / _dual boot_), comprobar la compatibilidad de tu ordenador con la distro específica.
+> - Si es un portátil relativamente nuevo, es posible que algunos drivers todavía no estén en los repositorios (ver [Solucionar Drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)).
+> - Si es un portátil relativamente antiguo, es posible que las _distros_ más _bleeding edge_ te den problemas.
+> 
+> Buscando en [Google](https://google.com) o preguntándole [al patito](https://duckduckgo.com/) se suelen encontrar respuestas.
+
 Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.com/), pero aquí te dejamos nuestras recomendaciones:
-- Si eres principiante, te recomendamos [Ubuntu](https://ubuntu.com/desktop) o [Linux Mint](https://linuxmint.com/), basadas en [Debian](https://www.debian.org/), ya que son estables* y fáciles de usar _out of the box_.
+- Si eres principiante, te recomendamos [Linux Mint](https://linuxmint.com/) o [Ubuntu](https://ubuntu.com/desktop), basadas en [Debian](https://www.debian.org/), ya que son "estables" y fáciles de usar _out of the box_.
 - Si quieres paquetes algo más actualizados, te recomendamos [Fedora](https://fedoraproject.org/workstation).
 - Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide).
 
 
-> [!TIP]
-> Es recomendable, especialmente antes de instalar Linux en físico (_full install_ / _dual boot_), comprobar la compatibilidad de tu ordenador con la distro específica.
-> - Si es un portátil relativamente nuevo, es posible que algunos drivers todavía no estén en los repositorios (tocará añadirlos manualmente, ver[Solucionar Drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)).
-> - Si es un portátil relativamente antiguo, es posible que las _distros_ más _bleeding edge_ te den problemas.
-> 
-> Buscando en [Google](https://google.com) o preguntándole [al patito](https://duckduckgo.com/) se suelen encontrar respuestas.
+### Distribuciones especializadas
+Las _distros_ mencionadas anteriormente se consideran "generalistas", es decir, que funcionan para la mayoría de la gente en la mayoría de situaciones, y son un buen punto de partida. Sin embargo, si quieres algo más especial y/o te apetece trastear un poco, te dejamos otras opciones:
+- Para jugones, recomendamos [Nobara Linux](https://nobaraproject.org/).
+  - Si quieres tener una máquina exclusiva para jugar, y sin tener que configurar mucho, (e.g. un PC en el salón, o una _handheld_) te recomendamos [Bazzite](https://bazzite.gg/).  
+  Es una _distro_ inmutable, lo cual quiere decir que está pensada para funcionar y que no se rompa nada, a cambio de tener limitaciones a la hora de modificar el sistema.  
+  Sin embargo, viene con todo lo que puedas necesitar para jugar a tus jueguitos, y con muy buena [documentación y guías](https://docs.bazzite.gg/).
+- Para gente (_otakus_, furros, _femboys_, programadores de [Rust](https://www.rust-lang.org/)) que quiera probar la verdadera experiencia Linux moderna, con [_tiling window manager_](https://en.wikipedia.org/wiki/Tiling_window_manager) incluído, pero que no quieran empezar de cero, recomendamos [Omarchi](https://omarchy.org/). Es [Arch Linux](https://wiki.archlinux.org/) con [Hyprland](https://hypr.land/), con una configuración excelente.
+- Si tienes un ordenador moderno y quieres exprimirlo al máximo, échale un vistazo a [CachyOS](https://cachyos.org/).
+
+> [!NOTE]
+> La mayoría de estas _distros_ simplemente añaden paquetes, configuraciones, y/o kernels ya preinstalados, lo cual hace una gran experiencia _out of the box_.  
+> Sin embargo, puedes coger cualquier distribución e instalar estos componentes manualmente. Eso es lo bonito de Linux.
 
 
 <!--
@@ -97,7 +110,7 @@ Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o
     - Tu tía la del pueblo que sólo usa Internet Explorer
 - **Cosas que preparar:**
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
-    - Un [live USB con Linux](common.md#cómo-crear-un-liveusb) .
+    - Un [live USB con Linux](common.md#cómo-crear-un-liveusb).
 
 Guía de como instalarlo en [`full-install.md`](full-install.md)
 
@@ -116,7 +129,7 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
     - Personas a la que gente malvada le obligue a usar Windows
 - **Cosas que preparar:**
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
-    - Un [live USB con Linux](common.md#cómo-crear-un-liveusb) .
+    - Un [live USB con Linux](common.md#cómo-crear-un-liveusb).
 
 Guía de cómo instalarlo en [`dualboot-install.md`](dualboot-install.md).
 
@@ -196,6 +209,8 @@ Si quieres seguir el taller pero no quieres liarte a instalar nada (_cobarde_), 
 
 ## Ruegos y preguntas
 Si tienes alguna duda, nos puedes escribir a info AT gul.uc3m.es, o un MD a nuestro Twitter, [@guluc3m](https://twitter.com/guluc3m).
+
+También échale un vistazo a nuestra sección [post-install](post-install.md) y nuestra [guía de juegos en Linux](play-on-linux.md).
 
 
 ## Transparencias de _install partys_ anteriores
