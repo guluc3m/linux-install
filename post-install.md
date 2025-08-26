@@ -120,6 +120,8 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [gestures](https://gitlab.com/nokun/gestures): Aplicación para ejecutar comandos a partir de gestos en el _trackpad_
 - [nala](https://gitlab.com/volian/nala): [Exclusivo para APT (Debian/Ubuntu/Mint y derivados)] _Frontend_ alternativo para APT
 - [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
+- [Vicinae](https://github.com/vicinaehq/vicinae): _Launcher_ de aplicaciones con extensiones y funcionalidades extra ([Raycast](https://www.raycast.com/) para Linux)
+- [Kdenlive](https://kdenlive.org/es/): Editor de vídeo
 
 
 ### Emuladores de terminal
@@ -128,9 +130,32 @@ Una de las grandes ventajas de Linux es el uso de la terminal (y sus [multiples 
 En el caso de que seas un ávido usuario de ella, es recomendable cambiar el emulador de terminal (la aplicación que ejecuta la terminal) que venga por defecto por una más moderna, ya que añaden funcionalidades extra (como mostrar imágenes, las cuales son usadas en algunas aplicaciones), y permiten una mayor configuración.
 
 Hay una cantidad ingente de ellos, pero te recomendamos estos tres:
-- [kitty](https://sw.kovidgoyal.net/kitty/): El emulador con más funcionalidades y el mejor soportado.
-- [Ghostty](https://ghostty.org/): Emulador que combina una gran cantidad de funcionalidades con una "experiencia nativa" en entornos de escritorio y sin sacrificar el rendimiento.
-- [st](https://st.suckless.org/): Un emulador centrado en ser sencillo, rápido y ligero. Puedes añadir [_patches_](https://st.suckless.org/patches/) para funcionalidades extra.
+- [kitty](https://sw.kovidgoyal.net/kitty/): El emulador con más funcionalidades y el mejor soportado
+- [Ghostty](https://ghostty.org/): Emulador que combina una gran cantidad de funcionalidades con una "experiencia nativa" en entornos de escritorio y sin sacrificar el rendimiento
+- [st](https://st.suckless.org/): Un emulador centrado en ser sencillo, rápido y ligero. Puedes añadir [_patches_](https://st.suckless.org/patches/) para funcionalidades extra
+
+
+### Shells
+El programa que ejecuta la terminal en sí se llama _shell_. La mayoría de distros vienen con [Bash](https://www.gnu.org/software/bash/), pero tienes otras alternativas:
+- [Zsh](https://www.zsh.org/): La más popular, con una gran cantidad de plugins hechos por la comunidad (ver [Zinit](https://github.com/zdharma-continuum/zinit))
+- [fish](https://fishshell.com/): _Shell_ "_batteries-included_", con muchas funcionalidades configuradas _out of the box_
+- [Nushell](https://www.nushell.sh/): Una _shell_ moderna, hecha desde cero, y muy diferente al resto, con plugins, mensajes de error fantásticos y muchísimas funcionalidades para trabajar con datos
+
+#### Prompt
+El _prompt_ es lo que aparece antes de ejecutar cada comando, y muestra información sobre el estado de la shell, e.g.:
+```bash
+gul@corneja:~$ 
+```
+<!--
+ ^     ^    ^^
+ |     |    |└- user mode
+ |     |    └- current directory
+ |     └- hostname
+ └- username
+```
+-->
+
+Cada una de las _shells_ te permite configurarlo hasta cierto punto, pero si quieres tener más control, o mostrar información como el tiempo, la hora, el estado de Git, o la música que estás escuchando, échale un vistazo a [Oh My Posh](https://ohmyposh.dev/) y [Starship](https://starship.rs/).
 
 
 ### Aplicaciones de terminal
@@ -165,6 +190,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [carbonyl](https://github.com/fathyb/carbonyl): Navegador en terminal
 - [rmpc](https://mierak.github.io/rmpc/): Reproductor de música en terminal, con soporte para imágenes
 - [beets](https://beets.io/): Gestor de archivos de música
+- [jqp](https://github.com/noahgorstein/jqp): Permite hacer _queries_ interactivas de [jq](https://github.com/jqlang/jq) en archivos JSON
 
 
 ### Aplicaciones para hardware específico
