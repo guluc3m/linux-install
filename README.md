@@ -82,7 +82,7 @@ Las _distros_ mencionadas anteriormente se consideran "generalistas", es decir, 
   - Si quieres tener una máquina exclusiva para jugar, y sin tener que configurar mucho, (e.g. un PC en el salón, o una _handheld_) te recomendamos [Bazzite](https://bazzite.gg/).  
   Es una _distro_ inmutable, lo cual quiere decir que está pensada para funcionar y que no se rompa nada, a cambio de tener limitaciones a la hora de modificar el sistema.  
   Sin embargo, viene con todo lo que puedas necesitar para jugar a tus jueguitos, y con muy buena [documentación y guías](https://docs.bazzite.gg/).
-- Para gente (_otakus_, furros, _femboys_, programadores de [Rust](https://www.rust-lang.org/)) que quiera probar la verdadera experiencia Linux moderna, con [_tiling window manager_](https://en.wikipedia.org/wiki/Tiling_window_manager) incluído, pero que no quieran empezar de cero, recomendamos [Omarchi](https://omarchy.org/). Es [Arch Linux](https://wiki.archlinux.org/) con [Hyprland](https://hypr.land/), con una configuración excelente.
+- Para gente (_otakus_, furros, _femboys_, programadores de [Rust](https://www.rust-lang.org/)) que quiera probar la verdadera experiencia Linux moderna, con [_tiling window manager_](https://en.wikipedia.org/wiki/Tiling_window_manager) incluído, pero que no quieran empezar de cero, recomendamos [Omarchy](https://omarchy.org/). Es [Arch Linux](https://wiki.archlinux.org/) con [Hyprland](https://hypr.land/), con una configuración excelente.
 - Si tienes un ordenador moderno y quieres exprimirlo al máximo, échale un vistazo a [CachyOS](https://cachyos.org/).
 
 > [!NOTE]
