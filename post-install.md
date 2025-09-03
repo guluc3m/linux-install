@@ -161,7 +161,7 @@ Cada una de las _shells_ te permite configurarlo hasta cierto punto, pero si qui
 ### Aplicaciones de terminal
 Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Unix:
 - [eza](https://github.com/eza-community/eza): Versión mejorada de `ls`
-- [bat](https://github.com/sharkdp/bat): Versión mejorada de `cat`
+- [bat](https://github.com/sharkdp/bat): Versión mejorada de `cat` (ver también [bat-extras](https://github.com/eth-p/bat-extras))
 - [advcpmv](https://github.com/jarun/advcpmv): Parche para `cp` y `mv` que añade una barra de progreso
 - [btop](https://github.com/aristocratos/btop): Versión mejorada de `top`, con soporte para GPUs
 - [fd](https://github.com/sharkdp/fd): Versión mejorada de `find`
