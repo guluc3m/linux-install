@@ -101,7 +101,7 @@ nvidia-inst --nouveau
 
 
 ## Aplicaciones
-Normalmente, tu gestor de paquetes (APT para Debian/Ubuntu/Mint, DNF para Fedora, Pacman para Arch) tendrá todos los paquetes que te puedas instalar. Alternativamente (sobretodo en los casos en los que un paquete no esté disponible), puedes usar [Flatpak](https://flatpak.org/) o [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) con un _helper_ como [Yay](https://github.com/Jguer/yay) (en el caso de Arch). En ocasiones también te proporcionan un AppImage, y recuerda que siempre es factible compilar desde source.
+Normalmente, tu gestor de paquetes (APT para Debian/Ubuntu/Mint, DNF para Fedora, Pacman para Arch) tendrá todos los paquetes que te puedas instalar. Alternativamente (sobretodo en los casos en los que un paquete no esté disponible), puedes usar [Flatpak](https://flatpak.org/) (con [Flatseal](https://flathub.org/en/apps/com.github.tchx84.Flatseal)) o [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) (en el caso de Arch) con un _helper_ como [Yay](https://github.com/Jguer/yay). En ocasiones también te proporcionan un AppImage, y recuerda que siempre es factible compilar desde source.
 
 > [!TIP]
 > ¿Qué es un _AppImage_?
