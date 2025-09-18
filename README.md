@@ -28,7 +28,8 @@ Ordenadores con un procesador de la familia M (M1/M2/...) (2020 o posterior, dep
 Las opciones son:
 1. Dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/).  
    Guía en [`dualboot-mac-install.md`](dualboot-mac-install.md).
-2. Correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/).  
+2. Usar una VM de [Orbstack](https://orbstack.dev/) (también permite emular x86).
+3. Correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/).  
    Guía en [`vm-install-mac.md`](vm-install-mac.md).
 
 
