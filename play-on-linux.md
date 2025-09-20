@@ -198,6 +198,7 @@ A continuación están los emuladores que siguen siendo mantenidos y que miembro
 - [nDS - MelonDS](https://melonds.kuribo64.net/)
 - [3DS - Azahar](https://azahar-emu.org/) (o [AzaharPlus](https://github.com/AzaharPlus/AzaharPlus))
 - [PS1 - Duckstation](https://www.duckstation.org/)
+- [PS2 - PCSX2](https://pcsx2.net/)
 - [PS3 - RCPS3](https://rpcs3.net/)
 
 
