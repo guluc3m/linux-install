@@ -199,6 +199,9 @@ Muchos dispositivos vienen con herramientas específicas para controlar aspectos
 - [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
 - [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ de diferentes marcas
 - [Solaar](https://github.com/pwr-Solaar/Solaar): Herramienta para configurar dispositivos de Logitech (ratones, teclados, etc.)
+- [Framework System TUI](https://github.com/grouzen/framework-tool-tui) /
+  [Framework System](https://github.com/FrameworkComputer/framework-system):
+  Herramienta de configuración para ordenadores [Framework](https://frame.work)
 
 ### Timeshift
 Esta aplicación se ocupa de crear algo llamado _snapshots_ de tu sistema. Estos snapshots son copias del estado de tu sistema en un momento particular, que sirven como backups para poder restaurarlo en el caso de que se rompa. Se instala a través del gestor de paquetes, y es universal para todas las distros.
