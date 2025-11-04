@@ -122,6 +122,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
 - [Vicinae](https://github.com/vicinaehq/vicinae): _Launcher_ de aplicaciones con extensiones y funcionalidades extra ([Raycast](https://www.raycast.com/) para Linux)
 - [Kdenlive](https://kdenlive.org/es/): Editor de vídeo
+- [scrcpy](https://github.com/Genymobile/scrcpy): Control y streaming de móviles Android directamente al ordenador (No requiere de una aplicación extra ya que se basa en el ADB de Android).
 
 
 ### Emuladores de terminal
