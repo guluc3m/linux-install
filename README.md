@@ -58,8 +58,9 @@ Las opciones son:
 
 
 ### Microsoft Surface
-Dado que algunos de los drivers son privativos, para los casos de full install o _dual boot_ es recomendable instalar un kernel específico para Surface, como [linux-surface](https://github.com/linux-surface/linux-surface). Guía de instalación [aquí](https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup).
+Dado que algunos de los drivers son privativos, para los casos de [_full install_](#método-1-full-linux) o [_dual boot_](#método-2-dual-boot) es recomendable instalar un kernel específico para Surface, como [linux-surface](https://github.com/linux-surface/linux-surface). Guía de instalación [aquí](https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup).
 
+Si tienes un Surface con procesador ARM (Snapdragon)... lo siento. El soporte, aún con los parches del kernel de linux-surface, es bastante pobre. Te dejamos esta pequeña [guía con el estado en el Surface Laptop 7](https://github.com/bryce-hoehn/linux-surface-laptop-7) por si quieres pegarte, pero te recomendamos que optes por [WSL](#método-3-windows-subsystem-for-linux-2-wsl2) o [máquina virtual](#método-4-virtual-machine-vm).
 
 
 ## Distribuciones
