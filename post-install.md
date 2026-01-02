@@ -112,6 +112,7 @@ Normalmente, tu gestor de paquetes (APT para Debian/Ubuntu/Mint, DNF para Fedora
 Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de sacarle el máximo partido a tu nuevo Linux:
 - [EnvyControl](https://github.com/bayasdev/envycontrol): Aplicación para configurar el uso de GPUs dedicadas, integradas, e híbridas, extremadamente útil para cuando tienes tanto gráfica integrada como gráfica dedicada
 - [OpenRGB](https://github.com/CalcProgrammer1/OpenRGB): Controlador para luces RGB
+- [Dual Function Keys](https://gitlab.com/interception/linux/plugins/dual-function-keys): Plugin para [interception tools](https://gitlab.com/interception/linux) que permite configurar teclas del teclado con múltiples funciones (e.g. Caps Lock si lo pulsas funciona como Caps Lock, pero si lo mantienes funciona como Control).
 - [Vesktop](https://github.com/Vencord/Vesktop): Discord para Linux, pero bien hecho
 - [ZapZap](https://rtosta.com/zapzap/): Cliente de WhatsApp para Linux
 - [Redshift](https://github.com/jonls/redshift): _Screen filter_ (protector de vista)
@@ -122,7 +123,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
 - [Vicinae](https://github.com/vicinaehq/vicinae): _Launcher_ de aplicaciones con extensiones y funcionalidades extra ([Raycast](https://www.raycast.com/) para Linux)
 - [Kdenlive](https://kdenlive.org/es/): Editor de vídeo
-- [scrcpy](https://github.com/Genymobile/scrcpy): Control y streaming de móviles Android directamente al ordenador (No requiere de una aplicación extra ya que se basa en el ADB de Android).
+- [scrcpy](https://github.com/Genymobile/scrcpy): Control y _streaming_ de móviles Android directamente al ordenador (no requiere de una aplicación extra ya que se basa en el ADB de Android)
 
 
 ### Emuladores de terminal
