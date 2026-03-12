@@ -195,6 +195,7 @@ Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal,
 - [beets](https://beets.io/): Gestor de archivos de música
 - [jqp](https://github.com/noahgorstein/jqp): Permite hacer _queries_ interactivas de [jq](https://github.com/jqlang/jq) en archivos JSON
 - [croc](https://github.com/schollz/croc): Aplicación simple para enviar archivos entre ordenadores (soporta distintos Sistemas Operativos)
+- [witr](https://github.com/pranshuparmar/witr): Navaja suiza para _debuggear_ procesos y puertos
 
 
 ### Aplicaciones para hardware específico
