@@ -183,7 +183,7 @@ scan on
 ## Emulación
 No se lo contéis a Nintendo, pero si tu objetivo principal es emular juegos mas viejos o de otras consolas, Linux es la mejor opción ya que muchos emuladores se ejecutan nativamente en Linux y están específicamente optimizados para ello.
 
-En el caso en el que quieras emular, pero no tengas las ROMs de tus juegos comprados legalmente y de los cuales también tienes la consola, en [Vimm's Lair](https://vimm.net/) podrás encontrarlas para consolas de hace 4 generaciones, subidas y moderadas por la comunidad. Suponemos que no hace falta comentar que todos los juegos de Mario están quitados. Otra alternativa es [r/ROMs Megathread](https://r-roms.github.io/), la cual contiene los enlaces más actualizados a todas las ROMs que puedas querer.
+En el caso en el que quieras emular, pero no tengas las ROMs de tus juegos comprados legalmente y de los cuales también tienes la consola, en [Vimm's Lair](https://vimm.net/) podrás encontrarlas para consolas de hace 4 generaciones, subidas y moderadas por la comunidad. Suponemos que no hace falta comentar que todos los juegos de Mario están quitados. ~~Otra alternativa es [r/ROMs Megathread](https://r-roms.github.io/), la cual contiene los enlaces más actualizados a todas las ROMs que puedas querer~~ ( Murió por falta de capital ;( ).
 
 En esta guía vamos a cubrir dos métodos para emular en Linux, de los cuales ambos tienen cierto público objetivo.
 
@@ -193,7 +193,7 @@ Si tu objetivo es emular un par de juegos, tocarlos a lo mejor una vez cada dos 
 A continuación están los emuladores que siguen siendo mantenidos y que miembros de GUL dan fe que funcionan:
 - [Wii / GameCube - Dolphin](https://es.dolphin-emu.org/?cr=es)
 - [WiiU - Cemu](https://cemu.info/)
-- [Switch - Suyu](https://suyu.dev/)
+- [Switch - Eden](https://eden-emu.dev/)
 - [GBA - VisualBoy Advance](https://visualboyadvance.org/)
 - [nDS - MelonDS](https://melonds.kuribo64.net/)
 - [3DS - Azahar](https://azahar-emu.org/) (o [AzaharPlus](https://github.com/AzaharPlus/AzaharPlus))
@@ -213,6 +213,8 @@ En el caso de que tengas una librería extensa de emuladores y ROMs completament
 
 Este además de tener compatibilidad con cualquier mando que te puedas imaginar, tiene la opción de usar shaders personalizados, multiples guardados de partidas, interfaz customizable, núcleos actualizados, y una lista más de opciones que trae consigo.
 
+#### ES-DE (EmulationStation Desktop Edition)
+[ES-DE](https://es-de.org/) es, como podrás adivinar, otro _frontend_, pero para ejecutables directamente. Este viene con soporte para la grán mayoria que estén soportados actualmente, pero además se puede extender con lanzadores personalizados y modificar los predeterminados. La curva de aprendizaje depende completamente de los emuladores que uses, aunque es de decir, que ninguno de ellos es complicado de configurar.
 
 ## Lossless Scaling Frame Generation
 Actualmente hay una herramienta llamada [lsfg-vk](https://github.com/PancakeTAS/lsfg-vk) en desarrollo, que permite usar [Lossless Scaling](https://losslessscaling.com) (generación de fotogramas) en juegos nativos de Vulkan, y los que usan DXVK. Esta herramienta funciona oficialmente con cualquier juego de 64 bits, y no oficialmente, a través de WOW64, en juegos de 32 bits (lo que se puede activar aplicando la variable de entorno `PROTON_USE_WOW64=1` en versiones _bleeding edge_ de Proton, Proton-GE y Wine-GE).
