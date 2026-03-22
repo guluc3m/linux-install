@@ -112,6 +112,7 @@ Normalmente, tu gestor de paquetes (APT para Debian/Ubuntu/Mint, DNF para Fedora
 Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de sacarle el máximo partido a tu nuevo Linux:
 - [EnvyControl](https://github.com/bayasdev/envycontrol): Aplicación para configurar el uso de GPUs dedicadas, integradas, e híbridas, extremadamente útil para cuando tienes tanto gráfica integrada como gráfica dedicada
 - [OpenRGB](https://github.com/CalcProgrammer1/OpenRGB): Controlador para luces RGB
+- [OpenTabletDriver](https://opentabletdriver.net/): Drivers para controlar la tablet gráfica. Recomendado/Necesario incluso para distribuciones como KDE que vienen con configuradores nativos.
 - [Dual Function Keys](https://gitlab.com/interception/linux/plugins/dual-function-keys): Plugin para [interception tools](https://gitlab.com/interception/linux) que permite configurar teclas del teclado con múltiples funciones (e.g. Caps Lock si lo pulsas funciona como Caps Lock, pero si lo mantienes funciona como Control).
 - [Vesktop](https://github.com/Vencord/Vesktop): Discord para Linux, pero bien hecho
 - [ZapZap](https://rtosta.com/zapzap/): Cliente de WhatsApp para Linux
