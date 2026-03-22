@@ -196,7 +196,7 @@ A continuación están los emuladores que siguen siendo mantenidos y que miembro
 - [Switch - Eden](https://eden-emu.dev/)
 - [GBA - VisualBoy Advance](https://visualboyadvance.org/)
 - [nDS - MelonDS](https://melonds.kuribo64.net/)
-- [3DS - Azahar](https://azahar-emu.org/) (o [AzaharPlus](https://github.com/AzaharPlus/AzaharPlus))
+- [3DS - Azahar](https://azahar-emu.org/) (~~o [AzaharPlus](https://github.com/AzaharPlus/AzaharPlus)~~ El proyecto base ya tiene soporte para archivos `.3ds`)
 - [PS1 - Duckstation](https://www.duckstation.org/)
 - [PS2 - PCSX2](https://pcsx2.net/)
 - [PS3 - RCPS3](https://rpcs3.net/)
