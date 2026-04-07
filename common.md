@@ -57,8 +57,8 @@ En caso de que esto no solucione tu problema, te va a tocar buscar, descargar, e
 
 1. Activa los servicios
 ```bash
-sudo systemctl enable —now systemd-networkd
-sudo systemctl enable —now systemd-resolved
+sudo systemctl enable --now systemd-networkd
+sudo systemctl enable --now systemd-resolved
 ```
 
 2. Mira cual es el adaptador que estas usando con `ip a`
