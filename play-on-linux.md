@@ -201,6 +201,8 @@ A continuación están los emuladores que siguen siendo mantenidos y que miembro
 - [PS2 - PCSX2](https://pcsx2.net/)
 - [PS3 - RCPS3](https://rpcs3.net/)
 
+#### Ficheros necesarios por emuladores
+En el caso de ciertos emuladores como PCSX2, RCPS3 o Eden, es necesario descargar el firmware proprietario de dichas consolas, los cuales se pueden encontrar en [la gametechwiki](https://emulation.gametechwiki.com/index.php/Emulator_files).
 
 ### Gestores y _frontends_
 En el caso de que tengas una librería extensa de emuladores y ROMs completamente legales, puede merecer la pena usar alguna aplicación para gestionar tus configuraciones y juegos.
