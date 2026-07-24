@@ -1,15 +1,3 @@
-
-# Linux Install Party
-
-## Cosas a tener en cuenta ANTES DE ASISTIR AL TALLER
-Uno de los objetivos de éste taller es instalar Linux en vuestros ordenadores.  
-Para agilizar éste proceso, es recomendable que leáis la siguiente información:  
-
-Hay diversas formas de "instalar" Linux. Entendemos que no todos tenéis las mismas circunstancias, así que recomendamos que tengáis en cuenta todas y elijáis una antes de venir, trayendo el material correspondiente dependiendo del método.
-
-
-
-
 # Guía del GUL-UC3M para la instalación de Linux
 
 ## Prefacio
