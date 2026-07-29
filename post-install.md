@@ -28,14 +28,14 @@ Alternativamente, puedes usar el [_script_ de Python proporcionado por GÉANT](h
 > - **Username**: El ID proporcionado
 > - **Password**: La contraseña proporcionada
 
-Si te vas a conectar a *eduroam* a través de un terminal o tty usando `iwd`, crea el siguiente archivo con *nano* o tu editor de preferencia: `/var/lib/iwd/eduroam.8021x`, y escribe lo siguiente:
+Si te vas a conectar a través de un terminal o tty usando [`iwd`](https://wiki.archlinux.org/title/Iwd), crea el archivo `/var/lib/iwd/eduroam.8021x` (con [`nano`](https://www.nano-editor.org/) o tu editor de preferencia), y escribe lo siguiente:
 ```
 [Security]
 EAP-Method=PEAP
-EAP-Identity=100522NIA@alumnos.uc3m.es
+EAP-Identity=100XXXXXX@alumnos.uc3m.es  # tu correo
 EAP-PEAP-Phase2-Method=MSCHAPV2
-EAP-PEAP-Phase2-Identity=100522NIA@alumnos.uc3m.es
-EAP-PEAP-Phase2-Password=contraseña123
+EAP-PEAP-Phase2-Identity=100XXXXXX@alumnos.uc3m.es  # tu correo
+EAP-PEAP-Phase2-Password=contraseña123  # tu contraseña
 
 [Settings]
 AutoConnect=true
@@ -96,7 +96,7 @@ Ejecuta el comando `lspci -k -d ::03xx` y fíjate en el resultado, por ejemplo:
 ```
 VGA compatible controller: NVIDIA Corporation AD107 [GeForce RTX 4060] (rev a1)
 ```
-Mira **AD107** y en la web comprueba a qué gráfica se corresponde. En mi caso,
+Mira tu tarjeta (en este caso, *AD107*) y [en la web](https://wiki.archlinux.org/title/NVIDIA#Installation) comprueba a qué gráfica se corresponde. En mi caso,
 
 ```bash
 sudo pacman -Syu nvidia-580xx-dkms linux-headers
