@@ -17,7 +17,7 @@ Para poder instalar arch linux en tu ordenador, necesitamos lo siguiente:
 - Una conexión estable a internet.
 
 ## 2. Primeros pasos
-Este paso es la continuación a la guía mencionada arriba, una vez as accedido a la ISO desde el selector de disco de arranque.
+Este paso es la continuación a la guía mencionada arriba, una vez has accedido a la ISO desde el selector de disco de arranque.
 
 - Elige la opción de instalar arch.
 - Espera un rato, la ISO se está copiando en memoria RAM. Una vez termine, puedes desconectar el USB.
@@ -30,7 +30,7 @@ sda           8:0    0 931.5G  0 disk
 ├─sda2        8:2    0 631.3G  0 part 
 └─sda3        8:17   0   300G  0 part 
 ```
-Si tu espacio libre es de 300 GigaBytes, lo has hecho bien. Nota como `/sda` lo marca como "disk" y el resto "part. Esto es porque el primero es un volumen y las partes son sus distitnas particiones.
+Si tu espacio libre es de 300 GigaBytes, lo has hecho bien. Nota como `/sda` lo marca como "disk" y el resto "part". Esto es porque el primero es un volumen y las partes son sus distintas particiones.
 **NOTA:** En lugar de `sda` y `sdaX` es posible que el disco se llame `nvme0n1` y sus particiones `nvme0n1pX`. Comprueba bien los nombres de las particiones que te salen con `lsblk`.
 
 ## 3. Elegir el layout del teclado
@@ -49,27 +49,29 @@ y encuentra tu modelo.
 ```bash
 cat /sys/firmware/efi/fw_platform_size
 ```
-Te debe salir un 64 o 32 como resultado. Si no te sale eso, consulta el enlace de la wiki de arch para más profundidad.
+Te debe salir un 64 o 32 como resultado. Si no te sale eso, consulta el [enlace](https://wiki.archlinux.org/title/Installation_guide#Verify_the_boot_mode) de la wiki de arch para más profundidad.
 
 ## 4. Internet.
 
-Ejecuta el comando `ip link` y comprueba si tienes una interfaz "wlan0" "eth0"... Asegúrate que un proceso rfkill no esté bloqueando tu tarjeta de red. Consulta la wiki de arch para más profundidad.
+Ejecuta el comando `ip link` y comprueba si tienes una interfaz "wlan0" "eth0"... Asegúrate que un proceso rfkill no esté bloqueando tu tarjeta de red. Consulta la [wiki](https://wiki.archlinux.org/title/Installation_guide#Connect_to_the_internet) de arch para más profundidad.
 - Si es un cable ethernet, conéctalo sin más.
 - Si es una WiFi, salta al paso 4.1.
-- Si es un móvil por cablew, ve a ajustes -> Punto de acceso portátil -> activa compartir por USB.
+- Si es un móvil por cable, ve a ajustes -> Punto de acceso portátil -> Activa compartir por USB.
 
 ### 4.1. WiFi
-Ejecuta el comando `iwctl`. Esta es una [herramienta](https://wiki.archlinux.org/title/Iwd) para conectarte a redes inalámbricas.
+Ejecuta el comando `iwctl`. Esta es una [herramienta](https://wiki.archlinux.org/title/Iwd) para conectarse a redes inalámbricas.
 
-Para conectarte a internet usarás tu interfaz inalámbrica, en el caso de ejemplo, "wlan0", lo cual es probable que tengas tú también.
+Para conectarte a internet usarás tu interfaz inalámbrica, en el caso de ejemplo, "wlan0", la cual es probable que tengas tú también.
 ```iwd
 station wlan0 scan
 station wlan0 get-networks
 station wlan0 connect X
 ```
 En donde X es el SSID de la red. Si son varias palabras, ponlo entre "comillas".
-- `scan` busca redes cerca de tí, `get-networks` te lista los resultados, `connect` te permite conectarte a la deseada.
-Si es una WiFi normal como la de casa, pon la contraseña, si es eduroam, consulta el anexo al final de esta guía.
+- `scan` busca redes cerca de tí.
+- `get-networks` te lista los resultado.
+- `connect` te permite conectarte a la deseada.
+Si es una WiFi normal como la de casa, pon la contraseña, si es eduroam, consulta nuestro [post-install](post-install.md#eduroam).
 Haz `ping 9.9.9.9` y comprueba que hay flujo de paquetes.
 
 ## 5. Reloj interno
@@ -137,13 +139,13 @@ pacman -S nano iwd sudo dhcpcd man
 `iwd` es una herramienta (de terminal) para poder conectarte a redes WiFi.
 `sudo` te permite ejecutar comandos que requieran permiso de administrador sin ser `root`.
 `dhcpcd` te permite resolver los *dynamic host* y acceder a internet.
-`man` te permite ver los manuales de unix de los comandos.
+`man` te permite ver los manuales de Unix de los comandos.
 
 ## 11. Zona horaria
 ```bash
 ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 ```
-Europe y Madrid son los puntos de zona hoaria, para otra zona horaria cambia la ciudad por London, Prague o Moscow y el continente por el que convenga. Si escribes el comando a mano, `/zoneinfo/` y tabulas un par de veces, se mostrarán todas las opciones disponibles.
+Europe y Madrid son los puntos de zona horaria, para otra zona horaria cambia la ciudad por London, Prague o Moscow y el continente por el que convenga. Si escribes el comando a mano, `/zoneinfo/` y tabulas un par de veces, se mostrarán todas las opciones disponibles.
 
 Usa el comando `hwclock --systohc` para generar el archivo `/etc/adjtime`
 
@@ -187,7 +189,7 @@ Para tener permisos de aministrador, ejecuta este comando:
 ```bash
 EDITOR=nano visudo
 ```
-Y descomenta (quita el *hashtatg* '#') de la línea 
+Y descomenta (quita el *hashtag* '#') de la línea 
 ```
 %wheel ALL=(ALL:ALL) ALL
 ```
@@ -224,7 +226,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 Creando este archivo, verás una interfaz manejable con flechitas cuando arranques la partición EFI, en lugar de una consola de comandos de GRUB.
 
 ## 19. Escritorio
-Para terminar, sólo falta una cosa: elegir tu entorno de escritorio. Esto es lo que verás al arrancar el sistema. El más popular es KDE, por sus amplias opciones de personalización; si tu ordenador es una patata, te recomiendo xfce, bastante ligero en memoria; si te gustan los pies, pues tienes GNOME; y para cualquier otro, tienes una lista completa en la arch wiki.
+Para terminar, sólo falta una cosa: elegir tu entorno de escritorio. Esto es lo que verás al arrancar el sistema. El más popular es KDE, por sus amplias opciones de personalización; si tu ordenador es una patata, te recomiendo xfce, bastante ligero en memoria; si te gustan los pies, pues tienes GNOME; y para cualquier otro, tienes una lista completa en la [arch wiki](https://wiki.archlinux.org/title/Desktop_environment).
 
 ### 19.1. KDE
 Descarga todos estos paquetes para una instalción completa. Recomeindo que no instales KDE si tienes menos de 8 GB de memoria RAM.
@@ -257,7 +259,7 @@ systemctl enable gdm.service
 ```
 
 ### 19.4. Otros
-Hay muchos entornos de escritorio, según tus gustos o necesidades puedes instalar uno u otro, referenciados están en la arch wiki. Yo he probado estos 3 y para un ordenador potente, instala KDE.
+Hay muchos entornos de escritorio, según tus gustos o necesidades puedes instalar uno u otro, referenciados están en la [arch wiki](https://wiki.archlinux.org/title/Desktop_environment). Yo he probado estos 3 y para un ordenador potente, instala KDE.
 
 ## 20. Listo
 Sal del *chroot* con `exit` o `ctrl+D`. Después haz `reboot` y repite el paso de abrir el selector de arranque. Si lo has hecho bien, en mac te saldrá un nuevo disco interno bajo el nombre "EFI Boot", minertras que en windows te saldrá como GRUB o similar. Entra en esa opción y comprueba que todo vaya bien.
