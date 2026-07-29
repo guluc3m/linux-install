@@ -28,6 +28,20 @@ Alternativamente, puedes usar el [_script_ de Python proporcionado por GÉANT](h
 > - **Username**: El ID proporcionado
 > - **Password**: La contraseña proporcionada
 
+Si te vas a conectar a través de un terminal o tty usando [`iwd`](https://wiki.archlinux.org/title/Iwd), crea el archivo `/var/lib/iwd/eduroam.8021x` (con [`nano`](https://www.nano-editor.org/) o tu editor de preferencia), y escribe lo siguiente:
+```
+[Security]
+EAP-Method=PEAP
+EAP-Identity=100XXXXXX@alumnos.uc3m.es  # tu correo
+EAP-PEAP-Phase2-Method=MSCHAPV2
+EAP-PEAP-Phase2-Identity=100XXXXXX@alumnos.uc3m.es  # tu correo
+EAP-PEAP-Phase2-Password=contraseña123  # tu contraseña
+
+[Settings]
+AutoConnect=true
+```
+- Identity es tu correo de alumno.
+- Password es tu contraseña de Aula Global.
 
 Más información en [la página del SDIC](https://www.uc3m.es/sdic/servicios/wifi-eduroam).
 
@@ -78,9 +92,16 @@ Si tienes _secure boot_ activado, échale un vistazo al repositorio [roworu/nvid
 
 #### Arch
 Según [Arch Wiki](https://wiki.archlinux.org/title/NVIDIA):
+Ejecuta el comando `lspci -k -d ::03xx` y fíjate en el resultado, por ejemplo:
+```
+VGA compatible controller: NVIDIA Corporation AD107 [GeForce RTX 4060] (rev a1)
+```
+Mira tu tarjeta (en este caso, *AD107*) y [en la web](https://wiki.archlinux.org/title/NVIDIA#Installation) comprueba a qué gráfica se corresponde. En el caso general,
+
 ```bash
 sudo pacman -Syu nvidia-open
 ```
+
 
 #### EndeavourOS
 Según la [documentación de Endeavouros discovery](https://discovery.endeavouros.com/nvidia/new-nvidia-driver-installer-nvidia-inst/2022/03/), puedes usar `nvidia-inst`.

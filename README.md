@@ -27,7 +27,7 @@ Ordenadores con procesador Intel (pre-2020), los cuales están basados en la arq
 
 Las opciones son:
 1. Dual boot (tener MacOS y Linux en el mismo ordenador).
-    - Si es un ordenador sin [chip de seguridad T2](https://support.apple.com/es-es/103265) (pre-2018), no suele haber demasiados problemas al instalar, y los pasos generales para la instalación son fundamentalmente iguales que para cualquier otra máquina. Te recomendamos la [siguiente guía](https://www.makeuseof.com/tag/install-linux-macbook-pro/).
+    - Si es un ordenador sin [chip de seguridad T2](https://support.apple.com/es-es/103265) (pre-2018), no suele haber demasiados problemas al instalar, y los pasos generales para la instalación son fundamentalmente iguales que para cualquier otra máquina. Puedes ver los pasos en [este archivo](dualboot-mac.md). Te recomendamos también la [siguiente guía](https://www.makeuseof.com/tag/install-linux-macbook-pro/).
     - Para ordenadores con chip T2 (2018-2019), lo más recomendable es usar [t2linux](https://t2linux.org/). Son parches específicos para múltiples distribuciones de Linux, ya que cosas como el Wi-Fi o el teclado y el _trackpad_ no suelen funcionar con una ISO normal debido a los _drivers_.
 
 >  [!TIP]
@@ -64,7 +64,7 @@ Una distribución, o _distro_, es una serie de aplicaciones y herramientas que s
 Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.com/), pero aquí te dejamos nuestras recomendaciones:
 - Si eres principiante, te recomendamos [Linux Mint](https://linuxmint.com/) o [Ubuntu](https://ubuntu.com/desktop), basadas en [Debian](https://www.debian.org/), ya que son "estables" y fáciles de usar _out of the box_.
 - Si quieres paquetes algo más actualizados, te recomendamos [Fedora](https://fedoraproject.org/workstation).
-- Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide).
+- Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide). Si te interesa esta última pero no sabes por donde empezar, consulta esta [guía](arch-manual.md).
 
 
 ### Distribuciones especializadas
@@ -118,6 +118,7 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
 - **Recomendado para:**
     - Estudiantes que necesiten Linux para la carrera, pero que quieran seguir usando su PC para jugar al Fortnite (u otras cosas de Windows)
     - Personas a la que gente malvada le obligue a usar Windows
+    - Apple fanboys (o femboys) que quieran seguir usando su macbook de 2014 que apple ya no actualiza
 - **Cosas que preparar:**
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [live USB con Linux](common.md#cómo-crear-un-liveusb).
