@@ -1,8 +1,7 @@
-# ¿Quieres meterte en el asombroso mundo de Gumb- digo Arch, pero hacer la instalación manual te tiene los huevos por corbata?
+# Guía de instalación de Arch Linux
 
-## No pasa nada, ¡aquí está tu teleco de confianza para explicarte todo lo necesario con más de una instalación manual satisfactoria!
 
-### 1. Antes de nada...
+### 1. Requisitos mínimos...
 Para poder instalar arch linux en tu ordenador, necesitamos lo siguiente:
 
 - Un sistema de arquitectura x86.64 compatible.
@@ -15,7 +14,7 @@ Para poder instalar arch linux en tu ordenador, necesitamos lo siguiente:
 
 #### 1.1 Pasos previos
 
-Antes de instalar arch, sigue los pasos en [esta guía](dualboot-mac-install.md) para preparar tu sistema.
+Antes de instalar arch, sigue los pasos en [esta guía](dualboot-mac-install.md) si usas mac, o [esta otra](dualboot-install.md) para preparar tu sistema.
 
 ### 2. Primeros pasos
 Este paso es la continuación a la guía mencionada arriba, una vez as accedido a la ISO desde el selector de disco de arranque.
@@ -120,7 +119,7 @@ Linux tiene varios kernel, el nomral, el LTS, el zen.... Depende de gustos o nec
 pacstrap -K /mnt base linux-lts linux-firmware
 ```
 Donde yo he puesto `linux-lts` pon el kernel de tu elección. Consulta la [wiki de arch](https://wiki.archlinux.org/title/Kernel) para más profundidad.
-**NOTA:** Si tu gráfica es de NVIDIA, necesitarás drivers y paquetes adicionales, consulta [esta guía](post-install.md).
+**NOTA:** Si tu gráfica es de NVIDIA, necesitarás drivers y paquetes adicionales, consulta [esta guía](post-install.md#Drivers de NVIDIA).
 
 
 ## Configura la instalación
@@ -283,5 +282,3 @@ Con esto, cada vez que te conectes a una red, se resolverá solo el cliente dhcp
 - [Guía de instalación base](https://wiki.archlinux.org/title/Installation_guide)
 - [Entornos de escritorio](https://wiki.archlinux.org/title/Desktop_environment)
 - [Boot loader](https://wiki.archlinux.org/title/Arch_boot_process#Boot_loader)
-
-Gracias por llegar hasta aquí, y si no nos volvemos a ver, buenos días, buenas tardes y buenas noches.

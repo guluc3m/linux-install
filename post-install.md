@@ -96,12 +96,12 @@ Ejecuta el comando `lspci -k -d ::03xx` y fíjate en el resultado, por ejemplo:
 ```
 VGA compatible controller: NVIDIA Corporation AD107 [GeForce RTX 4060] (rev a1)
 ```
-Mira tu tarjeta (en este caso, *AD107*) y [en la web](https://wiki.archlinux.org/title/NVIDIA#Installation) comprueba a qué gráfica se corresponde. En mi caso,
+Mira tu tarjeta (en este caso, *AD107*) y [en la web](https://wiki.archlinux.org/title/NVIDIA#Installation) comprueba a qué gráfica se corresponde. En el caso general,
 
 ```bash
-sudo pacman -Syu nvidia-580xx-dkms linux-headers
+sudo pacman -Syu nvidia-open
 ```
-Sustituye `linux` con tu kernel, `linux-lts` o `linux-zen`. Los headers son necesarios para paquetes *dkms*.
+
 
 #### EndeavourOS
 Según la [documentación de Endeavouros discovery](https://discovery.endeavouros.com/nvidia/new-nvidia-driver-installer-nvidia-inst/2022/03/), puedes usar `nvidia-inst`.
