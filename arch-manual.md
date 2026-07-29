@@ -15,9 +15,10 @@ Para poder instalar arch linux en tu ordenador, necesitamos lo siguiente:
 
 #### 1.1 Pasos previos
 
-Antes de instalar arch, sigue los pasos en "dualboot" "insstall" "mac-dualboot" para preparar tu sistema.
+Antes de instalar arch, sigue los pasos en [esta guía](dualboot-mac.md) para preparar tu sistema.
 
 ### 2. Primeros pasos
+Este paso es la continuación a la guía mencionada arriba, una vez as accedido a la ISO desde el selector de disco de arranque.
 
 - Elige la opción de instalar arch.
 - Espera un rato, la ISO se está copiando en memoria RAM. Una vez termine, puedes desconectar el USB.
@@ -60,7 +61,7 @@ Ejecuta el comando `ip link` y comprueba si tienes una interfaz "wlan0" "eth0"..
 
 #### 4.1. WiFi
 
-Ejecuta el comando `iwctl`. Esta es una herramienta para conectarte a redes inalámbricas.
+Ejecuta el comando `iwctl`. Esta es una [herramienta](https://wiki.archlinux.org/title/Iwd) para conectarte a redes inalámbricas.
 
 Para conectarte a internet usarás tu interfaz inalámbrica, en el caso de ejemplo, "wlan0", lo cual es probable que tengas tú también.
 ```iwd
@@ -118,8 +119,8 @@ Linux tiene varios kernel, el nomral, el LTS, el zen.... Depende de gustos o nec
 ```bash
 pacstrap -K /mnt base linux-lts linux-firmware
 ```
-Donde yo he puesto `linux-lts` pon el kernel de tu elección. Consulta la wiki de arch para más profundidad.
-**NOTA:** Si tu gráfica es de NVIDIA, necesitarás drivers y paquetes adicionales, consulta el anexo pertinente al final de esta guía.
+Donde yo he puesto `linux-lts` pon el kernel de tu elección. Consulta la [wiki de arch](https://wiki.archlinux.org/title/Kernel) para más profundidad.
+**NOTA:** Si tu gráfica es de NVIDIA, necesitarás drivers y paquetes adicionales, consulta [esta guía](post-install.md).
 
 
 ## Configura la instalación
@@ -163,7 +164,7 @@ Usa `locale-gen` para generar las locales. Crea y edita, con `nano`, el archivo 
 ```
 LANG=en_US.UTF-8
 ```
-para una configuración default con localización EEUU. Para más info de las locales y cuál usar, lee la wiki de arch.
+para una configuración default con localización EEUU. Para más info de las locales y cuál usar, lee la [wiki de arch](https://wiki.archlinux.org/title/Locale).
 
 ### 13. El layout... de nuevo
 
@@ -175,7 +176,7 @@ para un layout español estánar. Si tienes otro layout, sustituye *es* por el q
 
 ### 14. Elige el nombre de tu máquina
 
-Crea con `nano` el archivo `/etc/hostname` y pon en él, en una única línea el nombre que le quieras dar a tu máquina. (Servirá como nombre de dominio para resoluciones DNS
+Crea con `nano` el archivo `/etc/hostname` y pon en él, en una única línea el nombre que le quieras dar a tu máquina. (Servirá como nombre de dominio para resoluciones DNS)
 
 ### 15. Crea de nuevo el intramfs para guardar las configuraciones del teclado
 
@@ -212,7 +213,7 @@ passwd nombre
 ```
 para poner contraseña a tu usuario. Cuando uses `sudo` será ésta la contraseña a utilizar, no la de `root`.
 
-### 18. Boot loader
+### 18. [Boot loader](https://wiki.archlinux.org/title/Arch_boot_process#Boot_loader)
 
 Es lo que permite al sistema arrancar e inicializarse.
 El boot loader por excelencia es *grub*, aunque hay alguno más. En esta guía explicaré como instalar *grub*.
@@ -222,7 +223,7 @@ El boot loader por excelencia es *grub*, aunque hay alguno más. En esta guía e
 pacman -S grub efibootmgr
 ```
 
-#### 18.2. Instala grub
+#### 18.2. Instala [grub](https://wiki.archlinux.org/title/GRUB)
 ```bash
 grub-install --target=x86_64-efi --efi-directory=/dev/sdaX --bootloader-id=GRUB
 ```
@@ -277,3 +278,10 @@ Una vez en el nuevo sistema, haz login, abre un terminal y ejecuta estos comando
 sudo systemctl enable dhcpcd.service
 ```
 Con esto, cada vez que te conectes a una red, se resolverá solo el cliente dhcp.
+
+## Links de utilidad
+- [Guía de instalación base](https://wiki.archlinux.org/title/Installation_guide)
+- [Entornos de escritorio](https://wiki.archlinux.org/title/Desktop_environment)
+- [Boot loader](https://wiki.archlinux.org/title/Arch_boot_process#Boot_loader)
+
+Gracias por llegar hasta aquí, y si no nos volvemos a ver, buenos días, buenas tardes y buenas noches.
