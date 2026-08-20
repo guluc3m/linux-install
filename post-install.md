@@ -122,12 +122,14 @@ nvidia-inst --nouveau
 
 
 ## Aplicaciones
-Normalmente, tu gestor de paquetes (APT para Debian/Ubuntu/Mint, DNF para Fedora, Pacman para Arch) tendrá todos los paquetes que te puedas instalar. Alternativamente (sobretodo en los casos en los que un paquete no esté disponible), puedes usar [Flatpak](https://flatpak.org/) (con [Flatseal](https://flathub.org/en/apps/com.github.tchx84.Flatseal)) o [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) (en el caso de Arch) con un _helper_ como [Yay](https://github.com/Jguer/yay). En ocasiones también te proporcionan un AppImage, y recuerda que siempre es factible compilar desde source.
+Normalmente, tu gestor de paquetes (APT para Debian/Ubuntu/Mint, DNF para Fedora, Pacman para Arch) tendrá todos los paquetes que te puedas instalar. Tu _distro_ probablemente también traiga una aplicación GUI para buscar e instalar software. Alternativamente (sobretodo en los casos en los que un paquete no esté disponible), puedes usar [Flatpak](https://flatpak.org/) (puedes usar la GUI [Bazaar](https://flathub.org/es/apps/io.github.kolunmi.Bazaar), y también recomendamos tener [Flatseal](https://flathub.org/en/apps/com.github.tchx84.Flatseal) a mano) o [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) (en el caso de Arch) con un _helper_ como [Yay](https://github.com/Jguer/yay). En ocasiones también te proporcionan un AppImage, y recuerda que siempre es factible compilar desde _source_.
 
 > [!TIP]
 > ¿Qué es un _AppImage_?
 > 
 > Una aplicación empaquetada en un AppImage es el equivalente de un `.exe` en windows, doble click y se abre. A veces, para poder abrirlo, hay que decirle al sistema operativo que es un archivo ejecutable por el sistema mediante `chmod +x .\aplicación.AppImage`.
+> 
+> También existen aplicaciones para gestionar AppImages, como [Gear Lever](https://github.com/mijorus/gearlever) (o, para los _Apple fanboys_, [AppManager](https://github.com/kem-a/AppManager)).
 
 
 Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de sacarle el máximo partido a tu nuevo Linux:
@@ -145,6 +147,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
 - [Vicinae](https://github.com/vicinaehq/vicinae): _Launcher_ de aplicaciones con extensiones y funcionalidades extra ([Raycast](https://www.raycast.com/) para Linux)
 - [Kdenlive](https://kdenlive.org/es/): Editor de vídeo
+- [Localsend](https://localsend.org): Aplicación para compartir archivos entre dispositivos en la misma red, compatible con MacOS, Windows, Android, IOS, etc.
 - [scrcpy](https://github.com/Genymobile/scrcpy): Control y _streaming_ de móviles Android directamente al ordenador (no requiere de una aplicación extra ya que se basa en el ADB de Android)
 - [wayland-scroll-factor](https://github.com/daniel-g-carrasco/wayland-scroll-factor): Permite controlar la sensibilidad del _touchpad_ en Gnome con Wayland (porque no hay otra forma, ver [Gnome #18097](https://discourse.gnome.org/t/add-touchpad-scroll-sensitivity-adjustment-feature/18097/36))
 
