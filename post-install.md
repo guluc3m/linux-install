@@ -267,6 +267,14 @@ Aparte de la virtualización "tradicional" que ofrecen plataformas como [Virtual
 > - [How to Properly Install a Windows 11 Virtual Machine on KVM](https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm)
 
 
+## Impresoras
+En la mayoría de casos y _distros_, las impresoras deberían funcionar sin problemas, ya que los drivers suelen estar en el kernel. En el peor de los casos, suele bastar con instalar [CUPS](https://openprinting.github.io/cups/).
+
+> [!TIP]
+> Recursos extra:
+> - [OpenPrinter](https://openprinting.github.io/)
+> - [CUPS - Arch Wiki](https://wiki.archlinux.org/title/CUPS)
+
 
 ## Instalar rEFInd
 [rEFInd](https://www.rodsbooks.com/refind/) es un _boot manager_, al igual que
