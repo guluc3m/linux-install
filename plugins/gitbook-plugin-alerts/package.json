@@ -1,0 +1,16 @@
+{
+  "name": "gitbook-plugin-alerts",
+  "version": "1.0.0",
+  "description": "Custom alerts plugin with dark mode support for HonKit/GitBook",
+  "main": "index.js",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "keywords": [
+    "gitbook",
+    "honkit",
+    "plugin",
+    "alerts",
+    "callouts"
+  ]
+}

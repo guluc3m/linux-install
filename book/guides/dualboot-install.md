@@ -103,7 +103,7 @@ powercfg.exe /h off
 
 
 ## 3. Arrancar en Linux
-Ver [Arrancar desde el Live USB](common.md#arrancar-desde-el-liveusb).
+Ver [Arrancar desde el Live USB](liveusb.md#arrancar-desde-el-liveusb).
 
 
 
@@ -171,7 +171,7 @@ También te recomendamos echarle un vistazo a nuestra sección [Post-Install](po
 
 
 ## Troubleshooting
-- [Solucionar drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)
+- [Solucionar drivers Wi-Fi](troubleshoot.md#solucionar-drivers-wi-fi)
 - [Arreglar GRUB](https://askubuntu.com/a/88432)
 
 

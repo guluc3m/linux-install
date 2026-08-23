@@ -1,0 +1,1 @@
+Fork del plugin [gitbook-plugin-flexible-alerts](https://www.npmjs.com/package/gitbook-plugin-flexible-alerts), vibe-parcheado para que soporte modo oscuro. Upstream: [rajayonin/gitbook-plugin-flexible-alerts](https://github.com/rajayonin/gitbook-plugin-flexible-alerts/tree/dark-mode).

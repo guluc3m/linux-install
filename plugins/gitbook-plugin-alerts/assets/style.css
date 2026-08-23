@@ -1,0 +1,188 @@
+/* Alert base styles */
+.alert {
+  display: block;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-left: 4px solid;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.alert .alert-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.alert .alert-title i {
+  font-size: 1.1em;
+}
+
+.alert .alert-content {
+  margin: 0;
+}
+
+.alert .alert-content p {
+  margin: 0.5rem 0;
+}
+
+.alert .alert-content p:first-child {
+  margin-top: 0;
+}
+
+.alert .alert-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Note - Blue */
+.alert.alert-note {
+  border-left-color: #0969da;
+  background-color: #ddf4ff;
+}
+
+.alert.alert-note .alert-title {
+  color: #0969da;
+}
+
+/* Tip - Green */
+.alert.alert-tip {
+  border-left-color: #1a7f37;
+  background-color: #dafbe1;
+}
+
+.alert.alert-tip .alert-title {
+  color: #1a7f37;
+}
+
+/* Warning - Orange/Yellow */
+.alert.alert-warning {
+  border-left-color: #9a6700;
+  background-color: #fff8c5;
+}
+
+.alert.alert-warning .alert-title {
+  color: #9a6700;
+}
+
+/* Danger - Red */
+.alert.alert-danger {
+  border-left-color: #cf222e;
+  background-color: #ffebe9;
+}
+
+.alert.alert-danger .alert-title {
+  color: #cf222e;
+}
+
+/* Important - Purple */
+.alert.alert-important,
+.alert.alert-info {
+  border-left-color: #8250df;
+  background-color: #fbefff;
+}
+
+.alert.alert-important .alert-title,
+.alert.alert-info .alert-title {
+  color: #8250df;
+}
+
+/* ========================================
+   Dark Mode - HonKit Night Theme (color-theme-2)
+   ======================================== */
+
+.book.color-theme-2 .alert {
+  background-color: #161b22;
+  color: #c9d1d9;
+  border: none;
+  border-left: 4px solid;
+}
+
+.book.color-theme-2 .alert .alert-content {
+  color: #c9d1d9;
+}
+
+/* Note - Blue (Dark) */
+.book.color-theme-2 .alert.alert-note {
+  border-left-color: #58a6ff;
+  background-color: #0d1d31;
+}
+
+.book.color-theme-2 .alert.alert-note .alert-title {
+  color: #58a6ff;
+}
+
+/* Tip - Green (Dark) */
+.book.color-theme-2 .alert.alert-tip {
+  border-left-color: #3fb950;
+  background-color: #0d2818;
+}
+
+.book.color-theme-2 .alert.alert-tip .alert-title {
+  color: #3fb950;
+}
+
+/* Warning - Orange (Dark) */
+.book.color-theme-2 .alert.alert-warning {
+  border-left-color: #d29922;
+  background-color: #2a2010;
+}
+
+.book.color-theme-2 .alert.alert-warning .alert-title {
+  color: #d29922;
+}
+
+/* Danger - Red (Dark) */
+.book.color-theme-2 .alert.alert-danger {
+  border-left-color: #f85149;
+  background-color: #2d1214;
+}
+
+.book.color-theme-2 .alert.alert-danger .alert-title {
+  color: #f85149;
+}
+
+/* Important - Purple (Dark) */
+.book.color-theme-2 .alert.alert-important,
+.book.color-theme-2 .alert.alert-info {
+  border-left-color: #a371f7;
+  background-color: #1f1529;
+}
+
+.book.color-theme-2 .alert.alert-important .alert-title,
+.book.color-theme-2 .alert.alert-info .alert-title {
+  color: #a371f7;
+}
+
+/* ========================================
+   Sepia Theme Support (color-theme-1)
+   ======================================== */
+
+
+.book.color-theme-1 .alert {
+  background-color: #f4ecd8;
+}
+
+.book.color-theme-1 .alert.alert-note {
+  background-color: #e8ece0;
+}
+
+.book.color-theme-1 .alert.alert-tip {
+  background-color: #e8f0df;
+}
+
+.book.color-theme-1 .alert.alert-warning {
+  background-color: #f5edd5;
+}
+
+.book.color-theme-1 .alert.alert-danger {
+  background-color: #f5e5e0;
+}
+
+.book.color-theme-1 .alert.alert-important,
+.book.color-theme-1 .alert.alert-info {
+  background-color: #f0e8f0;
+}

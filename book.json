@@ -1,0 +1,18 @@
+{
+  "root": "./book",
+  "title": "Guía del GUL-UC3M para la instalación de Linux",
+  "author": "GUL-UC3M",
+  "structure": {
+    "readme": "intro.md"
+  },
+  "plugins": ["alerts"],
+  "pluginsConfig": {
+    "alerts": {
+      "important": {
+        "label": "Important",
+        "icon": "fa fa-exclamation-circle",
+        "className": "important"
+      }
+    }
+  }
+}

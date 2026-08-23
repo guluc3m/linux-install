@@ -41,35 +41,3 @@ Para cambiar el disco de arranque en la BIOS, suele haber una opción o listado 
 > Si ves alguna opción como _Allow booting from USB device_ o similar, asegúrate de que esté activada.
 
 Una vez esté cambiada la prioridad, reinicia y debería arrancar el LiveUSB.
-
-
-
-## Solucionar drivers Wi-Fi
-Es relativamente común que los _drivers_ de la tarjeta de red Wi-Fi de los portátiles no vengan instalados por defecto en Linux.
-
-Una forma de obtener conexión a Internet es usando un cable Ethernet, ya sea mediante el puerto Ethernet del ordenador (si lo tiene), o mediante el uso de un adaptador. Si no tienes nada de eso a mano, siempre puedes conectar el ordenador a tu móvil por USB, poner los datos, y compartirlos mediante _Módem USB_ (en Android suele estar en `Ajustes` > `Redes e Internet` > `Punto de acceso y anclaje de red` > `Compartir conexión por USB`).
-
-En ocasiones los _drivers_ se actualizan solos al actualizar el sistema (e.g. `sudo apt update && sudo apt upgrade` para Ubuntu/Mint/Debian, `sudo dnf upgrade` para Fedora, `sudo pacman -Syu` para Arch/Manjaro).
-
-En caso de que esto no solucione tu problema, te va a tocar buscar, descargar, e instalar los _drivers_ a mano. Para ello, primero tendrás que averiguar qué chipset Wi-Fi tiene tu ordenador. Te recomendamos ir a la página del fabricante, o seguir la [guía de nixCraft](https://www.cyberciti.biz/faq/linux-find-wireless-driver-chipset/). Una vez averigüado, te tocará buscar la guía de instalación del _driver_ para tu chipset y distribución específica. Para ello, busca en Google.
-
-## Estoy en Ubuntu Server y no me va el DHCP
-
-1. Activa los servicios
-```bash
-sudo systemctl enable --now systemd-networkd
-sudo systemctl enable --now systemd-resolved
-```
-
-2. Mira cual es el adaptador que estas usando con `ip a`
-
-3. Creas /etc/systemd/network/20-wired.network con este contenido:
-```
-[Match]
-Name=nombredelainterfazaqui
-
-[Network]
-DHCP=yes
-```
-4. Ejecuta `sudo systemctl restart systemd-networkd systemd-resolved` para reiniciar los servicios
-5. Revisa si tienes intenet con `ping 8.8.8.8` (la IP es de una DNS Google)

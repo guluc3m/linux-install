@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "gitbook-plugin-alerts": "file:./plugins/gitbook-plugin-alerts",
+    "honkit": "^6.2.2"
+  },
+  "scripts": {
+    "build": "honkit build",
+    "pdf": "honkit pdf",
+    "serve": "honkit serve"
+  }
+}

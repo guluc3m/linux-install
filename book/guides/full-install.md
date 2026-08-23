@@ -8,14 +8,8 @@ el disco tiene que estar guardado en otro lado. [Discos externos](https://www.to
 no se verán afectados y los particionados por Windows son legibles dentro
 de Linux.
 
-## Requisitos
-
-- Live USB
-
-
-
-
-## 2. Instalar Linux
+## 1. Instalar Linux
+Lo primero, [crea un LiveUSB](liveusb.md#cómo-crear-un-liveusb) con tu _distro_ elegida y [arranca desde el LiveUSB](liveusb.md#arrancar-desde-el-liveusb).
 
 ### Ubuntu
 1. Instalar Ubuntu.
@@ -36,15 +30,15 @@ de Linux.
 Al igual que Ubuntu, pero puede que cambie algún paso.
 
 
-## 3. Wrap-Up
+## 2. Wrap-Up
 Ya hemos terminado `:)`. Al reiniciar verás el GRUB, de donde puedes entrar directamente a la BIOS o iniciar otro sistema operativo en caso de que tengamos mas de uno instalado.
 
-También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](../post-install/post-install.md).
 
 
 
 ## Troubleshooting
-- [Solucionar drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)
+- [Solucionar drivers Wi-Fi](troubleshoot.md#solucionar-drivers-wi-fi)
 
 
 
