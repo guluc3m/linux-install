@@ -229,6 +229,7 @@ Muchos dispositivos vienen con herramientas específicas para controlar aspectos
 - [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
 - [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ de diferentes marcas
 - [Solaar](https://github.com/pwr-Solaar/Solaar): Herramienta para configurar dispositivos de Logitech (ratones, teclados, etc.)
+  - [OpenLogi](https://github.com/AprilNEA/OpenLogi): Alternativa más _user-friendly_
 - [Framework System TUI](https://github.com/grouzen/framework-tool-tui) /
   [Framework System](https://github.com/FrameworkComputer/framework-system):
   Herramienta de configuración para ordenadores [Framework](https://frame.work)
