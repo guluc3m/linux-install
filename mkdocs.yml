@@ -1,0 +1,100 @@
+site_name: Linux Install | GUL-UC3M
+site_description: Guía del GUL-UC3M para la instalación de Linux 
+site_url: https://gul.uc3m.es/guia
+repo_url: https://github.com/guluc3m/linux-install/
+repo_name: guluc3m/linux-install
+copyright: "&copy; GUL-UC3M"
+
+extra:
+  homepage: https://gul.uc3m.es
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/guluc3m
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/guluc3m
+
+
+nav:
+  - index.md
+  - Guías:
+    - guías/full.md
+    - guías/wsl.md
+    - guías/dualboot-win.md
+    - guías/dualboot-external.md
+    - guías/dualboot-mac.md
+    - guías/vm-win.md
+    - guías/vm-mac.md
+    - guías/arch.md
+  - Post-install:
+    - post-install/index.md
+    - post-install/config.md
+    - post-install/apps.md
+    - post-install/play-on-linux.md
+    - post-install/windows.md
+  - liveusb.md
+  - troubleshoot.md
+  - especialitos.md
+
+
+plugins:
+  - search
+  - offline
+  - glightbox
+
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 2
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+
+
+theme:
+  name: material
+  language: es
+
+  icon:
+    repo: fontawesome/brands/github
+
+  features:
+    - content.code.copy
+    - search.suggest
+    # - navigation.sections
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra_css:
+  - stylesheets/extra.css

@@ -1,0 +1,2 @@
+# Introducción
+Para sacarle más partido a Linux, es posible que necesites realizar algunas [configuraciones](config.md) extra. También te dejamos algunas [aplicaciones](apps.md) que te pueden ser útiles para sacarle más partido, e incluso una [guía de _gaming_ en Linux](play-on-linux.md). 

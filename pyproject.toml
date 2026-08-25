@@ -1,0 +1,13 @@
+[project]
+name = "linux-install"
+version = "0.1.0"
+description = "Guía del GUL-UC3M para la instalación de Linux"
+requires-python = ">=3.11"
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-glightbox>=0.5.2",
+    "mkdocs-material>=9.7.7",
+]
+
+[tool.uv]
+package = false

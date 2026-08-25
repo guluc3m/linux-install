@@ -1,5 +1,4 @@
-# Instalación de Linux en Máquina Virtual con Mac ARM (M1, M2, M3, M4 y variantes)
-
+# Máquina Virtual (MacOS, ARM)
 
 En este tutorial instalaremos paso a paso Ubuntu Linux 22.04 en una máquina virtual utilizando UTM.
 
@@ -33,4 +32,4 @@ Puedes jugar con el resto de ajustes, pero lo recomendable es dejarlos por defec
 
 Ya podemos ejecutar la máquina dandole al botón de `Play` en la parte superior izquierda.
 
-También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](../post-install/index.md).
