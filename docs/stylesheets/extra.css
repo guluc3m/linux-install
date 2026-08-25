@@ -1,0 +1,7 @@
+.md-header {
+  --md-primary-fg-color: #666666;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  --md-primary-fg-color: hsl(215 12% 17%);
+}

@@ -1,4 +1,5 @@
-# Guía de _gaming_ en Linux
+# _Gaming_ en Linux
+
 A diferencia de lo que se podría suponer en principio, Linux ofrece una experiencia bastante buena en cuanto a los videojuegos. A pesar de todos los mitos, hoy en día, la gran mayoría de los juegos ofrecidos por plataformas como [Steam](https://store.steampowered.com/), [Epic Games](https://www.epicgames.com/), [GOG](https://www.gog.com), [EA](https://www.ea.com/), y los demás funcionan, y además, según _benchmarks_ y evidencias empíricas de varios miembros de la GUL, en muchos casos corren incluso mejor que en Windows.
 
 Sin embargo, antes de hacer ningún cambio a tu PC gaming, es imprescindible que compruebes que todo lo que vayas a jugar y que no puedas vivir sin él esté soportado, especialmente juegos multijugador competitivos (los del _anticheat_ de kernel, os estoy mirando a vosotros), ya que muchos están completamente rotos en Linux. Para ello te dejamos los siguientes recursos:
@@ -43,11 +44,11 @@ Y finalmente instalar el paquete usando:
 sudo pacman -Syu steam
 ```
 
-> [!TIP]
-> Siempre antes de instalar algo está bien actualizar los paquetes del sistema, ya que los repositorios pueden o no estar actualizados o que surjan conflictos con otros paquetes.
+!!! tip
+    Siempre antes de instalar algo está bien actualizar los paquetes del sistema, ya que los repositorios pueden o no estar actualizados o que surjan conflictos con otros paquetes.
 
-> [!NOTE]
-> Al instalar, es posible que os pidan elegir qué paquete del driver de [Vulkan](https://wiki.archlinux.org/title/Vulkan#Installation) instalar. En cualquier caso, para gráficas integradas de Intel o las nuevas Arc, elegir `vulkan-intel`. Para gráficas NVIDIA, `nvidia-utils`. Finalmente, para gráficas AMD, usar `vulkan-radeon`.
+??? question "Vulkan?"
+    Al instalar, es posible que os pidan elegir qué paquete del driver de [Vulkan](https://wiki.archlinux.org/title/Vulkan#Installation) instalar. En cualquier caso, para gráficas integradas de Intel o las nuevas Arc, elegir `vulkan-intel`. Para gráficas NVIDIA, `nvidia-utils`. Finalmente, para gráficas AMD, usar `vulkan-radeon`.
 
 Toda la información se puede encontrar en la [documentación de ArchWiki](https://wiki.archlinux.org/title/Steam).
 
@@ -85,8 +86,8 @@ Gracias a esto, y a una comunidad asombrosa, en la página de Lutris hay instruc
 
 Al igual que con Steam, cada distribución tiene su propio paquete y tienen métodos de instalación diferentes.
 
-> [!NOTE]
-> A excepción de algunos programas, los métodos de instalación son casi siempre los mismos, buscas lo que quieras descargar en internet, seguido de tu distribución, y normalmente será un comando que tendrás que ejecutar o un paquete que tienes que descomprimir / instalar.
+!!! note
+    A excepción de algunos programas, los métodos de instalación son casi siempre los mismos, buscas lo que quieras descargar en internet, seguido de tu distribución, y normalmente será un comando que tendrás que ejecutar o un paquete que tienes que descomprimir / instalar.
 
 #### Distribuciones basadas en Debian (Ubuntu, Mint, ...)
 [Descargar](https://github.com/lutris/lutris/releases) el paquete `.deb` de la última versión de Lutris.
@@ -109,8 +110,8 @@ Incluso si instalas juegos que según ProtonDB u otros recursos deberían funcio
 
 Para juegos de Proton o Lutris, puedes probar versiones alternativas de Proton o Wine, como [Proton-GE](#proton-ge). Te recomendamos instalarlas a través de [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt) o [ProtonPlus](https://github.com/Vysp3r/ProtonPlus).
 
-> [!NOTE]
-> "¿Para que me sirve a mi esto?", te preguntarás. Hay casos bastante puntuales donde un juego solo funciona en una versión especifica de proton o algún fork que no esté disponible a través de otros medios. Es por esto que a veces tener varias versiones instaladas es necesario.
+??? question "¿Para que me sirve a mi esto?"
+    Hay casos bastante puntuales donde un juego solo funciona en una versión especifica de proton o algún fork que no esté disponible a través de otros medios. Es por esto que a veces tener varias versiones instaladas es necesario.
 
 ### Proton-GE
 [Proton-GE](https://github.com/GloriousEggroll/proton-ge-custom) es una versión de Proton alternativa con patches no oficiales los que a veces pueden ayudarte a correr un juego muy reciente o uno que acaba de ser actualizado.
@@ -138,8 +139,8 @@ Tranquilo, no vas a tener ni que tocar la BIOS, ni usar la terminal para modific
 
 Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el que os recomendamos es el [Zen Kernel](https://github.com/zen-kernel/zen-kernel). Después de instalarlo, te aparecerán en GRUB nuevas opciones de arranque, así que en cualquier momento puedes volver a usar el _kernel_ por defecto por si en algún momento te llega a dar problemas.
 
-> [!TIP]
-> Para forzar a que aparezca GRUB en el arranque, presiona repetidamente la tecla `Esc`.
+!!! tip
+    Para forzar a que aparezca GRUB en el arranque, presiona repetidamente la tecla `Esc`.
 
 
 ### Uso de mandos
@@ -191,12 +192,13 @@ En esta guía vamos a cubrir dos métodos para emular en Linux, de los cuales am
 Si tu objetivo es emular un par de juegos, tocarlos a lo mejor una vez cada dos meses por recordar la nostalgia, o si quieres tenerlo ahí en caso de que hayas perdido la ultima ranked del LoL y te den ganas de desinstalarlo, lo mejor será descargar directamente el emulador para la consola que quieras jugar. Este es objetivamente el más "straightforward" y fácil de usar ya que no hay que toquetear demasiado (Plug and Play).
 
 A continuación están los emuladores que siguen siendo mantenidos y que miembros de GUL dan fe que funcionan:
+
 - [Wii / GameCube - Dolphin](https://es.dolphin-emu.org/?cr=es)
 - [WiiU - Cemu](https://cemu.info/)
 - [Switch - Eden](https://eden-emu.dev/)
 - [GBA - VisualBoy Advance](https://visualboyadvance.org/)
 - [nDS - MelonDS](https://melonds.kuribo64.net/)
-- [3DS - Azahar](https://azahar-emu.org/) (~~o [AzaharPlus](https://github.com/AzaharPlus/AzaharPlus)~~ El proyecto base ya tiene soporte para archivos `.3ds`)
+- [3DS - Azahar](https://azahar-emu.org/) (o [AzaharPlus](https://github.com/AzaharPlus/AzaharPlus))
 - [PS1 - Duckstation](https://www.duckstation.org/)
 - [PS2 - PCSX2](https://pcsx2.net/)
 - [PS3 - RCPS3](https://rpcs3.net/)
@@ -222,7 +224,8 @@ Este además de tener compatibilidad con cualquier mando que te puedas imaginar,
 Actualmente hay una herramienta llamada [lsfg-vk](https://github.com/PancakeTAS/lsfg-vk) en desarrollo, que permite usar [Lossless Scaling](https://losslessscaling.com) (generación de fotogramas) en juegos nativos de Vulkan, y los que usan DXVK. Esta herramienta funciona oficialmente con cualquier juego de 64 bits, y no oficialmente, a través de WOW64, en juegos de 32 bits (lo que se puede activar aplicando la variable de entorno `PROTON_USE_WOW64=1` en versiones _bleeding edge_ de Proton, Proton-GE y Wine-GE).
 
 Esta herramienta permite correr videojuegos con _framerates_ limitados a más FPS de los que está diseñado el juego (o los que logra renderizar tu GPU), sin tener que modificar archivos, ni romper la lógica del juego, aunque con latencia de entrada añadida.
-> [!NOTE]
-> ¡Funciona incluso en los emuladores y aplicaciones que no son juegos, como el reproductor de videos MPV!
+
+!!! info
+    ¡Funciona incluso en los emuladores y aplicaciones que no son juegos, como el reproductor de videos [MPV](https://mpv.io/)!
 
 Para instalarla, se puede seguir o la [guía de instalación del repositorio oficial](https://github.com/PancakeTAS/lsfg-vk/wiki), o instalando el [paquete de AUR](https://aur.archlinux.org/packages/lsfg-vk-git) (en el caso de usar Arch, _btw_).

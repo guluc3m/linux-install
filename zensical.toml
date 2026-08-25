@@ -1,0 +1,109 @@
+# Site metadata
+[project]
+site_name = "Linux Install | GUL-UC3M"
+site_description = "Guía del GUL-UC3M para la instalación de Linux"
+site_url = "https://gul.uc3m.es/guia"
+repo_url = "https://github.com/guluc3m/linux-install"
+repo_name = "guluc3m/linux-install"
+edit_uri = "/edit/main/docs/"
+copyright = "&copy; GUL-UC3M"
+extra_css = ["stylesheets/extra.css"]
+
+# Navigation
+nav = [
+  "index.md",
+  { "Guías" = [
+    "guías/full.md",
+    "guías/wsl.md",
+    "guías/dualboot-win.md",
+    "guías/dualboot-external.md",
+    "guías/dualboot-mac.md",
+    "guías/vm-win.md",
+    "guías/vm-mac.md",
+    "guías/arch.md",
+  ] },
+  { "Post-install" = [
+    "post-install/index.md",
+    "post-install/config.md",
+    "post-install/apps.md",
+    "post-install/play-on-linux.md",
+    "post-install/windows.md",
+  ] },
+  "liveusb.md",
+  "troubleshoot.md",
+  "especialitos.md",
+]
+
+# extra links
+[project.extra]
+homepage = "https://gul.uc3m.es"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/guluc3m"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/twitter"
+link = "https://twitter.com/guluc3m"
+
+
+# Plugins
+[project.plugins.offline]
+
+# Markdown extensions
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+footnotes = {}
+md_in_html = {}
+pymdownx.blocks.caption = {}
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.superfences = {}
+toc.permalink = true
+toc.toc_depth = 2
+zensical.extensions.glightbox = {}
+
+
+[project.theme]
+variant = "classic"
+language = "es"
+features = [
+  "content.code.copy",
+  "search.suggest",
+  "content.action.edit",
+]
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+# auto-light-dark mode pallete toggles
+
+# auto
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+primary = "grey"
+
+[project.theme.palette.toggle]
+icon = "material/brightness-auto"
+name = "Switch to light mode"
+
+# light
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "grey"
+
+[project.theme.palette.toggle]
+icon = "material/brightness-7"
+name = "Switch to dark mode"
+
+# dark
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "grey"
+
+[project.theme.palette.toggle]
+icon = "material/brightness-4"
+name = "Switch to system preference"
