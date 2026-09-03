@@ -146,7 +146,9 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 - [nala](https://gitlab.com/volian/nala): [Exclusivo para APT (Debian/Ubuntu/Mint y derivados)] _Frontend_ alternativo para APT
 - [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
 - [Vicinae](https://github.com/vicinaehq/vicinae): _Launcher_ de aplicaciones con extensiones y funcionalidades extra ([Raycast](https://www.raycast.com/) para Linux)
-- [Kdenlive](https://kdenlive.org/es/): Editor de vídeo
+- [Kdenlive](https://kdenlive.org/es/): Editor de vídeo FOSS
+- [Ardour](https://ardour.org/): DAW (Digital Audio Workstation) FOSS
+- [Newsflash](https://apps.gnome.org/es/NewsFlash/): Lector y agregador de _feeds_ [RSS](https://es.wikipedia.org/wiki/RSS)
 - [Localsend](https://localsend.org): Aplicación para compartir archivos entre dispositivos en la misma red, compatible con MacOS, Windows, Android, IOS, etc.
 - [scrcpy](https://github.com/Genymobile/scrcpy): Control y _streaming_ de móviles Android directamente al ordenador (no requiere de una aplicación extra ya que se basa en el ADB de Android)
 - [wayland-scroll-factor](https://github.com/daniel-g-carrasco/wayland-scroll-factor): Permite controlar la sensibilidad del _touchpad_ en Gnome con Wayland (porque no hay otra forma, ver [Gnome #18097](https://discourse.gnome.org/t/add-touchpad-scroll-sensitivity-adjustment-feature/18097/36))
