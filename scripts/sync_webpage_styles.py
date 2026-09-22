@@ -126,9 +126,19 @@ def sync(dist_dir: Path) -> None:
         "{% raw %}\n" + header_html + "\n{% endraw %}\n", encoding="utf-8"
     )
 
-    # 3. Footer: verbatim, incluidos sus <script> (email ofuscado,
-    #    scroll-reveal) — se ejecutan solos por ser HTML servido normal.
+    # 3. Footer: verbatim. gul-Footer.astro's <script>/<noscript> (reveal-on-
+    #    scroll, y el <script> que desofusca los data-gul-email — usado
+    #    también por el dropdown de Contacta del header) son HERMANOS de
+    #    <footer>, no hijos — sin ellos el footer se queda en opacity:0 para
+    #    siempre (nada añade .is-visible) y el email nunca se desofusca.
+    #    Se incluyen tal cual detrás del footer: al ir después del header en
+    #    el documento, su querySelectorAll también alcanza los elementos del
+    #    header.
     footer_html = extract_element(index_html, "footer", attr=("id", "legal"))
+    footer_end = index_html.index(footer_html) + len(footer_html)
+    body_end = index_html.index("</body>")
+    trailing = index_html[footer_end:body_end].strip()
+    footer_html = footer_html + "\n" + trailing
     (OVERRIDES_DIR / "footer.html").write_text(
         "{% raw %}\n" + footer_html + "\n{% endraw %}\n", encoding="utf-8"
     )
