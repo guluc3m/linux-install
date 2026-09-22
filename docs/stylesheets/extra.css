@@ -1,7 +1,145 @@
-.md-header {
-  --md-primary-fg-color: #666666;
+/*
+ * Reusa los tokens de la paleta/tipografía de `webpage` (vendorizados en
+ * assets/webpage/global.css, cargado antes que este fichero vía extra_css)
+ * en vez de copiar hex a mano. Ver issue #22.
+ */
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--color-gul-bg);
+  --md-default-fg-color: var(--color-gul-ink);
+  --md-default-fg-color--light: var(--color-gul-muted);
+  --md-default-fg-color--lighter: var(--color-gul-line);
+
+  --md-primary-fg-color: var(--color-gul-surface);
+  --md-primary-bg-color: var(--color-gul-ink);
+  --md-primary-fg-color--light: var(--color-gul-line);
+
+  --md-accent-fg-color: var(--color-gul-blue);
+  --md-typeset-a-color: var(--color-gul-blue);
+
+  --md-code-bg-color: var(--color-gul-surface);
+  --md-code-fg-color: var(--color-gul-ink);
+
+  --md-typeset-table-color: var(--color-gul-line);
+  --md-admonition-fg-color: var(--color-gul-ink);
+  --md-admonition-bg-color: var(--color-gul-surface);
+
+  --md-footer-bg-color: var(--color-gul-surface);
+  --md-footer-fg-color: var(--color-gul-ink);
+  --md-footer-fg-color--light: var(--color-gul-muted);
+
+  --md-text-font: var(--font-sans);
+  --md-code-font: var(--font-mono);
 }
 
-[data-md-color-scheme="slate"] .md-header {
-  --md-primary-fg-color: hsl(215 12% 17%);
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: var(--font-heading);
+  color: var(--color-gul-ink);
+}
+
+.md-typeset h2::before {
+  content: '## ';
+  color: var(--color-gul-blue);
+}
+.md-typeset h3::before {
+  content: '### ';
+  color: var(--color-gul-blue);
+}
+
+.md-typeset code,
+.md-typeset kbd {
+  border-radius: var(--radius-md, 0.375rem);
+}
+.md-typeset kbd {
+  border: 1px solid var(--color-gul-line);
+}
+
+.md-typeset table:not([class]) {
+  border-radius: var(--radius-md, 0.375rem);
+  border: 1px solid var(--color-gul-line);
+}
+
+.md-typeset blockquote {
+  font-style: italic;
+  color: var(--color-gul-muted);
+  border-left-color: var(--color-gul-line);
+}
+
+.md-typeset hr {
+  border-bottom-color: var(--color-gul-line);
+}
+
+/* Admonitions — Material colorea note/warning/danger/success con hex fijos
+   propios; se sobreescriben con los colores de estado de webpage. */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: var(--color-gul-blue);
+}
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: color-mix(in oklab, var(--color-gul-blue) 10%, transparent);
+}
+.md-typeset .note > .admonition-title::before,
+.md-typeset .note > summary::before {
+  background-color: var(--color-gul-blue);
+}
+.md-typeset .note > .admonition-title::after,
+.md-typeset .note > summary::after {
+  color: var(--color-gul-blue);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--color-gul-amber);
+}
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: color-mix(in oklab, var(--color-gul-amber) 10%, transparent);
+}
+.md-typeset .warning > .admonition-title::before,
+.md-typeset .warning > summary::before {
+  background-color: var(--color-gul-amber);
+}
+.md-typeset .warning > .admonition-title::after,
+.md-typeset .warning > summary::after {
+  color: var(--color-gul-amber);
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-color: var(--color-gul-red);
+}
+.md-typeset .danger > .admonition-title,
+.md-typeset .danger > summary {
+  background-color: color-mix(in oklab, var(--color-gul-red) 10%, transparent);
+}
+.md-typeset .danger > .admonition-title::before,
+.md-typeset .danger > summary::before {
+  background-color: var(--color-gul-red);
+}
+.md-typeset .danger > .admonition-title::after,
+.md-typeset .danger > summary::after {
+  color: var(--color-gul-red);
+}
+
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-color: var(--color-gul-green);
+}
+.md-typeset .success > .admonition-title,
+.md-typeset .success > summary {
+  background-color: color-mix(in oklab, var(--color-gul-green) 10%, transparent);
+}
+.md-typeset .success > .admonition-title::before,
+.md-typeset .success > summary::before {
+  background-color: var(--color-gul-green);
+}
+.md-typeset .success > .admonition-title::after,
+.md-typeset .success > summary::after {
+  color: var(--color-gul-green);
 }

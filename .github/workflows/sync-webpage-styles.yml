@@ -1,0 +1,39 @@
+name: Sync webpage styles
+
+# Toma el último release de guluc3m/webpage (el tarball de dist/ que su
+# workflow release.yml publica en cada tag), extrae el CSS y el HTML real de
+# Header/Footer, y los commitea en docs/assets/webpage/ y
+# overrides/partials/. Ver issue #22.
+on:
+  repository_dispatch:
+    types: [webpage-released]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download latest webpage release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/webpage-dist
+          gh release download --repo guluc3m/webpage --pattern '*.tar.gz' -D /tmp/webpage-dist --clobber
+          tar -xzf /tmp/webpage-dist/*.tar.gz -C /tmp/webpage-dist
+
+      - name: Sync styles
+        run: python3 scripts/sync_webpage_styles.py --dist-dir /tmp/webpage-dist
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/assets/webpage overrides/partials/header.html overrides/partials/footer.html
+          git diff --staged --quiet && exit 0
+          git commit -m "sync: estilos/header/footer de webpage"
+          git push

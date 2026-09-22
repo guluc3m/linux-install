@@ -7,7 +7,7 @@ repo_url = "https://github.com/guluc3m/linux-install"
 repo_name = "guluc3m/linux-install"
 edit_uri = "/edit/main/docs/"
 copyright = "&copy; GUL-UC3M"
-extra_css = ["stylesheets/extra.css"]
+extra_css = ["assets/webpage/global.css", "stylesheets/extra.css"]
 
 # Navigation
 nav = [
@@ -68,6 +68,7 @@ zensical.extensions.glightbox = {}
 [project.theme]
 variant = "classic"
 language = "es"
+custom_dir = "overrides"
 features = [
   "content.code.copy",
   "search.suggest",
@@ -77,33 +78,8 @@ features = [
 [project.theme.icon]
 repo = "fontawesome/brands/github"
 
-# auto-light-dark mode pallete toggles
-
-# auto
+# webpage solo tiene modo oscuro: una única paleta, sin toggle (el selector
+# de tema desaparece cuando solo hay una entrada con `toggle`).
 [[project.theme.palette]]
-media = "(prefers-color-scheme)"
-primary = "grey"
-
-[project.theme.palette.toggle]
-icon = "material/brightness-auto"
-name = "Switch to light mode"
-
-# light
-[[project.theme.palette]]
-media = "(prefers-color-scheme: light)"
-scheme = "default"
-primary = "grey"
-
-[project.theme.palette.toggle]
-icon = "material/brightness-7"
-name = "Switch to dark mode"
-
-# dark
-[[project.theme.palette]]
-media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 primary = "grey"
-
-[project.theme.palette.toggle]
-icon = "material/brightness-4"
-name = "Switch to system preference"
