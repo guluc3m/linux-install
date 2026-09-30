@@ -18,7 +18,7 @@ Antes de empezar, instala [VirtualBox](https://www.virtualbox.org/) y descarga l
     - Folder: La carpeta donde se va a guardar la máquina.  
     Puedes dejar la ruta por defecto o elegir otra carpeta, por ejemplo, en otro disco con más espacio.
     - ISO Image: La ruta a la imagen `.iso` de Ubuntu (el archivo que te has descargado)
-    - No hagas check Haz _check_ en la cajita de `Skip  Unattended Installation`
+    - Haz _check_ en la cajita de `Skip Unattended Installation` (o quita el check de `Proceed with Unattended Installation`)
 
     ![Paso 2](img/vm-install/vm_2.png)
 
