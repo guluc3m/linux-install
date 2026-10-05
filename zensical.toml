@@ -12,15 +12,15 @@ extra_css = ["stylesheets/extra.css"]
 # Navigation
 nav = [
   "index.md",
-  { "Guías" = [
-    "guías/full.md",
-    "guías/wsl.md",
-    "guías/dualboot-win.md",
-    "guías/dualboot-external.md",
-    "guías/dualboot-mac.md",
-    "guías/vm-win.md",
-    "guías/vm-mac.md",
-    "guías/arch.md",
+  { "Install" = [
+    "install/full.md",
+    "install/wsl.md",
+    "install/dualboot-win.md",
+    "install/dualboot-external.md",
+    "install/dualboot-mac.md",
+    "install/vm-win.md",
+    "install/vm-mac.md",
+    "install/arch.md",
   ] },
   { "Post-install" = [
     "post-install/index.md",

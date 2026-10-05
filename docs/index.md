@@ -19,7 +19,7 @@ Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.
 
 - Si eres principiante, te recomendamos [Linux Mint](https://linuxmint.com/) o [Ubuntu](https://ubuntu.com/desktop), basadas en [Debian](https://www.debian.org/), ya que son "estables" y fáciles de usar _out of the box_.
 - Si quieres paquetes algo más actualizados, te recomendamos [Fedora](https://fedoraproject.org/workstation).
-- Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide). Si te interesa esta última pero no sabes por donde empezar, consulta esta [guía](guías/arch.md).
+- Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide). Si te interesa esta última pero no sabes por donde empezar, consulta esta [guía](install/arch.md).
 
 
 ### Distribuciones especializadas
@@ -28,7 +28,7 @@ Las _distros_ mencionadas anteriormente se consideran "generalistas", es decir, 
 - Para jugones, recomendamos [Nobara Linux](https://nobaraproject.org/).
   - Si quieres tener una máquina exclusiva para jugar, y sin tener que configurar mucho, (e.g. un PC en el salón, o una _handheld_) te recomendamos [Bazzite](https://bazzite.gg/).  
   Es una _distro_ inmutable, lo cual quiere decir que está pensada para funcionar y que no se rompa nada, a cambio de tener limitaciones a la hora de modificar el sistema.  
-  Sin embargo, viene con todo lo que puedas necesitar para jugar a tus jueguitos, y con muy buena [documentación y guías](https://docs.bazzite.gg/).
+  Sin embargo, viene con todo lo que puedas necesitar para jugar a tus jueguitos, y con muy buena [documentación y install](https://docs.bazzite.gg/).
 - Para gente (_otakus_, furros, _femboys_, programadores de [Rust](https://www.rust-lang.org/)) que quiera probar la verdadera experiencia Linux moderna, con [_tiling window manager_](https://en.wikipedia.org/wiki/Tiling_window_manager) incluído, pero que no quieran empezar de cero, recomendamos [Omarchy](https://omarchy.org/). Es [Arch Linux](https://wiki.archlinux.org/) con [Hyprland](https://hypr.land/) y [Quickshell](https://quickshell.org/), con una configuración excelente.
     - Otra altenativa interesante es instalar [Noctalia](https://docs.noctalia.dev/) encima de cualquier distro.
 - Si tienes un ordenador moderno y quieres exprimirlo al máximo, échale un vistazo a [CachyOS](https://cachyos.org/).
@@ -59,7 +59,7 @@ Espera, ¿ese es un problema? Si tienes que usar Office, Adobe Creative Cloud, o
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [Live USB con Linux](liveusb.md#como-crear-un-liveusb).
 
-Guía de como instalarlo en [Full Install](guías/full.md).
+Guía de como instalarlo en [Full Install](install/full.md).
 
 ### Método 2: Dual Boot
 Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS y Linux.
@@ -80,7 +80,7 @@ Consiste en instalar en tu ordenador los dos sistemas operativos: Windows/MacOS 
     - Copia de seguridad de tus archivos (fotos, fanfics, etc.)
     - Un [Live USB con Linux](liveusb.md#como-crear-un-liveusb).
 
-[Ver guía](guías/dualboot-win.md).
+[Ver guía](install/dualboot-win.md).
 
 
 ### Método 3: Windows Subsystem for Linux 2 (WSL2)
@@ -101,7 +101,7 @@ WSL te permite "correr Linux" dentro de Windows, pero sólo mediante una termina
     - Gente que no le tenga miedo a la terminal y decida seguir usando Windows (por algún motivo)
 - **Cosas que preparar:** Nada, simplemente trae tu portátil
 
-[Ver guía](guías/wsl.md).
+[Ver guía](install/wsl.md).
 
 
 ### Método 4: Virtual Machine (VM)
@@ -125,7 +125,7 @@ Una máquina virtual (VM) te permite correr un SO virtual por encima de tu propi
 
     Esto es lo recomendable si tienes un ordenador lo suficientemente potente y sólo necesitas hacer unas pocas cosas en Windows.
 
-[Ver guía](guías/vm-win.md).
+[Ver guía](install/vm-win.md).
 
 
 ### Método 5: Disco externo
@@ -149,7 +149,7 @@ Puedes instalar Linux en un disco duro externo y conectarlo a tu PC cuando quier
 !!! note
     También se puede tener Windows en un disco externo, lo cual puede dar hasta menos problemas.
 
-[Ver guía](guías/dualboot-external.md).
+[Ver guía](install/dualboot-external.md).
 
 
 ### Método 6: "Sólo la puntita"

@@ -144,7 +144,7 @@ Hay bastantes para [elegir](https://wiki.archlinux.org/title/Kernel), pero el qu
 
 
 ### Uso de mandos
-Por defecto, en los ultimos años la compatibilidad con mandos en Linux se ha vuelto practicamente nativo, y solo con conectar el mando ya puedes ponerte a jugar directamente. Pero puede haber casos donde el mando no es directamente detectado por el sistema operativo o por Steam, por lo que guías con la [ArchWiki](https://wiki.archlinux.org/title/Gamepad) pueden ayudar a solucionar el problema bastante rápido.
+Por defecto, en los ultimos años la compatibilidad con mandos en Linux se ha vuelto practicamente nativo, y solo con conectar el mando ya puedes ponerte a jugar directamente. Pero puede haber casos donde el mando no es directamente detectado por el sistema operativo o por Steam, por lo que install con la [ArchWiki](https://wiki.archlinux.org/title/Gamepad) pueden ayudar a solucionar el problema bastante rápido.
 
 Para probar que el mando está siendo detectado y no es problema del sistema operativo, existe [evtest](https://archlinux.org/packages/?name=evtest), el cual detecta todas las entradas de cualquier dispositivo.
 

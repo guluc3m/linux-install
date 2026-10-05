@@ -15,9 +15,9 @@ Ordenadores con un procesador de la familia M (M1/M2/...) (2020 o posterior, dep
 Las opciones son:
 
 1. Dual boot (tener MacOS y Linux en el mismo ordenador) con [Ashahi Linux](https://asahilinux.org/).  
-   [Ver guía](guías/dualboot-mac.md).
+   [Ver guía](install/dualboot-mac.md).
 2. Correr una VM con una versión de Linux para ARM a través de [UTM](https://mac.getutm.app/).  
-   [Ver guía](guías/vm-mac.md).
+   [Ver guía](install/vm-mac.md).
 3. Usar una VM de [Orbstack](https://orbstack.dev/) emulando x86.
 
 
@@ -27,7 +27,7 @@ Ordenadores con procesador Intel (pre-2020), los cuales están basados en la arq
 Las opciones son:
 
 1. Dual boot (tener MacOS y Linux en el mismo ordenador).
-    - Si es un ordenador sin [chip de seguridad T2](https://support.apple.com/es-es/103265) (pre-2018), no suele haber demasiados problemas al instalar, y los pasos generales para la instalación son fundamentalmente iguales que para cualquier otra máquina. Puedes ver los pasos en [este archivo](guías/dualboot-mac.md). Te recomendamos también la [siguiente guía](https://www.makeuseof.com/tag/install-linux-macbook-pro/).
+    - Si es un ordenador sin [chip de seguridad T2](https://support.apple.com/es-es/103265) (pre-2018), no suele haber demasiados problemas al instalar, y los pasos generales para la instalación son fundamentalmente iguales que para cualquier otra máquina. Puedes ver los pasos en [este archivo](install/dualboot-mac.md). Te recomendamos también la [siguiente guía](https://www.makeuseof.com/tag/install-linux-macbook-pro/).
     - Para ordenadores con chip T2 (2018-2019), lo más recomendable es usar [t2linux](https://t2linux.org/). Son parches específicos para múltiples distribuciones de Linux, ya que cosas como el Wi-Fi o el teclado y el _trackpad_ no suelen funcionar con una ISO normal debido a los _drivers_.
     ??? tip "Distribuciones sin t2linux"
         Si has instalado una distribución sin [t2linux](https://t2linux.org/), puedes encontrar _firmware_ ya compilado en Internet.
@@ -36,7 +36,7 @@ Las opciones son:
 
         - [Macbook Air 8](https://github.com/ztybigcat/brcm43xx)
 
-2. Correr una VM como en cualquier otro ordenador. [Ver guía](guías/vm-win.md)
+2. Correr una VM como en cualquier otro ordenador. [Ver guía](install/vm-win.md)
 
 !!! info
     Para más información sobre _troubleshooting_ y resolución de problemas en portátiles Mac, ve a [Laptop/Apple - ArchWiki](https://wiki.archlinux.org/title/Laptop/Apple).
