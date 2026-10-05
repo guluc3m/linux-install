@@ -1,9 +1,9 @@
-# Guía de instalación de Arch Linux
+# Instalación manual de Arch Linux
 
 Antes de seguir con la guía, pasa por la preparación previa antes:
 
-- [Dualboot Windows](dualboot-install.md)
-- [Dualboot MAC](dualboot-mac-install.md)
+- [Dualboot Windows](dualboot-win.md)
+- [Dualboot MAC](dualboot-mac.md)
 
 ## 1. Requisitos mínimos
 Para poder instalar arch linux en tu ordenador, necesitamos lo siguiente:
@@ -51,7 +51,8 @@ cat /sys/firmware/efi/fw_platform_size
 ```
 Te debe salir un 64 o 32 como resultado. Si no te sale eso, consulta el [enlace](https://wiki.archlinux.org/title/Installation_guide#Verify_the_boot_mode) de la wiki de arch para más profundidad.
 
-> Si no existe el directorio, es muy probable que hayas arrancado desde BIOS, algo común en máquinas más antiguas. En los pasos que esto implique una variación del proceso, se incluirá una nota al pie como esta.
+!!! tip
+    Si no existe el directorio, es muy probable que hayas arrancado desde BIOS, algo común en máquinas más antiguas. En los pasos que esto implique una variación del proceso, se incluirá una nota al pie como esta.
 
 ## 4. Internet.
 
@@ -73,7 +74,7 @@ En donde X es el SSID de la red. Si son varias palabras, ponlo entre "comillas".
 - `scan` busca redes cerca de tí.
 - `get-networks` te lista los resultado.
 - `connect` te permite conectarte a la deseada.
-Si es una WiFi normal como la de casa, pon la contraseña, si es eduroam, consulta nuestro [post-install](post-install.md#eduroam).
+Si es una WiFi normal como la de casa, pon la contraseña, si es eduroam, consulta nuestro [post-install](../post-install/config.md#eduroam).
 Haz `ping 9.9.9.9` y comprueba que hay flujo de paquetes.
 
 ## 5. Reloj interno
@@ -92,8 +93,10 @@ La interfaz es muy intuitiva, navega con las flechas a la partición de 300 GB y
 **Es muy importante que recuerdes qué division de /dev/sdaX es cada una**
 **Cuidado de no borrar la partición con tu otro OS, si procede**
 
-> En el caso BIOS, al ejecutar el comando te debe salir arriba "Partition type: dos", si no es así, consulta la [wiki de arch](https://wiki.archlinux.org/title/Installation_guide#Verify_the_boot_mode).
-> 
+!!! note
+    En el caso BIOS, al ejecutar el comando te debe salir arriba "Partition type: dos", si no es así, consulta la [wiki de arch](https://wiki.archlinux.org/title/Installation_guide#Verify_the_boot_mode).
+
+
 ### 6.1. Formatear
 - La partición de 1 GB es la de arranque, será formato EFI montado en /boot. (Formatea esta únicamente si la has creado desde `cfdisk`). Se formatea en FAT32.
 - La de tamaño RAM es una partición de SWAP, importante para hibernar el sistema o si se queda sin RAM. Se formatea como swapspace.
@@ -104,7 +107,8 @@ mkswap /dev/sdaY
 mkfs.ext4 /dev/sdaZ
 ```
 
-> En elc aso BIOS, haz una particion swap y deja el resto como root, no necesitas una partición separada para boot. Es decir, haz solo sdaY y sdaZ.
+!!! note
+  En el caso BIOS, haz una particion swap y deja el resto como root, no necesitas una partición separada para boot. Es decir, haz solo sdaY y sdaZ.
 
 ### 6.2. Montar el sistema de archivos
 Ejecuta estos comandos para habilitar y poder trabajar sobre estas nuevas particiones y así instalar arch linux:
@@ -113,8 +117,11 @@ mount --mkdir /dev/sdaX /mnt/boot
 swapon /dev/sdaY
 mount /dev/sdaZ /mnt
 ```
-> En BIOS, si no has hecho partición de boot, puedes ignorar el primer comando de la lista.
-> 
+
+!!! note
+    En BIOS, si no has hecho partición de boot, puedes ignorar el primer comando de la lista.
+
+
 ## 7. Instalar el kernel de linux
 El kernel es el núcleo del sistema operativo, es lo que hay detrás que tú no ves. Sin ello, no existe sistema operativo.
 Linux tiene varios kernel, el nomral, el LTS, el zen.... Depende de gustos o necesidades los hay mejores y peores. Si buscas algo estable a largo plazo, quédate con linux-lts
@@ -122,7 +129,7 @@ Linux tiene varios kernel, el nomral, el LTS, el zen.... Depende de gustos o nec
 pacstrap -K /mnt base linux-lts linux-firmware
 ```
 Donde yo he puesto `linux-lts` pon el kernel de tu elección. Consulta la [wiki de arch](https://wiki.archlinux.org/title/Kernel) para más profundidad.
-**NOTA:** Si tu gráfica es de NVIDIA, necesitarás drivers y paquetes adicionales, consulta [esta guía](post-install.md#Drivers de NVIDIA).
+**NOTA:** Si tu gráfica es de NVIDIA, necesitarás drivers y paquetes adicionales, consulta [esta guía](../post-install/config.md#drivers-de-nvidia).
 
 ## 8. Configura la tabla de particiones y puntos de montaje
 ```bash
@@ -170,7 +177,7 @@ Para hacer permanente la elección del layout de tu teclado, abre, con `nano`, e
 ```
 KEYMAP=es
 ```
-para un layout español estánar. Si tienes otro layout, sustituye *es* por el que te saliera en el paso 3.
+para un layout español estánar. Si tienes otro layout, sustituye *es* por el que te saliera en el [paso 3](#3-elegir-el-layout-del-teclado).
 
 ## 14. Elige el nombre de tu máquina
 
@@ -219,18 +226,21 @@ El boot loader por excelencia es *grub*, aunque hay alguno más. En esta guía e
 ```bash
 pacman -S grub efibootmgr
 ```
-> En BIOS, no necesitas el `efibootmgr` pues no estás usando el arranque EFI. sino BIOS. Descarga solo el paquete `grub`.
 
-### 18.2. Instala [grub](https://wiki.archlinux.org/title/GRUB)
+!!! note
+  En BIOS, no necesitas el `efibootmgr` pues no estás usando el arranque EFI. sino BIOS. Descarga solo el paquete `grub`.
+
+### 18.2. Instala [GRUB](https://wiki.archlinux.org/title/GRUB)
 ```bash
 grub-install --target=x86_64-efi --efi-directory=/dev/sdaX --bootloader-id=GRUB
 ```
 Recuerda que sdaX es la partición /boot que hemos formateado antes en el paso **6**.
 
-> Aquí el comando cambia, pues no hay directorio efi ni partición boot.
-> ```bash
-> grub-install --target=i386-pc /dev/sda
-> ```
+!!! note
+  En BIOS, el comando cambia, pues no hay directorio efi ni partición boot.
+  ```bash
+  grub-install --target=i386-pc /dev/sda
+  ```
 
 ### 18.3. Crea el archivo de configuración
 ```bash

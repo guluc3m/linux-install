@@ -1,4 +1,4 @@
-# Instalación de Linux en dualboot
+# Dualboot (Windows)
 
 En este tutorial vamos a explicar cómo instalar Linux junto a Windows
 (dualboot). Este tutorial está pensado para instalar ambos sistemas operativos
@@ -103,7 +103,7 @@ powercfg.exe /h off
 
 
 ## 3. Arrancar en Linux
-Ver [Arrancar desde el Live USB](common.md#arrancar-desde-el-liveusb).
+Ver [Arrancar desde el Live USB](../liveusb.md#arrancar-desde-el-liveusb).
 
 
 
@@ -162,16 +162,16 @@ Al igual que Ubuntu, pero puede que cambie algún paso.
 Ya hemos terminado `:)`. Al reiniciar verás el GRUB, selecciona primero Windows
 y asegúrate de que funciona. Reinicia y entra en Ubuntu.
 
-> [!NOTE]
-> Si después de reiniciar no aparece GRUB, entra en la BIOS y selecciónalo
-> como opción de boot principal. Suele venir 'camuflado' con el nombre de la
-> distribución, e.g. `ubuntu`.
+!!! note
+    Si después de reiniciar no aparece GRUB, entra en la BIOS y selecciónalo
+    como opción de boot principal. Suele venir 'camuflado' con el nombre de la
+    distribución, e.g. `ubuntu`.
 
-También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](../post-install/index.md).
 
 
 ## Troubleshooting
-- [Solucionar drivers Wi-Fi](common.md#solucionar-drivers-wi-fi)
+- [Solucionar drivers Wi-Fi](../troubleshoot.md#solucionar-drivers-wi-fi)
 - [Arreglar GRUB](https://askubuntu.com/a/88432)
 
 

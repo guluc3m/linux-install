@@ -1,4 +1,4 @@
-# Instalación de Linux con MacOS en dualboot
+# Dualboot (MacOS)
 
 ## Mac Intel
 
@@ -22,7 +22,7 @@ Después, repite este paso pero seleccionando "Boot in grub2 mode".
 ### 3. Listo
 
 Los pasos de instalación son iguales a los de otras máquinas: Debes crear las particiones, instalar el kernel, entorno de escritorio, instalar el bootloader...
-Si quieres, puedes usar instaladors gráficos como debian, ubuntu, mint... o aventurarte en [el asombroso mundo de arch](arch-manual.md)
+Si quieres, puedes usar instaladors gráficos como debian, ubuntu, mint... o aventurarte en [el asombroso mundo de arch](arch.md)
 
 ## Mac Silicon (Proceesadores M1 o M2)
 
@@ -85,7 +85,7 @@ Cuando se reinicie, ya arrancará en Linux.
 ## 5. Links de interés
 - [Asahi Linux](https://asahilinux.org)
 
-También te recomendamos echarle un vistazo a nuestra sección [Post-Install](post-install.md).
+También te recomendamos echarle un vistazo a nuestra sección [Post-Install](../post-install/index.md).
 
 
 <!--## TODO: Troubleshooting-->
