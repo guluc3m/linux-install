@@ -54,7 +54,7 @@
     );
   const icon = (v, color) =>
     fromHTML(
-      `<svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 stroke-current stroke-[1.5] ${color}" fill="none">${ICONS[v]}</svg>`,
+      `<svg viewBox="0 0 24 24" class="size-5 shrink-0 stroke-current stroke-[1.5] ${color}" fill="none">${ICONS[v]}</svg>`,
     );
 
   document.querySelectorAll('.md-typeset .admonition, .md-typeset details').forEach((box) => {
