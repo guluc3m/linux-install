@@ -119,6 +119,14 @@
   color: var(--color-gul-muted);
 }
 
+/* Separador tipo `---` bajo h1/h2: el mismo border-b border-gul-line que
+   cierra el bloque del h1 en /styleguide. */
+.md-typeset h1,
+.md-typeset h2 {
+  border-bottom: 1px solid var(--color-gul-line);
+  padding-bottom: calc(var(--spacing) * 3);
+}
+
 .md-typeset h2::before {
   content: '## ';
   color: var(--color-gul-blue);
