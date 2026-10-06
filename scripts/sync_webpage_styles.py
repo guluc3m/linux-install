@@ -159,6 +159,9 @@ def sync(dist_dir: Path) -> None:
     #    izquierdo, docs/overrides/main.html) — se le añade solo el toggle,
     #    sin el que no habría forma de abrir la navegación en móvil.
     header_html = extract_element(index_html, "header")
+    # bundle.js de Zensical exige un [data-md-component=header]: sin él lanza
+    # al arrancar y no monta el resto de componentes (la búsqueda incluida).
+    header_html = header_html.replace("<header ", '<header data-md-component="header" ', 1)
     header_html = header_html.replace("</header>", f"{DRAWER_TOGGLE}</header>")
     header_html = webpage_links(local_images(header_html))
     OVERRIDES_DIR.mkdir(parents=True, exist_ok=True)
