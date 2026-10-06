@@ -229,6 +229,19 @@
   font-size: var(--text-sm);
 }
 
+/* Buscador del panel izquierdo (overrides/main.html): centrado dentro del
+   gul-Frame y con borde siempre, no solo el fondo al pasar el ratón. */
+.md-sidebar--primary .md-search__button {
+  display: block;
+  margin-inline: auto;
+  border: 1px solid var(--color-gul-line);
+  border-radius: var(--radius-md);
+}
+.md-sidebar--primary .md-search__button:hover,
+.md-sidebar--primary .md-search__button:focus {
+  border-color: var(--color-gul-muted);
+}
+
 /* Botones — calcado de gul-Button.astro (bg-gul-blue/invert para
    primary; borde gul-line/invert para secondary). Sin el glifo $/>, el
    cursor parpadeante ni el PixelDissolve del componente real — son
