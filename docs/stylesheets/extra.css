@@ -154,34 +154,50 @@
   text-align: justify;
 }
 
-/* Admonitions — como gul-Callout.astro: sin caja/barra de título, solo
-   icono + "Etiqueta:" en el color de estado seguido del texto en la misma
-   línea (gul-Callout es un único <p>: icono + `{label}: ` + contenido).
+/* Admonitions — caja gul-Frame (igual que GulCallout.astro: <GulFrame
+   variant="full" surface class="p-4">) con el icono + "Etiqueta:" + el
+   primer párrafo fundidos en una sola línea, como el <p> único de
+   GulCallout (icono + `{label}: ` + slot, un solo flex row).
    El Markdown de un !!! genera <p class="admonition-title"> como hermano
-   del <p> de cuerpo — se fuerzan ambos a display:inline para que fluyan
-   como una sola línea de texto; con ??? (details/summary) la caja también
-   se quita pero el título se deja en bloque (summary ya es el disparador
-   clicable, con su propia flecha ::after — forzarlo a inline rompería esa
-   posición absoluta).
-   Nota de especificidad: el ::before/::after por tipo de Material
-   (`.md-typeset .note>.admonition-title`, 3 clases) pesa más que un
-   selector genérico de 2 — por eso se repite aquí la lista de tipos en vez
-   de un selector único. note/tip/info/question comparten el tratamiento
-   "aviso" (el único que tiene gul-Callout fuera de éxito/peligro), failure
-   se trata como danger — son los tipos que de verdad aparecen en docs/. */
+   del <p> de cuerpo — se fuerzan ambos a display:inline para que lean como
+   una sola línea; con ??? (details/summary) la caja se mantiene pero el
+   título se deja en bloque (summary ya es el disparador clicable, con su
+   propia flecha ::after por posición absoluta — forzarlo a inline la
+   rompería).
+   Nota de especificidad (causa de que el intento anterior no se viera
+   reflejado, dos veces): Material colorea cada tipo con un selector de 3
+   clases (`.md-typeset .note>.admonition-title`, background-color
+   #448aff1a) — un selector genérico de 2 clases pierde contra eso pase lo
+   que pase el orden de carga. Hay que igualar la especificidad repitiendo
+   la lista de tipos, no generalizar. note/tip/info/question comparten el
+   tratamiento "aviso" (el único que tiene GulCallout fuera de éxito/
+   peligro), failure se trata como danger — son los tipos que de verdad
+   aparecen en docs/. */
 .md-typeset .admonition,
 .md-typeset details {
-  background: none;
-  border: none;
-  border-radius: 0;
+  background-color: var(--color-gul-surface);
+  border: 1px solid var(--color-gul-line);
+  border-radius: var(--radius-md, 0.375rem);
   box-shadow: none;
-  padding: 0;
-  margin: 1em 0;
+  padding: 1rem;
 }
-
+/* ??? (details.TYPE): el borde coloreado por tipo de Material
+   (.md-typeset details.note{border-color:...}, 3 piezas de especificidad)
+   pesa más que la regla genérica de arriba (.md-typeset details, 2 piezas)
+   — se repite aquí para igualar. */
+.md-typeset details.note,
+.md-typeset details.tip,
+.md-typeset details.info,
+.md-typeset details.question,
+.md-typeset details.warning,
+.md-typeset details.danger,
+.md-typeset details.failure,
+.md-typeset details.success {
+  border-color: var(--color-gul-line);
+}
 .md-typeset .admonition-title {
   display: inline;
-  background: none;
+  background-color: transparent;
   border: none;
   padding: 0;
   margin: 0;
@@ -202,9 +218,13 @@
   display: inline;
   margin: 0;
 }
+.md-typeset .admonition > :last-child,
+.md-typeset details > :last-child {
+  margin-bottom: 0;
+}
 
 .md-typeset summary {
-  background: none;
+  background-color: transparent;
   border: none;
   padding-top: 0;
   padding-bottom: 0;
@@ -224,12 +244,17 @@
 }
 .md-typeset .note > .admonition-title,
 .md-typeset .note > .admonition-title::after,
+.md-typeset .note > summary,
 .md-typeset .tip > .admonition-title,
 .md-typeset .tip > .admonition-title::after,
+.md-typeset .tip > summary,
 .md-typeset .info > .admonition-title,
 .md-typeset .info > .admonition-title::after,
+.md-typeset .info > summary,
 .md-typeset .question > .admonition-title,
-.md-typeset .question > .admonition-title::after {
+.md-typeset .question > .admonition-title::after,
+.md-typeset .question > summary {
+  background-color: transparent;
   color: var(--color-gul-blue);
 }
 
@@ -238,7 +263,9 @@
   background-color: var(--color-gul-amber);
 }
 .md-typeset .warning > .admonition-title,
-.md-typeset .warning > .admonition-title::after {
+.md-typeset .warning > .admonition-title::after,
+.md-typeset .warning > summary {
+  background-color: transparent;
   color: var(--color-gul-amber);
 }
 
@@ -250,8 +277,11 @@
 }
 .md-typeset .danger > .admonition-title,
 .md-typeset .danger > .admonition-title::after,
+.md-typeset .danger > summary,
 .md-typeset .failure > .admonition-title,
-.md-typeset .failure > .admonition-title::after {
+.md-typeset .failure > .admonition-title::after,
+.md-typeset .failure > summary {
+  background-color: transparent;
   color: var(--color-gul-red);
 }
 
@@ -260,7 +290,9 @@
   background-color: var(--color-gul-green);
 }
 .md-typeset .success > .admonition-title,
-.md-typeset .success > .admonition-title::after {
+.md-typeset .success > .admonition-title::after,
+.md-typeset .success > summary {
+  background-color: transparent;
   color: var(--color-gul-green);
 }
 
