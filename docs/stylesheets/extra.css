@@ -243,6 +243,12 @@
   font-size: var(--text-sm);
 }
 
+/* Aire entre el texto central y el footer, para que al llegar al final de
+   la página el footer no choque con los paneles laterales. */
+.md-content {
+  margin-bottom: calc(var(--spacing) * 24);
+}
+
 /* Títulos de los paneles: Zensical les pone fondo + sombra del color de la
    página (para tapar lo que pasa por debajo al ser sticky), y eso tapaba el
    acento de puntos del gul-Frame. Solo escritorio: en móvil el del panel
