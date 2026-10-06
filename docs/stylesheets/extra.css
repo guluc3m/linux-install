@@ -185,10 +185,12 @@
   .md-nav--primary > .md-nav__title::before {
     content: '';
     display: inline-block;
-    width: 1.5em;
-    height: 1.75em;
-    margin-right: 0.4em;
-    vertical-align: -0.55em;
+    width: 1.9em;
+    height: 2.2em;
+    margin-right: -0.1em;
+    vertical-align: -0.9em;
+    position: relative;
+    top: 0.3em;
     background-color: currentColor;
     -webkit-mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
     mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
