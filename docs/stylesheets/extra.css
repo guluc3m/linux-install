@@ -27,6 +27,20 @@
   --container-gul-content: 992px;
 }
 
+/* Capas: el buscador de Zensical es un div fixed con z-index 4 colgado del
+   body. Los componentes de webpage traen sus propios z-index (relative z-10
+   en callouts, footer y frames; z-50 en el header) que, sin aislar, compiten
+   en la raíz y quedaban por encima del buscador abierto. Se aísla todo lo
+   que hay bajo .md-container (contenido + footer), así cualquier z-index de
+   un componente — presente o futuro — se queda dentro, y el header se baja
+   justo por debajo del buscador (sigue por encima del contenido). */
+.md-container {
+  isolation: isolate;
+}
+[data-md-component="header"] {
+  z-index: 3;
+}
+
 [data-md-color-scheme="slate"] {
   --md-default-bg-color: var(--color-gul-bg);
   --md-default-fg-color: var(--color-gul-ink);
