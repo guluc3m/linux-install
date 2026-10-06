@@ -98,13 +98,22 @@ def sync(dist_dir: Path) -> None:
             return
         copied.add(basename)
         src = astro_src / basename
-        shutil.copy2(src, astro_dst / basename)
         if src.suffix == ".css":
-            for ref in re.findall(r'url\((["\']?)([^"\')]+)\1\)', src.read_text(encoding="utf-8")):
+            # Astro emite url() absolutas a /_astro/... (asume deploy en la
+            # raíz del dominio) — aquí el CSS y sus fuentes/iconos viven
+            # juntos y planos, así que basta la ruta relativa. Sin esto, en
+            # local (y en cualquier deploy que no sea la raíz exacta de
+            # webpage) esas URLs dan 404 y el navegador cae a la fuente del
+            # sistema sin avisar.
+            text = re.sub(r'(url\((["\']?))/_astro/', r'\1', src.read_text(encoding="utf-8"))
+            (astro_dst / basename).write_text(text, encoding="utf-8")
+            for ref in re.findall(r'url\((["\']?)([^"\')]+)\1\)', text):
                 url = ref[1]
                 if url.startswith("data:"):
                     continue
                 copy_asset(url.rsplit("/", 1)[-1])
+        else:
+            shutil.copy2(src, astro_dst / basename)
 
     for href in css_hrefs:
         copy_asset(href.rsplit("/", 1)[-1])
