@@ -8,6 +8,16 @@
 -#}
 {% extends "base.html" %}
 
+{#- Los dos paneles van dentro del markup de gul-Frame.astro (borde gul-line,
+    rounded-md y el canvas PixelDissolve en su variante por defecto,
+    "corner", que pinta el script del header sincronizado). -#}
+{% macro gul_frame() %}
+  <div class="relative overflow-hidden rounded-md border border-gul-line">
+    <canvas data-pixel-dissolve data-cell="3" data-color="0, 117, 176" data-alpha="0.4" data-max-density="0.5" data-x-bias="0.5" data-falloff="10" data-ordered-mix="0.85" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full [image-rendering:pixelated]"></canvas>
+    <div class="relative z-10 py-3">{{ caller() }}</div>
+  </div>
+{% endmacro %}
+
 {% block site_nav %}
   {% if nav %}
     {% if page.meta and page.meta.hide %}
@@ -16,6 +26,7 @@
     <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
       <div class="md-sidebar__scrollwrap">
         <div class="md-sidebar__inner">
+          {% call gul_frame() %}
           {% if "search" in config.plugins %}
             {% set search = config.plugins["search"] | attr("config") %}
             {% if search.enabled %}
@@ -27,6 +38,7 @@
             {% endif %}
           {% endif %}
           {% include "partials/nav.html" %}
+          {% endcall %}
         </div>
       </div>
     </div>
@@ -51,7 +63,9 @@
           {% endif %}
         {% endif %}
         <div class="md-sidebar__inner">
+          {% call gul_frame() %}
           {% include "partials/toc.html" %}
+          {% endcall %}
         </div>
       </div>
     </div>
