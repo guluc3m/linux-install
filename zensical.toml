@@ -63,6 +63,10 @@ pymdownx.superfences = {}
 toc.permalink = true
 toc.toc_depth = 2
 zensical.extensions.glightbox = {}
+pymdownx.caret = {}
+pymdownx.keys = {}
+pymdownx.mark = {}
+pymdownx.tilde = {}
 
 
 [project.theme]
