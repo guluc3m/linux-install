@@ -14,11 +14,13 @@
       '<path d="M12 3.5l9.5 16.5H2.5z"/><line x1="12" y1="10" x2="12" y2="14.5"/><circle cx="12" cy="17" r="0.75" fill="currentColor" stroke="none"/>',
   };
   const COLOR = { warning: 'text-gul-amber', success: 'text-gul-green', error: 'text-gul-red' };
+  // Excepciones por tipo dentro de la variante "aviso" (gul-callout-tip: extra.css).
+  const TYPE_COLOR = { info: 'text-gul-blue', tip: 'gul-callout-tip' };
   // gul-Callout solo tiene 3 variantes; el resto de tipos caen en "aviso".
   const VARIANT = { success: 'success', danger: 'error', failure: 'error', bug: 'error' };
   const LABEL = {
     note: 'Nota',
-    tip: 'Consejo',
+    tip: 'Tip',
     info: 'Info',
     question: 'Pregunta',
     warning: 'Aviso',
@@ -50,14 +52,15 @@
         '<canvas data-pixel-dissolve data-cell="3" data-color="0, 117, 176" data-alpha="0.3" data-max-density="0.65" data-x-bias="0.8" data-falloff="1.6" data-ordered-mix="0.75" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full [image-rendering:pixelated]"></canvas>',
       ),
     );
-  const icon = (v) =>
+  const icon = (v, color) =>
     fromHTML(
-      `<svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 stroke-current stroke-[1.5] ${COLOR[v]}" fill="none">${ICONS[v]}</svg>`,
+      `<svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 stroke-current stroke-[1.5] ${color}" fill="none">${ICONS[v]}</svg>`,
     );
 
   document.querySelectorAll('.md-typeset .admonition, .md-typeset details').forEach((box) => {
     const type = [...box.classList].find((c) => c in LABEL) ?? 'note';
     const v = VARIANT[type] ?? 'warning';
+    const color = TYPE_COLOR[type] ?? COLOR[v];
     const title = box.querySelector(':scope > .admonition-title, :scope > summary');
     const raw = title?.textContent.trim() ?? '';
     const text = !raw || raw.toLowerCase() === type ? LABEL[type] : raw;
@@ -78,18 +81,18 @@
         el(
           'summary',
           'relative z-10 p-4 text-sm',
-          el('span', 'flex items-start gap-3', icon(v), el('span', `font-semibold ${COLOR[v]}`, text)),
+          el('span', 'flex items-start gap-3', icon(v, color), el('span', `font-semibold ${color}`, text)),
         ),
         el('div', '', el('div', 'relative z-10', body)),
       );
     } else {
       // Como el <p> único de gul-Callout: "Etiqueta: texto" en la misma línea.
-      const label = el('span', `font-semibold ${COLOR[v]}`, `${text}:`);
+      const label = el('span', `font-semibold ${color}`, `${text}:`);
       const first = body.firstElementChild;
       if (first?.tagName === 'P') first.prepend(label, ' ');
       else body.prepend(el('p', '', label));
       out = frame('div');
-      out.append(el('div', 'relative z-10 p-4', el('div', 'flex items-start gap-3', icon(v), body)));
+      out.append(el('div', 'relative z-10 p-4', el('div', 'flex items-start gap-3', icon(v, color), body)));
     }
     box.replaceWith(out);
   });

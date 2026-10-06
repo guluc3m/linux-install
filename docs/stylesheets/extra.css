@@ -179,6 +179,9 @@
 .md-typeset .gul-callout {
   margin: 1.5625em 0;
 }
+.gul-callout-tip {
+  color: #00bfa5;
+}
 .md-typeset .gul-callout-body > :first-child {
   margin-top: 0;
 }
