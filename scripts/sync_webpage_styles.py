@@ -144,13 +144,23 @@ def sync(dist_dir: Path) -> None:
 
         return re.sub(r'src="/([^"/]+\.(?:svg|png|jpe?g|webp))"', sub, html)
 
+    def webpage_links(html: str) -> str:
+        # Los enlaces del header (logo → "/", nav → "/actividades/"...) son
+        # rutas de webpage; servidos desde la guía caerían en la guía (en
+        # local, "/" redirige a /guia). Se anclan a extra.homepage.
+        return re.sub(
+            r'href="/(?!/)',
+            'href="{% endraw %}{{ config.extra.homepage }}{% raw %}/',
+            html,
+        )
+
     # 2. Header: el header de webpage no trae el toggle del panel de
     #    navegación de la guía (drawer) ni el buscador (movido al panel
     #    izquierdo, docs/overrides/main.html) — se le añade solo el toggle,
     #    sin el que no habría forma de abrir la navegación en móvil.
     header_html = extract_element(index_html, "header")
     header_html = header_html.replace("</header>", f"{DRAWER_TOGGLE}</header>")
-    header_html = local_images(header_html)
+    header_html = webpage_links(local_images(header_html))
     OVERRIDES_DIR.mkdir(parents=True, exist_ok=True)
     (OVERRIDES_DIR / "header.html").write_text(
         "{% raw %}\n" + header_html + "\n{% endraw %}\n", encoding="utf-8"
@@ -168,7 +178,7 @@ def sync(dist_dir: Path) -> None:
     footer_end = index_html.index(footer_html) + len(footer_html)
     body_end = index_html.index("</body>")
     trailing = index_html[footer_end:body_end].strip()
-    footer_html = local_images(footer_html + "\n" + trailing)
+    footer_html = webpage_links(local_images(footer_html + "\n" + trailing))
     (OVERRIDES_DIR / "footer.html").write_text(
         "{% raw %}\n" + footer_html + "\n{% endraw %}\n", encoding="utf-8"
     )
