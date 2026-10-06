@@ -164,7 +164,7 @@ Hay una cantidad ingente de ellos, pero te recomendamos estos:
 ## Shells
 El programa que ejecuta la terminal en sí se llama _shell_. La mayoría de distros vienen con [Bash](https://www.gnu.org/software/bash/), pero tienes otras alternativas:
 
-- [Zsh](https://www.zsh.org/): La más popular, con una gran cantidad de plugins hechos por la comunidad (ver [Zinit](https://github.com/zdharma-continuum/zinit))
+- [Zsh](https://www.zsh.org/): La más popular, con una gran cantidad de plugins hechos por la comunidad (ver [Antidote](https://antidote.sh/))
 - [fish](https://fishshell.com/): _Shell_ "_batteries-included_", con muchas funcionalidades configuradas _out of the box_
 - [Nushell](https://www.nushell.sh/): Una _shell_ moderna, hecha desde cero, y muy diferente al resto, con plugins, mensajes de error fantásticos y muchísimas funcionalidades para trabajar con datos
 
