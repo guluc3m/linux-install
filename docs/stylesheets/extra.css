@@ -179,10 +179,12 @@
   list-style-type: decimal;
 }
 
-/* Tabla de contenidos: las entradas de h3 (nav anidado) en gris, para
-   distinguirlas de las de h2. La activa y el hover mantienen su color. */
-.md-nav--secondary .md-nav .md-nav__link:not(.md-nav__link--active, :hover, :focus-visible) {
-  color: var(--color-gul-muted);
+/* Tabla de contenidos: las entradas de h3 (nav anidado) en un gris claro,
+   a medio camino entre gul-ink y gul-muted — más claro que el gul-muted con
+   el que Zensical marca las ya recorridas (--passed), que se respetan. La
+   activa y el hover mantienen su color. */
+.md-nav--secondary .md-nav .md-nav__link:not(.md-nav__link--active, .md-nav__link--passed, :hover, :focus-visible) {
+  color: color-mix(in oklab, var(--color-gul-ink) 50%, var(--color-gul-muted));
 }
 
 /* Tux junto al título del sitio en el panel de navegación (escritorio; en
