@@ -176,8 +176,14 @@
 .md-typeset details.gul-callout > summary::after {
   all: revert-layer;
 }
-.md-typeset .gul-callout {
+.md-typeset .gul-callout,
+.md-typeset details.gul-callout {
   margin: 1.5625em 0;
+}
+/* Material: details > :last-child { margin-bottom: .6rem } — caía sobre el
+   contenedor plegable y dejaba 12px de hueco con el desplegable cerrado. */
+.md-typeset details.gul-callout > div {
+  margin: 0;
 }
 .gul-callout-tip {
   color: #00bfa5;
