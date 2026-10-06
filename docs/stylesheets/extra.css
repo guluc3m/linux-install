@@ -229,6 +229,18 @@
   font-size: var(--text-sm);
 }
 
+/* Títulos de los paneles: Zensical les pone fondo + sombra del color de la
+   página (para tapar lo que pasa por debajo al ser sticky), y eso tapaba el
+   acento de puntos del gul-Frame. Solo escritorio: en móvil el del panel
+   izquierdo es la cabecera del menú desplegable. */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar .md-nav--primary .md-nav__title,
+  .md-sidebar .md-nav--secondary .md-nav__title {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
 /* Buscador del panel izquierdo (overrides/main.html): centrado dentro del
    gul-Frame y con borde siempre, no solo el fondo al pasar el ratón. */
 .md-sidebar--primary .md-search__button {
