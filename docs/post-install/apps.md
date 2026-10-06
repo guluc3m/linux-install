@@ -10,12 +10,12 @@ Hay diversas formas de instalar _paquetes_ en Linux:
 - Usando la aplicación GUI de tu _distro_ (en las _distros_ que las traigan). Es la forma más cómoda para principiantes, y normalmente te ofrece varios de los distintos métodos de instalación que verás a continuación.
 - Utilizando el [gestor de paquetes](#gestores-de-paquetes) de tu _distro_ en la terminal. Lo que usamos el 90% del GUL. La aplicación debe estar en los repositorios de la _distro_, y la versión que te bajes es la del _repo_ (puede no ser la última), pero a cambio, puedes actualizarlo con un comando.
 - Instalando el paquete usando el [formato de paquetes de tu _distro_](#formatos-distro-specific). Muchas aplicaciones te ofrecen bajarte desde su página web estos formatos. Al contrario que cuando usas el gestor de paquetes, no se actualizan solos (a no ser que lo haga la propia aplicación).
-- Instalando el paquete usando un [formato de paquetes genérico](#formatos-genéricos). Son la aplicación autocontenida, por lo que ocupan más espacio. Toca actualizarlos manualmente, pero suelen funcionar siempre.
+- Instalando el paquete usando un [formato de paquetes genérico](#formatos-genericos). Son la aplicación autocontenida, por lo que ocupan más espacio. Toca actualizarlos manualmente, pero suelen funcionar siempre.
 - _Build from source_. Consiste en bajarte el código fuente y compilar tú mismo, siguiendo las instrucciones del desarrollador. Dependiendo de la aplicación, puede ser un dolor o algo súper simple, pero está ahí como alternativa.
 
-!!! note "Sobre distribuciones inmutables"
+??? note "Sobre distribuciones inmutables"
 
-    _Distros_ como [Nobara Linux](https://nobaraproject.org/) son _inmutables_, es decir, que no permiten la instalación de paquetes y librerías de sistema. La única forma de instalar aplicaciones es mediante [formatos genéricos](#formatos-genéricos).
+    _Distros_ como [Nobara Linux](https://nobaraproject.org/) son _inmutables_, es decir, que no permiten la instalación de paquetes y librerías de sistema. La única forma de instalar aplicaciones es mediante [formatos genéricos](#formatos-genericos).
 
 
 ### Gestores de paquetes
@@ -26,7 +26,7 @@ Cada familia de _distros_ viene con su propio gestor de paquetes, el cual es el 
 - [Pacman](https://wiki.archlinux.org/title/Pacman): [Arch Linux](https://archlinux.org/) y derivados ([Manjaro](https://manjaro.org/), [EndevourOS](https://endeavouros.com/), [CachyOS](https://cachyos.org/), etc.)
 - [Zypper](https://documentation.suse.com/smart/systems-management/html/concept-zypper/index.html): [OpenSuse](https://www.opensuse.org/) y derivados
 
-!!! info
+??? info "Otras alternativas"
     También existe [Nix](https://wiki.nixos.org/wiki/Nix_(package_manager)), el gestor de paquetes de [NixOS](https://nixos.org/), que también se puede instalar en el resto de _distros_. Sus repositorios son los que mayor número de paquetes tienen, [con diferencia](https://repology.org/repositories/graphs). Es una alternativa interesante.
 
 La sintaxis varía un poco dependiendo del gestor, pero por lo general:
@@ -65,12 +65,15 @@ Linux siendo Linux, hay ochocientos estándares para empaquetar paquetes (valga 
 
 
 #### Formatos genéricos
-- [Flatpak](https://flatpak.org/): Un buen formato, enfocado en la seguridad (las aplicaciones están _sandboxed_ y puedes gestionar todos sus permisos). Sin embargo, en algunas aplicaciones la versión de Flatpak varía de la versiones de los gestores de paquetes normales.
-- [Appimage](https://appimage.org/): Un único archivo ejecutable, lo más parecido a un `.exe` de Windows.
+- [Flatpak](https://flatpak.org/): Un buen formato, enfocado en la seguridad (las aplicaciones están [_sandboxed_](https://en.wikipedia.org/wiki/Sandbox_(computer_security)) y puedes gestionar todos sus permisos). Sin embargo, en algunas aplicaciones la versión de Flatpak varía de la versiones de los gestores de paquetes normales.
+- [AppImage](https://appimage.org/): Un único archivo ejecutable, lo más parecido a un `.exe` de Windows.
 - [Snap](https://snapcraft.io/): Un formato ~~de mierda~~ que ha caído en desgracia ([con razón](https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html#criticism)). Evítalo si puedes. Desinstálalo si lo tienes en Ubuntu.
 - `.tar.gz`: En muchas ocasiones (normalmente, en Releases de GitHub) te dan la aplicación ya compilada en una carpeta comprimida. Basta con descomprimir y ejecutar el archivo binario.
 
-!!! tip "Dar permisos de ejecución al archivo"
+    ???+ note "Sobre las versiones de los paquetes"
+        Asegúrate de que la versión que te bajas es para Linux (`linux` o `unknown-linux`), y para tu arquitectura (`x86_64`/`amd64` - la normal, o `arm64` - ARM). Lo suele poner en el nombre. También es posible que veas cosas como `gnu` o `musl`, eso indica que requiere la librería `libc` (`gnu`) o no (`musl`). Algunas _distros_ (sobretodo en Máquinas Virtuales en el cloud, en general las _distros_ normales lo traen) vienen sin `libc`, por lo que es algo a tener en cuenta.
+
+??? tip "Dar permisos de ejecución al archivo"
     Normalmente los archivos que te bajas de Internet no suelen tener los permisos de ejecución habilitados (por razones obvias).
 
     Para habilitarlos:
@@ -82,8 +85,6 @@ Linux siendo Linux, hay ochocientos estándares para empaquetar paquetes (valga 
     También puedes editar los permisos desde el explorador de archivos.
 
 
-!!! note "Sobre las versiones de los paquetes"
-    Asegúrate de que la versión que te bajas es para Linux (`linux` o `unknown-linux`), y para tu arquitectura (`x86_64`/`amd64` - la normal, o `arm64` - ARM). Lo suele poner en el nombre. También es posible que veas cosas como `gnu` o `musl`, eso indica que requiere la librería `libc` (`gnu`) o no (`musl`). Algunas _distros_ (sobretodo en Máquinas Virtuales en el cloud, en general las _distros_ normales lo traen) vienen sin `libc`, por lo que es algo a tener en cuenta.
 
 
 ### Aplicaciones para gestionar paquetes
