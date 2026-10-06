@@ -22,12 +22,22 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 ASSETS_DIR = REPO_ROOT / "docs" / "assets" / "webpage"
 OVERRIDES_DIR = REPO_ROOT / "overrides" / "partials"
 
+# Botón del menú de navegación de la guía (#__drawer de Zensical), con el
+# mismo aspecto y posición (order-1) que la hamburguesa de gul-Nav, que en la
+# guía se oculta (extra.css) para no tener dos.
 DRAWER_TOGGLE = (
-    '<label class="md-header__button md-icon" for="__drawer" '
-    'aria-label="Navegación">'
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">'
-    '<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none"/>'
-    "</svg></label>"
+    '<label for="__drawer" aria-label="Navegación" class="gul-drawer-toggle order-1 '
+    'flex size-9 cursor-pointer items-center justify-center rounded-md text-gul-muted hover:text-gul-ink">'
+    '<svg viewBox="0 0 24 24" class="size-5 stroke-current stroke-2" fill="none">'
+    '<path d="M4 7h16M4 12h16M4 17h16"/></svg></label>'
+)
+# En móvil/tablet el buscador (que vive en el panel izquierdo) queda tapado
+# por el menú desplegable: lupa en el header que pulsa ese mismo botón.
+SEARCH_TOGGLE = (
+    '<button type="button" aria-label="Buscar" onclick="document.querySelector(\'.md-search__button\').click()" '
+    'class="gul-search-toggle order-2 flex size-9 cursor-pointer items-center justify-center rounded-md text-gul-muted hover:text-gul-ink">'
+    '<svg viewBox="0 0 24 24" class="size-5 stroke-current stroke-2" fill="none">'
+    '<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>'
 )
 
 
@@ -162,7 +172,7 @@ def sync(dist_dir: Path) -> None:
     # bundle.js de Zensical exige un [data-md-component=header]: sin él lanza
     # al arrancar y no monta el resto de componentes (la búsqueda incluida).
     header_html = header_html.replace("<header ", '<header data-md-component="header" ', 1)
-    header_html = header_html.replace("</header>", f"{DRAWER_TOGGLE}</header>")
+    header_html = header_html.replace("</header>", f"{DRAWER_TOGGLE}{SEARCH_TOGGLE}</header>")
     header_html = webpage_links(local_images(header_html))
     OVERRIDES_DIR.mkdir(parents=True, exist_ok=True)
     (OVERRIDES_DIR / "header.html").write_text(

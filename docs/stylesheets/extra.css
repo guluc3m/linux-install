@@ -29,16 +29,36 @@
 
 /* Capas: el buscador de Zensical es un div fixed con z-index 4 colgado del
    body. Los componentes de webpage traen sus propios z-index (relative z-10
-   en callouts, footer y frames; z-50 en el header) que, sin aislar, compiten
-   en la raíz y quedaban por encima del buscador abierto. Se aísla todo lo
-   que hay bajo .md-container (contenido + footer), así cualquier z-index de
-   un componente — presente o futuro — se queda dentro, y el header se baja
-   justo por debajo del buscador (sigue por encima del contenido). */
-.md-container {
+   en callouts y frames; z-50 en el header) que, sin aislar, compiten en la
+   raíz y quedaban por encima del buscador abierto. Se aísla la columna de
+   contenido, así cualquier z-index de un componente — presente o futuro —
+   se queda dentro, y el header se baja justo por debajo del buscador (sigue
+   por encima del contenido). No se aísla .md-container entero: dentro van
+   los paneles, y en móvil el izquierdo es un desplegable con z-index 5 que
+   tiene que quedar por encima del velo (z-index 4) de Zensical. El footer ya
+   forma su propio contexto (lleva translate por su animación). */
+.md-content {
   isolation: isolate;
 }
 [data-md-component="header"] {
   z-index: 3;
+}
+
+/* Una sola hamburguesa en móvil: la del menú de la guía (.gul-drawer-toggle,
+   la añade el sync en la posición de la de gul-Nav). Por debajo de md (48em)
+   el <nav> de webpage solo muestra su propia hamburguesa, así que se oculta
+   entero (oculto solo el botón, el <nav> vacío seguiría ocupando gap). Desde
+   76.25em el panel de navegación ya está a la vista y el botón sobra. */
+@media screen and (max-width: 47.9375em) {
+  [data-md-component="header"] > nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 76.25em) {
+  .gul-drawer-toggle,
+  .gul-search-toggle {
+    display: none;
+  }
 }
 
 [data-md-color-scheme="slate"] {
@@ -50,6 +70,7 @@
   --md-primary-fg-color: var(--color-gul-surface);
   --md-primary-bg-color: var(--color-gul-ink);
   --md-primary-fg-color--light: var(--color-gul-line);
+  --md-primary-fg-color--dark: var(--color-gul-surface);
 
   --md-accent-fg-color: var(--color-gul-blue);
   --md-typeset-a-color: var(--color-gul-blue);
@@ -247,6 +268,20 @@
    la página el footer no choque con los paneles laterales. */
 .md-content {
   margin-bottom: calc(var(--spacing) * 24);
+}
+
+/* Por debajo de 76.25em el panel izquierdo es un menú desplegable cuyos
+   niveles van en position:absolute con height:100%: el gul-Frame
+   (relative overflow-hidden, sin altura propia) los recortaba enteros. Ahí
+   el frame no genera caja. */
+@media screen and (max-width: 76.234375em) {
+  .md-sidebar--primary .gul-sidebar-frame,
+  .md-sidebar--primary .gul-sidebar-frame > div {
+    display: contents;
+  }
+  .md-sidebar--primary .gul-sidebar-frame > canvas {
+    display: none;
+  }
 }
 
 /* Títulos de los paneles: Zensical les pone fondo + sombra del color de la
