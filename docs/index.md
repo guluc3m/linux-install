@@ -21,6 +21,18 @@ Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.
 - Si quieres paquetes algo más actualizados, te recomendamos [Fedora](https://fedoraproject.org/workstation).
 - Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide). Si te interesa esta última pero no sabes por donde empezar, consulta esta [guía](install/arch.md).
 
+??? info "¿_Rolling release_? ¿_Fixed/stable release_? ¿_LTS_? ¿_Inmutable_?"
+    Hay distintos tipos de _distros_, dependiendo de cómo gestionan los paquetes:
+
+    - Las **_fixed/stable release_** son distribuciones que sacan una versión "estable" cada 6-12 meses. Dentro de esta versión, los mantenedores se aseguran de que las versiones de los paquetes y el kernel sean compatibles entre sí, y no den problemas. A cambio, suelen tardar algo más en añadir y actualizar paquetes, y sólo suelen mantener los repositorios de la versión durante el periodo de 1-2 años, por lo que te interesa actualizar a la versión nueva.  
+    Ejemplos de estas _distros_ son [Linux Mint](https://linuxmint.com/), [Ubuntu](https://ubuntu.com/desktop), [Debian](https://www.debian.org/), [Fedora](https://fedoraproject.org/workstation), y [OpenSUSE Leap](https://get.opensuse.org/leap/).
+        - Una **_LTS_** (_Long Term Service_) es una _fixed/stable release_ con más soporte, típicamente 5-10 años. Paquetes menos actualizados, pero más estables.  
+        Ejemplos de estas _distros_ son Ubuntu LTS o Debian LTS.
+    - Las **_rolling release_**, por el contrario, no tienen versiones. Los paquetes se van actualizando _sobre la marcha_ (_rolling_), por lo que te conviene actualizar el sistema con frecuencia. Son algo menos estables, pero te dan acceso al _bleeding edge_ de Linux.  
+    Ejemplos son Arch Linux y sus derivados, [Nobara Linux](https://nobaraproject.org/), y [OpenSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/).
+    - Las **_inmutables_** son distribuciones en las que el sistema principal no se puede modificar. Puedes instalar aplicaciones, siempre que estén [_sandboxed_](https://en.wikipedia.org/wiki/Sandbox_(computer_security)). Esto las hace muchísimo más seguras y resistentes, pero a cambio son menos flexibles, y no las recomendamos para usarlas en tu ordenador principal.  
+    Ejemplos son [Fedora Silverblue](https://silverblue.fedoraproject.org/) o [Bazzite](https://bazzite.gg/).
+
 
 ### Distribuciones especializadas
 Las _distros_ mencionadas anteriormente se consideran "generalistas", es decir, que funcionan para la mayoría de la gente en la mayoría de situaciones, y son un buen punto de partida. Sin embargo, si quieres algo más especial y/o te apetece trastear un poco, te dejamos otras opciones:
