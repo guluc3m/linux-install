@@ -30,6 +30,39 @@
 
   --md-text-font: var(--font-sans);
   --md-code-font: var(--font-mono);
+
+  /* gul-CodeBlock no resalta sintaxis por colores (solo gul-ink sobre
+     gul-surface, ver src/components/common/gul-CodeBlock.astro) — se
+     respeta esa decisión monocroma en vez de inventar una paleta de
+     colores por tipo de token. Los comentarios se atenúan a gul-muted,
+     el resto se queda en gul-ink. */
+  --md-code-hl-color: color-mix(in oklab, var(--color-gul-blue) 25%, transparent);
+  --md-code-hl-color--light: color-mix(in oklab, var(--color-gul-blue) 10%, transparent);
+  --md-code-hl-comment-color: var(--color-gul-muted);
+  --md-code-hl-constant-color: var(--color-gul-ink);
+  --md-code-hl-function-color: var(--color-gul-ink);
+  --md-code-hl-generic-color: var(--color-gul-ink);
+  --md-code-hl-keyword-color: var(--color-gul-ink);
+  --md-code-hl-name-color: var(--color-gul-ink);
+  --md-code-hl-number-color: var(--color-gul-ink);
+  --md-code-hl-operator-color: var(--color-gul-ink);
+  --md-code-hl-punctuation-color: var(--color-gul-muted);
+  --md-code-hl-special-color: var(--color-gul-ink);
+  --md-code-hl-string-color: var(--color-gul-ink);
+  --md-code-hl-variable-color: var(--color-gul-ink);
+
+  /* Iconos de admonition — los glifos dibujados a mano de gul-Callout.astro
+     (aviso: círculo+línea+punto; éxito: check; peligro: triángulo+!), no
+     los por defecto de Material. Solo importa la forma (mask-image usa el
+     alfa, no el color del SVG). */
+  --md-admonition-icon--note: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22/%3E%3Cline%20x1%3D%2212%22%20y1%3D%2211%22%20x2%3D%2212%22%20y2%3D%2216%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%228%22%20r%3D%220.75%22%20fill%3D%22black%22%20stroke%3D%22none%22/%3E%3C/svg%3E');
+  --md-admonition-icon--warning: var(--md-admonition-icon--note);
+  --md-admonition-icon--tip: var(--md-admonition-icon--note);
+  --md-admonition-icon--info: var(--md-admonition-icon--note);
+  --md-admonition-icon--question: var(--md-admonition-icon--note);
+  --md-admonition-icon--success: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%3E%3Cpath%20d%3D%22M4%2012l5%205%2011-11%22/%3E%3C/svg%3E');
+  --md-admonition-icon--danger: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%3E%3Cpath%20d%3D%22M12%203.5l9.5%2016.5H2.5z%22/%3E%3Cline%20x1%3D%2212%22%20y1%3D%2210%22%20x2%3D%2212%22%20y2%3D%2214.5%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2217%22%20r%3D%220.75%22%20fill%3D%22black%22%20stroke%3D%22none%22/%3E%3C/svg%3E');
+  --md-admonition-icon--failure: var(--md-admonition-icon--danger);
 }
 
 .md-typeset h1,
@@ -74,22 +107,49 @@
   border-bottom-color: var(--color-gul-line);
 }
 
-/* Admonitions — Material colorea note/warning/danger/success con hex fijos
-   propios; se sobreescriben con los colores de estado de webpage. */
+/* Admonitions — Material colorea cada tipo con hex fijos propios; se
+   sobreescriben con los colores de estado de webpage. gul-Callout solo
+   distingue 3 variantes (aviso/éxito/peligro), así que note/tip/info/
+   question comparten el mismo tratamiento "aviso" (azul), y failure se
+   trata como danger — son los tipos que de verdad aparecen en docs/. */
 .md-typeset .admonition.note,
-.md-typeset details.note {
+.md-typeset details.note,
+.md-typeset .admonition.tip,
+.md-typeset details.tip,
+.md-typeset .admonition.info,
+.md-typeset details.info,
+.md-typeset .admonition.question,
+.md-typeset details.question {
   border-color: var(--color-gul-blue);
 }
 .md-typeset .note > .admonition-title,
-.md-typeset .note > summary {
+.md-typeset .note > summary,
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary,
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary,
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
   background-color: color-mix(in oklab, var(--color-gul-blue) 10%, transparent);
 }
 .md-typeset .note > .admonition-title::before,
-.md-typeset .note > summary::before {
+.md-typeset .note > summary::before,
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before,
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before,
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before {
   background-color: var(--color-gul-blue);
 }
 .md-typeset .note > .admonition-title::after,
-.md-typeset .note > summary::after {
+.md-typeset .note > summary::after,
+.md-typeset .tip > .admonition-title::after,
+.md-typeset .tip > summary::after,
+.md-typeset .info > .admonition-title::after,
+.md-typeset .info > summary::after,
+.md-typeset .question > .admonition-title::after,
+.md-typeset .question > summary::after {
   color: var(--color-gul-blue);
 }
 
@@ -111,19 +171,27 @@
 }
 
 .md-typeset .admonition.danger,
-.md-typeset details.danger {
+.md-typeset details.danger,
+.md-typeset .admonition.failure,
+.md-typeset details.failure {
   border-color: var(--color-gul-red);
 }
 .md-typeset .danger > .admonition-title,
-.md-typeset .danger > summary {
+.md-typeset .danger > summary,
+.md-typeset .failure > .admonition-title,
+.md-typeset .failure > summary {
   background-color: color-mix(in oklab, var(--color-gul-red) 10%, transparent);
 }
 .md-typeset .danger > .admonition-title::before,
-.md-typeset .danger > summary::before {
+.md-typeset .danger > summary::before,
+.md-typeset .failure > .admonition-title::before,
+.md-typeset .failure > summary::before {
   background-color: var(--color-gul-red);
 }
 .md-typeset .danger > .admonition-title::after,
-.md-typeset .danger > summary::after {
+.md-typeset .danger > summary::after,
+.md-typeset .failure > .admonition-title::after,
+.md-typeset .failure > summary::after {
   color: var(--color-gul-red);
 }
 
@@ -142,4 +210,34 @@
 .md-typeset .success > .admonition-title::after,
 .md-typeset .success > summary::after {
   color: var(--color-gul-green);
+}
+
+/* Botones — calcado de gul-Button.astro (bg-gul-blue/invert para
+   primary; borde gul-line/invert para secondary). Sin el glifo $/>, el
+   cursor parpadeante ni el PixelDissolve del componente real — son
+   adornos vía JS/canvas propios, fuera de alcance para contenido Markdown. */
+.md-typeset .md-button {
+  border-radius: var(--radius-md, 0.375rem);
+  border-color: var(--color-gul-line);
+  color: var(--color-gul-ink);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  transition: color 0.1s, background-color 0.1s, border-color 0.1s;
+}
+.md-typeset .md-button:hover,
+.md-typeset .md-button:focus-visible {
+  border-color: var(--color-gul-ink);
+  background-color: var(--color-gul-ink);
+  color: var(--color-gul-bg);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--color-gul-blue);
+  color: var(--color-gul-ink);
+}
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus-visible {
+  background-color: var(--color-gul-ink);
+  color: var(--color-gul-blue);
+  border-color: transparent;
 }

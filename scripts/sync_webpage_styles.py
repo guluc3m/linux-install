@@ -115,6 +115,14 @@ def sync(dist_dir: Path) -> None:
     )
     (ASSETS_DIR / "global.css").write_text(imports + "\n", encoding="utf-8")
 
+    # 1b. Favicon + logo: ficheros estáticos de webpage/public/, no de
+    #     _astro/ (Astro los copia tal cual a la raíz del dist). Usados por
+    #     theme.favicon/theme.logo en zensical.toml — el logo solo se ve en
+    #     el header de fallback (overrides/partials/header.html), ya que el
+    #     header real sincronizado trae el suyo propio.
+    for name in ("favicon.png", "logo-gul-dark.svg"):
+        shutil.copy2(dist_dir / name, ASSETS_DIR / name)
+
     # 2. Header: el header de webpage no trae el toggle del panel de
     #    navegación de la guía (drawer) ni el buscador (movido al panel
     #    izquierdo, docs/overrides/main.html) — se le añade solo el toggle,
@@ -144,8 +152,9 @@ def sync(dist_dir: Path) -> None:
     )
 
     print(f"CSS: docs/assets/webpage/global.css -> {len(css_hrefs)} chunk(s)")
-    print(f"Header: {len(header_html)} bytes -> docs/overrides/partials/header.html")
-    print(f"Footer: {len(footer_html)} bytes -> docs/overrides/partials/footer.html")
+    print(f"Favicon/logo: docs/assets/webpage/{{favicon.png,logo-gul-dark.svg}}")
+    print(f"Header: {len(header_html)} bytes -> {OVERRIDES_DIR / 'header.html'}")
+    print(f"Footer: {len(footer_html)} bytes -> {OVERRIDES_DIR / 'footer.html'}")
 
 
 if __name__ == "__main__":

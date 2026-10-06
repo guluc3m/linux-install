@@ -69,6 +69,13 @@ zensical.extensions.glightbox = {}
 variant = "classic"
 language = "es"
 custom_dir = "overrides"
+favicon = "assets/webpage/favicon.png"
+logo = "assets/webpage/logo-gul-dark.svg"
+# webpage autoaloja sus fuentes a propósito (sin CDN de Google, ver
+# src/styles/global.css) — false quita el <link> a fonts.googleapis.com
+# que Zensical mete por defecto (Roboto/Roboto Mono); las fuentes reales
+# (--md-text-font/--md-code-font) se fijan en extra.css desde las de webpage.
+font = false
 features = [
   "content.code.copy",
   "search.suggest",
