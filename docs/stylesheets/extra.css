@@ -241,6 +241,17 @@
 .md-sidebar--primary .md-search__button:focus {
   border-color: var(--color-gul-muted);
 }
+/* La lupa (::before) y la etiqueta "Ctrl+K" (::after) van con un top fijo
+   en rem; con el borde y la raíz al 137.5%/150% de Material la etiqueta se
+   salía por abajo. Centradas en vertical en vez de desplazadas. */
+.md-sidebar--primary .md-search__button::before,
+.md-sidebar--primary .md-search__button::after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.md-sidebar--primary .md-search__button::after {
+  line-height: 1;
+}
 
 /* Botones — calcado de gul-Button.astro (bg-gul-blue/invert para
    primary; borde gul-line/invert para secondary). Sin el glifo $/>, el
