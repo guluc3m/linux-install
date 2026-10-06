@@ -150,31 +150,28 @@
   border-bottom-color: var(--color-gul-line);
 }
 
-/* Admonitions — Material colorea cada tipo con hex fijos propios; se
-   sobreescriben con los colores de estado de webpage. gul-Callout solo
-   distingue 3 variantes (aviso/éxito/peligro), así que note/tip/info/
-   question comparten el mismo tratamiento "aviso" (azul), y failure se
+/* Admonitions — Material las pinta como una barra de título coloreada +
+   caja con borde del mismo color. gul-Callout no tiene barra separada: es
+   una única caja gul-Frame (fondo gul-surface, borde gul-line neutro,
+   rounded-md), con el color solo en el icono + la palabra de la etiqueta.
+   Se calca ese tratamiento: la caja entera (da igual el tipo) usa el
+   mismo frame neutro; cada tipo solo colorea su icono y el texto del
+   título. note/tip/info/question comparten el tratamiento "aviso" (azul,
+   el único que tiene gul-Callout fuera de éxito/peligro), failure se
    trata como danger — son los tipos que de verdad aparecen en docs/. */
-.md-typeset .admonition.note,
-.md-typeset details.note,
-.md-typeset .admonition.tip,
-.md-typeset details.tip,
-.md-typeset .admonition.info,
-.md-typeset details.info,
-.md-typeset .admonition.question,
-.md-typeset details.question {
-  border-color: var(--color-gul-blue);
+.md-typeset .admonition,
+.md-typeset details {
+  background-color: var(--color-gul-surface);
+  border: 1px solid var(--color-gul-line);
+  border-radius: var(--radius-md, 0.375rem);
+  box-shadow: none;
 }
-.md-typeset .note > .admonition-title,
-.md-typeset .note > summary,
-.md-typeset .tip > .admonition-title,
-.md-typeset .tip > summary,
-.md-typeset .info > .admonition-title,
-.md-typeset .info > summary,
-.md-typeset .question > .admonition-title,
-.md-typeset .question > summary {
-  background-color: color-mix(in oklab, var(--color-gul-blue) 10%, transparent);
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background-color: transparent;
 }
+
 .md-typeset .note > .admonition-title::before,
 .md-typeset .note > summary::before,
 .md-typeset .tip > .admonition-title::before,
@@ -196,14 +193,6 @@
   color: var(--color-gul-blue);
 }
 
-.md-typeset .admonition.warning,
-.md-typeset details.warning {
-  border-color: var(--color-gul-amber);
-}
-.md-typeset .warning > .admonition-title,
-.md-typeset .warning > summary {
-  background-color: color-mix(in oklab, var(--color-gul-amber) 10%, transparent);
-}
 .md-typeset .warning > .admonition-title::before,
 .md-typeset .warning > summary::before {
   background-color: var(--color-gul-amber);
@@ -213,18 +202,6 @@
   color: var(--color-gul-amber);
 }
 
-.md-typeset .admonition.danger,
-.md-typeset details.danger,
-.md-typeset .admonition.failure,
-.md-typeset details.failure {
-  border-color: var(--color-gul-red);
-}
-.md-typeset .danger > .admonition-title,
-.md-typeset .danger > summary,
-.md-typeset .failure > .admonition-title,
-.md-typeset .failure > summary {
-  background-color: color-mix(in oklab, var(--color-gul-red) 10%, transparent);
-}
 .md-typeset .danger > .admonition-title::before,
 .md-typeset .danger > summary::before,
 .md-typeset .failure > .admonition-title::before,
@@ -238,14 +215,6 @@
   color: var(--color-gul-red);
 }
 
-.md-typeset .admonition.success,
-.md-typeset details.success {
-  border-color: var(--color-gul-green);
-}
-.md-typeset .success > .admonition-title,
-.md-typeset .success > summary {
-  background-color: color-mix(in oklab, var(--color-gul-green) 10%, transparent);
-}
 .md-typeset .success > .admonition-title::before,
 .md-typeset .success > summary::before {
   background-color: var(--color-gul-green);
