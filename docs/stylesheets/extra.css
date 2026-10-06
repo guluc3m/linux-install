@@ -150,26 +150,66 @@
   border-bottom-color: var(--color-gul-line);
 }
 
-/* Admonitions — Material las pinta como una barra de título coloreada +
-   caja con borde del mismo color. gul-Callout no tiene barra separada: es
-   una única caja gul-Frame (fondo gul-surface, borde gul-line neutro,
-   rounded-md), con el color solo en el icono + la palabra de la etiqueta.
-   Se calca ese tratamiento: la caja entera (da igual el tipo) usa el
-   mismo frame neutro; cada tipo solo colorea su icono y el texto del
-   título. note/tip/info/question comparten el tratamiento "aviso" (azul,
-   el único que tiene gul-Callout fuera de éxito/peligro), failure se
-   trata como danger — son los tipos que de verdad aparecen en docs/. */
-.md-typeset .admonition,
-.md-typeset details {
-  background-color: var(--color-gul-surface);
-  border: 1px solid var(--color-gul-line);
-  border-radius: var(--radius-md, 0.375rem);
-  box-shadow: none;
+.md-typeset p {
+  text-align: justify;
 }
 
-.md-typeset .admonition-title,
+/* Admonitions — como gul-Callout.astro: sin caja/barra de título, solo
+   icono + "Etiqueta:" en el color de estado seguido del texto en la misma
+   línea (gul-Callout es un único <p>: icono + `{label}: ` + contenido).
+   El Markdown de un !!! genera <p class="admonition-title"> como hermano
+   del <p> de cuerpo — se fuerzan ambos a display:inline para que fluyan
+   como una sola línea de texto; con ??? (details/summary) la caja también
+   se quita pero el título se deja en bloque (summary ya es el disparador
+   clicable, con su propia flecha ::after — forzarlo a inline rompería esa
+   posición absoluta).
+   Nota de especificidad: el ::before/::after por tipo de Material
+   (`.md-typeset .note>.admonition-title`, 3 clases) pesa más que un
+   selector genérico de 2 — por eso se repite aquí la lista de tipos en vez
+   de un selector único. note/tip/info/question comparten el tratamiento
+   "aviso" (el único que tiene gul-Callout fuera de éxito/peligro), failure
+   se trata como danger — son los tipos que de verdad aparecen en docs/. */
+.md-typeset .admonition,
+.md-typeset details {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.md-typeset .admonition-title {
+  display: inline;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+}
+.md-typeset .admonition-title::before {
+  position: static;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: -0.2em;
+  margin-right: 0.35em;
+}
+.md-typeset .admonition-title::after {
+  content: ':';
+}
+.md-typeset .admonition-title + p {
+  display: inline;
+  margin: 0;
+}
+
 .md-typeset summary {
-  background-color: transparent;
+  background: none;
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  font-weight: 600;
 }
 
 .md-typeset .note > .admonition-title::before,
@@ -182,14 +222,14 @@
 .md-typeset .question > summary::before {
   background-color: var(--color-gul-blue);
 }
+.md-typeset .note > .admonition-title,
 .md-typeset .note > .admonition-title::after,
-.md-typeset .note > summary::after,
+.md-typeset .tip > .admonition-title,
 .md-typeset .tip > .admonition-title::after,
-.md-typeset .tip > summary::after,
+.md-typeset .info > .admonition-title,
 .md-typeset .info > .admonition-title::after,
-.md-typeset .info > summary::after,
-.md-typeset .question > .admonition-title::after,
-.md-typeset .question > summary::after {
+.md-typeset .question > .admonition-title,
+.md-typeset .question > .admonition-title::after {
   color: var(--color-gul-blue);
 }
 
@@ -197,8 +237,8 @@
 .md-typeset .warning > summary::before {
   background-color: var(--color-gul-amber);
 }
-.md-typeset .warning > .admonition-title::after,
-.md-typeset .warning > summary::after {
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > .admonition-title::after {
   color: var(--color-gul-amber);
 }
 
@@ -208,10 +248,10 @@
 .md-typeset .failure > summary::before {
   background-color: var(--color-gul-red);
 }
+.md-typeset .danger > .admonition-title,
 .md-typeset .danger > .admonition-title::after,
-.md-typeset .danger > summary::after,
-.md-typeset .failure > .admonition-title::after,
-.md-typeset .failure > summary::after {
+.md-typeset .failure > .admonition-title,
+.md-typeset .failure > .admonition-title::after {
   color: var(--color-gul-red);
 }
 
@@ -219,8 +259,8 @@
 .md-typeset .success > summary::before {
   background-color: var(--color-gul-green);
 }
-.md-typeset .success > .admonition-title::after,
-.md-typeset .success > summary::after {
+.md-typeset .success > .admonition-title,
+.md-typeset .success > .admonition-title::after {
   color: var(--color-gul-green);
 }
 
