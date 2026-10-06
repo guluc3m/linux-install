@@ -65,6 +65,11 @@
   --md-admonition-icon--failure: var(--md-admonition-icon--danger);
 }
 
+/* Copiado literal de webpage/src/styles/global.css @layer base (h1–h6):
+   no basta con la font-family — Space Grotesk Variable es una fuente de
+   peso variable, y sin el font-weight exacto de cada nivel (los mismos
+   font-bold/font-semibold que pone Tailwind allí) el navegador la renderiza
+   en su peso por defecto, que no es el mismo grosor/ancho de trazo. */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
@@ -72,7 +77,45 @@
 .md-typeset h5,
 .md-typeset h6 {
   font-family: var(--font-heading);
+}
+
+.md-typeset h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
   color: var(--color-gul-ink);
+}
+.md-typeset h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: var(--color-gul-ink);
+}
+.md-typeset h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--color-gul-ink);
+}
+.md-typeset h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: var(--color-gul-ink);
+}
+.md-typeset h5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: var(--color-gul-ink);
+}
+.md-typeset h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: var(--color-gul-muted);
 }
 
 .md-typeset h2::before {
