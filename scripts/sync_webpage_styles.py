@@ -132,12 +132,25 @@ def sync(dist_dir: Path) -> None:
     for name in ("favicon.png", "logo-gul-dark.svg"):
         shutil.copy2(dist_dir / name, ASSETS_DIR / name)
 
+    def local_images(html: str) -> str:
+        # Header/footer piden imágenes de webpage/public/ con ruta absoluta
+        # (src="/logo-gul-dark.svg"): solo resuelven si webpage está servido
+        # en la raíz del mismo dominio — en local, rotas. Se vendorizan y el
+        # src pasa por el filtro `url` de Zensical (relativo a cada página).
+        def sub(m: re.Match) -> str:
+            name = m.group(1)
+            shutil.copy2(dist_dir / name, ASSETS_DIR / name)
+            return f"src=\"{{% endraw %}}{{{{ 'assets/webpage/{name}' | url }}}}{{% raw %}}\""
+
+        return re.sub(r'src="/([^"/]+\.(?:svg|png|jpe?g|webp))"', sub, html)
+
     # 2. Header: el header de webpage no trae el toggle del panel de
     #    navegación de la guía (drawer) ni el buscador (movido al panel
     #    izquierdo, docs/overrides/main.html) — se le añade solo el toggle,
     #    sin el que no habría forma de abrir la navegación en móvil.
     header_html = extract_element(index_html, "header")
     header_html = header_html.replace("</header>", f"{DRAWER_TOGGLE}</header>")
+    header_html = local_images(header_html)
     OVERRIDES_DIR.mkdir(parents=True, exist_ok=True)
     (OVERRIDES_DIR / "header.html").write_text(
         "{% raw %}\n" + header_html + "\n{% endraw %}\n", encoding="utf-8"
@@ -155,7 +168,7 @@ def sync(dist_dir: Path) -> None:
     footer_end = index_html.index(footer_html) + len(footer_html)
     body_end = index_html.index("</body>")
     trailing = index_html[footer_end:body_end].strip()
-    footer_html = footer_html + "\n" + trailing
+    footer_html = local_images(footer_html + "\n" + trailing)
     (OVERRIDES_DIR / "footer.html").write_text(
         "{% raw %}\n" + footer_html + "\n{% endraw %}\n", encoding="utf-8"
     )
