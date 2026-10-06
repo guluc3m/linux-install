@@ -193,6 +193,23 @@
   padding: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 4) calc(var(--spacing) * 12);
 }
 
+/* Bloques de código: javascripts/gul-codeblock.js los convierte en el markup
+   de gul-CodeBlock.astro. Mismo truco que los callouts: Material estiliza
+   pre/code por etiqueta y sin capa, revert-layer deja mandar las reglas
+   base de pre/code de global.css. */
+.md-typeset [data-gul-codeblock] pre,
+.md-typeset [data-gul-codeblock] pre > code {
+  all: revert-layer;
+}
+.md-typeset [data-gul-codeblock] {
+  margin: 1em 0;
+}
+/* La regla base usa rem literales (no tokens): sin esto saldría a 17.5px/20px. */
+.md-typeset [data-gul-codeblock] pre {
+  padding: calc(var(--spacing) * 4);
+  font-size: var(--text-sm);
+}
+
 /* Botones — calcado de gul-Button.astro (bg-gul-blue/invert para
    primary; borde gul-line/invert para secondary). Sin el glifo $/>, el
    cursor parpadeante ni el PixelDissolve del componente real — son
