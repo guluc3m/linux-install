@@ -162,6 +162,11 @@
 .md-typeset p {
   text-align: justify;
 }
+/* Sangría solo en los párrafos sueltos del artículo (hijos directos), no en
+   los de callouts, listas o tablas. */
+.md-typeset > p {
+  text-indent: 1.5em;
+}
 
 /* Callouts: javascripts/gul-callout.js sustituye cada admonition por el
    markup de gul-Callout.astro (clases de Tailwind de webpage). Un <div>
