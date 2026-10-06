@@ -264,6 +264,13 @@
   font-size: var(--text-sm);
 }
 
+/* Divisores del footer de webpage: la regla global hr{border:0} de Material
+   (sin capa) gana al preflight y a la regla base hr de global.css (en
+   @layer) y los dejaba sin borde. revert-layer devuelve el mando a esas. */
+#legal hr {
+  all: revert-layer;
+}
+
 /* Aire entre el texto central y el footer, para que al llegar al final de
    la página el footer no choque con los paneles laterales. */
 .md-content {
