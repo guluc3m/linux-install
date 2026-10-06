@@ -8,6 +8,7 @@ repo_name = "guluc3m/linux-install"
 edit_uri = "/edit/main/docs/"
 copyright = "&copy; GUL-UC3M"
 extra_css = ["assets/webpage/global.css", "stylesheets/extra.css"]
+extra_javascript = ["javascripts/gul-callout.js"]
 
 # Navigation
 nav = [
