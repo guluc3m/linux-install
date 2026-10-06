@@ -179,6 +179,22 @@
   list-style-type: decimal;
 }
 
+/* Tux junto al título del sitio en el panel de navegación (escritorio; en
+   el desplegable de móvil ese título ya lleva el logo). */
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__title::before {
+    content: '';
+    display: inline-block;
+    width: 1.5em;
+    height: 1.75em;
+    margin-right: 0.4em;
+    vertical-align: -0.55em;
+    background-color: currentColor;
+    -webkit-mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
+    mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
+  }
+}
+
 .md-typeset code,
 .md-typeset kbd {
   border-radius: var(--radius-md);

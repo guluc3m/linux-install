@@ -134,12 +134,12 @@ def sync(dist_dir: Path) -> None:
     )
     (ASSETS_DIR / "global.css").write_text(imports + "\n", encoding="utf-8")
 
-    # 1b. Favicon + logo: ficheros estáticos de webpage/public/, no de
-    #     _astro/ (Astro los copia tal cual a la raíz del dist). Usados por
-    #     theme.favicon/theme.logo en zensical.toml — el logo solo se ve en
-    #     el header de fallback (overrides/partials/header.html), ya que el
-    #     header real sincronizado trae el suyo propio.
-    for name in ("favicon.png", "logo-gul-dark.svg"):
+    # 1b. Favicon, logo y Tux: ficheros estáticos de webpage/public/, no de
+    #     _astro/ (Astro los copia tal cual a la raíz del dist). Favicon y
+    #     logo van a theme.favicon/theme.logo en zensical.toml (el logo solo
+    #     se ve en el header de fallback); tux.svg lo usa extra.css como
+    #     máscara para el icono de Tux.
+    for name in ("favicon.png", "logo-gul-dark.svg", "tux.svg"):
         shutil.copy2(dist_dir / name, ASSETS_DIR / name)
 
     def local_images(html: str) -> str:
