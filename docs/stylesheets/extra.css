@@ -299,6 +299,15 @@
   }
 }
 
+/* Las secciones desplegables y los títulos de los paneles son <label>, y la
+   regla base de webpage para formularios (label { text-sm }) les fijaba 14px:
+   en pantallas anchas, donde Material sube la raíz, salían más pequeños que
+   el resto de enlaces. */
+.md-nav label {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 /* Títulos de los paneles: Zensical les pone fondo + sombra del color de la
    página (para tapar lo que pasa por debajo al ser sticky), y eso tapaba el
    acento de puntos del gul-Frame. Solo escritorio: en móvil el del panel
