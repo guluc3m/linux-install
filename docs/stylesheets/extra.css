@@ -187,24 +187,6 @@
   color: color-mix(in oklab, var(--color-gul-ink) 50%, var(--color-gul-muted));
 }
 
-/* Tux junto al título del sitio en el panel de navegación (escritorio; en
-   el desplegable de móvil ese título ya lleva el logo). */
-@media screen and (min-width: 76.25em) {
-  .md-nav--primary > .md-nav__title::before {
-    content: '';
-    display: inline-block;
-    width: 1.9em;
-    height: 2.2em;
-    margin-right: -0.1em;
-    vertical-align: -0.9em;
-    position: relative;
-    top: 0.3em;
-    background-color: currentColor;
-    -webkit-mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
-    mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
-  }
-}
-
 .md-typeset code,
 .md-typeset kbd {
   border-radius: var(--radius-md);
