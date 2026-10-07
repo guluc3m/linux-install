@@ -1,7 +1,384 @@
-.md-header {
-  --md-primary-fg-color: #666666;
+/*
+ * Reusa los tokens de la paleta/tipografía de `webpage` (assets/webpage/global.css,
+ * generado por scripts/sync_webpage_styles.py y cargado antes que este fichero)
+ * en vez de copiar hex a mano. Ver issue #22.
+ */
+
+/* Material pone html{font-size:125%} (y 137.5%/150% en pantallas grandes),
+   así que aquí 1rem = 20px+; webpage asume los 16px por defecto. Todos los
+   tokens de Tailwind están en rem, de modo que el header, el footer y los
+   callouts de webpage salían un 25% más grandes que en webpage. Se fijan
+   en px con los valores de Tailwind a 16px. */
+:root {
+  --spacing: 4px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+  --radius-xs: 2px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --container-gul-content: 992px;
 }
 
-[data-md-color-scheme="slate"] .md-header {
-  --md-primary-fg-color: hsl(215 12% 17%);
+/* Capas: el buscador de Zensical es un div fixed con z-index 4 colgado del
+   body. Los componentes de webpage traen sus propios z-index (relative z-10
+   en callouts y frames; z-50 en el header) que, sin aislar, compiten en la
+   raíz y quedaban por encima del buscador abierto. Se aísla la columna de
+   contenido, así cualquier z-index de un componente — presente o futuro —
+   se queda dentro, y el header se baja justo por debajo del buscador (sigue
+   por encima del contenido). No se aísla .md-container entero: dentro van
+   los paneles, y en móvil el izquierdo es un desplegable con z-index 5 que
+   tiene que quedar por encima del velo (z-index 4) de Zensical. El footer ya
+   forma su propio contexto (lleva translate por su animación). */
+.md-content {
+  isolation: isolate;
+}
+[data-md-component="header"] {
+  z-index: 3;
+}
+
+/* Una sola hamburguesa en móvil: la del menú de la guía (.gul-drawer-toggle,
+   la añade el sync en la posición de la de gul-Nav). Por debajo de md (48em)
+   el <nav> de webpage solo muestra su propia hamburguesa, así que se oculta
+   entero (oculto solo el botón, el <nav> vacío seguiría ocupando gap). Desde
+   76.25em el panel de navegación ya está a la vista y el botón sobra. */
+@media screen and (max-width: 47.9375em) {
+  [data-md-component="header"] > nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 76.25em) {
+  .gul-drawer-toggle,
+  .gul-search-toggle {
+    display: none;
+  }
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--color-gul-bg);
+  --md-default-fg-color: var(--color-gul-ink);
+  --md-default-fg-color--light: var(--color-gul-muted);
+  --md-default-fg-color--lighter: var(--color-gul-line);
+
+  --md-primary-fg-color: var(--color-gul-surface);
+  --md-primary-bg-color: var(--color-gul-ink);
+  --md-primary-fg-color--light: var(--color-gul-line);
+  --md-primary-fg-color--dark: var(--color-gul-surface);
+
+  --md-accent-fg-color: var(--color-gul-blue);
+  --md-typeset-a-color: var(--color-gul-blue);
+
+  --md-code-bg-color: var(--color-gul-surface);
+  --md-code-fg-color: var(--color-gul-ink);
+
+  --md-typeset-table-color: var(--color-gul-line);
+
+  --md-footer-bg-color: var(--color-gul-surface);
+  --md-footer-fg-color: var(--color-gul-ink);
+  --md-footer-fg-color--light: var(--color-gul-muted);
+
+  --md-text-font: var(--font-sans);
+  --md-code-font: var(--font-mono);
+
+  /* gul-CodeBlock no resalta sintaxis por colores (solo gul-ink sobre
+     gul-surface, ver src/components/common/gul-CodeBlock.astro) — se
+     respeta esa decisión monocroma en vez de inventar una paleta de
+     colores por tipo de token. Los comentarios se atenúan a gul-muted,
+     el resto se queda en gul-ink. */
+  --md-code-hl-color: color-mix(in oklab, var(--color-gul-blue) 25%, transparent);
+  --md-code-hl-color--light: color-mix(in oklab, var(--color-gul-blue) 10%, transparent);
+  --md-code-hl-comment-color: var(--color-gul-muted);
+  --md-code-hl-constant-color: var(--color-gul-ink);
+  --md-code-hl-function-color: var(--color-gul-ink);
+  --md-code-hl-generic-color: var(--color-gul-ink);
+  --md-code-hl-keyword-color: var(--color-gul-ink);
+  --md-code-hl-name-color: var(--color-gul-ink);
+  --md-code-hl-number-color: var(--color-gul-ink);
+  --md-code-hl-operator-color: var(--color-gul-ink);
+  --md-code-hl-punctuation-color: var(--color-gul-muted);
+  --md-code-hl-special-color: var(--color-gul-ink);
+  --md-code-hl-string-color: var(--color-gul-ink);
+  --md-code-hl-variable-color: var(--color-gul-ink);
+}
+
+/* Headings: los mismos text-xx y font-xx de webpage/src/styles/global.css
+   @layer base. Space Grotesk Variable es de peso variable, así que el
+   font-weight explícito por nivel es lo que da el grosor de trazo correcto. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: var(--font-heading);
+  color: var(--color-gul-ink);
+}
+.md-typeset h1 {
+  font-size: var(--text-4xl);
+  line-height: var(--text-4xl--line-height);
+  font-weight: 700;
+}
+.md-typeset h2 {
+  font-size: var(--text-3xl);
+  line-height: var(--text-3xl--line-height);
+  font-weight: 700;
+}
+.md-typeset h3 {
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+  font-weight: 600;
+}
+.md-typeset h4 {
+  font-size: var(--text-xl);
+  line-height: var(--text-xl--line-height);
+  font-weight: 600;
+}
+.md-typeset h5 {
+  font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
+  font-weight: 600;
+}
+.md-typeset h6 {
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: var(--color-gul-muted);
+}
+
+/* Separador tipo `---` bajo h1/h2: el mismo border-b border-gul-line que
+   cierra el bloque del h1 en /styleguide. */
+.md-typeset h1,
+.md-typeset h2 {
+  border-bottom: 1px solid var(--color-gul-line);
+  padding-bottom: calc(var(--spacing) * 3);
+}
+
+.md-typeset h2::before {
+  content: '## ';
+  color: var(--color-gul-blue);
+}
+.md-typeset h3::before {
+  content: '### ';
+  color: var(--color-gul-blue);
+}
+
+/* El preflight de Tailwind (del CSS de webpage) quita list-style a todo ol/ul. */
+.md-typeset ul {
+  list-style-type: disc;
+}
+.md-typeset ol {
+  list-style-type: decimal;
+}
+
+/* Tabla de contenidos: las entradas de h3 (nav anidado) en un gris claro,
+   a medio camino entre gul-ink y gul-muted — más claro que el gul-muted con
+   el que Zensical marca las ya recorridas (--passed), que se respetan. La
+   activa y el hover mantienen su color. */
+.md-nav--secondary .md-nav .md-nav__link:not(.md-nav__link--active, .md-nav__link--passed, :hover, :focus-visible) {
+  color: color-mix(in oklab, var(--color-gul-ink) 50%, var(--color-gul-muted));
+}
+
+/* Tux junto al título del sitio en el panel de navegación (escritorio; en
+   el desplegable de móvil ese título ya lleva el logo). */
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__title::before {
+    content: '';
+    display: inline-block;
+    width: 1.9em;
+    height: 2.2em;
+    margin-right: -0.1em;
+    vertical-align: -0.9em;
+    position: relative;
+    top: 0.3em;
+    background-color: currentColor;
+    -webkit-mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
+    mask: url('../assets/webpage/tux.svg') center / contain no-repeat;
+  }
+}
+
+.md-typeset code,
+.md-typeset kbd {
+  border-radius: var(--radius-md);
+}
+.md-typeset kbd {
+  border: 1px solid var(--color-gul-line);
+}
+
+.md-typeset table:not([class]) {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gul-line);
+}
+
+.md-typeset blockquote {
+  font-style: italic;
+  color: var(--color-gul-muted);
+  border-left-color: var(--color-gul-line);
+}
+
+.md-typeset hr {
+  border-bottom-color: var(--color-gul-line);
+}
+
+.md-typeset p {
+  text-align: justify;
+}
+/* Sangría solo en los párrafos sueltos del artículo (hijos directos), no en
+   los de callouts, listas o tablas. */
+.md-typeset > p {
+  text-indent: 1.5em;
+}
+
+/* Callouts: javascripts/gul-callout.js sustituye cada admonition por el
+   markup de gul-Callout.astro (clases de Tailwind de webpage). Un <div>
+   no lo toca Material, pero <details>/<summary> sí, por etiqueta y sin
+   capa — y una regla sin capa gana a cualquier utilidad de Tailwind (que
+   van en @layer). revert-layer descarta las reglas de Material sobre esos
+   elementos y deja que manden las de webpage (utilidades + el acordeón de
+   @layer base de global.css). */
+.md-typeset details.gul-callout,
+.md-typeset details.gul-callout > summary,
+.md-typeset details.gul-callout > summary::before,
+.md-typeset details.gul-callout > summary::after {
+  all: revert-layer;
+}
+.md-typeset .gul-callout,
+.md-typeset details.gul-callout {
+  margin: 1.5625em 0;
+}
+/* Material: details > :last-child { margin-bottom: .6rem } — caía sobre el
+   contenedor plegable y dejaba 12px de hueco con el desplegable cerrado. */
+.md-typeset details.gul-callout > div {
+  margin: 0;
+}
+.gul-callout-tip {
+  color: #00bfa5;
+}
+.md-typeset .gul-callout-body > :first-child {
+  margin-top: 0;
+}
+.md-typeset .gul-callout-body > :last-child {
+  margin-bottom: 0;
+}
+.md-typeset details.gul-callout .gul-callout-body {
+  /* Alineado con la etiqueta: p-4 + icono size-5 + gap-3. */
+  padding: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 4) calc(var(--spacing) * 12);
+}
+
+/* Bloques de código: javascripts/gul-codeblock.js los convierte en el markup
+   de gul-CodeBlock.astro. Mismo truco que los callouts: Material estiliza
+   pre/code por etiqueta y sin capa, revert-layer deja mandar las reglas
+   base de pre/code de global.css. */
+.md-typeset [data-gul-codeblock] pre,
+.md-typeset [data-gul-codeblock] pre > code {
+  all: revert-layer;
+}
+.md-typeset [data-gul-codeblock] {
+  margin: 1em 0;
+}
+/* La regla base usa rem literales (no tokens): sin esto saldría a 17.5px/20px. */
+.md-typeset [data-gul-codeblock] pre {
+  padding: calc(var(--spacing) * 4);
+  font-size: var(--text-sm);
+}
+
+/* Divisores del footer de webpage: la regla global hr{border:0} de Material
+   (sin capa) gana al preflight y a la regla base hr de global.css (en
+   @layer) y los dejaba sin borde. revert-layer devuelve el mando a esas. */
+#legal hr {
+  all: revert-layer;
+}
+
+/* Aire entre el texto central y el footer, para que al llegar al final de
+   la página el footer no choque con los paneles laterales. */
+.md-content {
+  margin-bottom: calc(var(--spacing) * 24);
+}
+
+/* Por debajo de 76.25em el panel izquierdo es un menú desplegable cuyos
+   niveles van en position:absolute con height:100%: el gul-Frame
+   (relative overflow-hidden, sin altura propia) los recortaba enteros. Ahí
+   el frame no genera caja. */
+@media screen and (max-width: 76.234375em) {
+  .md-sidebar--primary .gul-sidebar-frame,
+  .md-sidebar--primary .gul-sidebar-frame > div {
+    display: contents;
+  }
+  .md-sidebar--primary .gul-sidebar-frame > canvas {
+    display: none;
+  }
+}
+
+/* Títulos de los paneles: Zensical les pone fondo + sombra del color de la
+   página (para tapar lo que pasa por debajo al ser sticky), y eso tapaba el
+   acento de puntos del gul-Frame. Solo escritorio: en móvil el del panel
+   izquierdo es la cabecera del menú desplegable. */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar .md-nav--primary .md-nav__title,
+  .md-sidebar .md-nav--secondary .md-nav__title {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+/* Buscador del panel izquierdo (overrides/main.html): centrado dentro del
+   gul-Frame y con borde siempre, no solo el fondo al pasar el ratón. */
+.md-sidebar--primary .md-search__button {
+  display: block;
+  margin-inline: auto;
+  border: 1px solid var(--color-gul-line);
+  border-radius: var(--radius-md);
+}
+.md-sidebar--primary .md-search__button:hover,
+.md-sidebar--primary .md-search__button:focus {
+  border-color: var(--color-gul-muted);
+}
+/* La lupa (::before) y la etiqueta "Ctrl+K" (::after) van con un top fijo
+   en rem; con el borde y la raíz al 137.5%/150% de Material la etiqueta se
+   salía por abajo. Centradas en vertical en vez de desplazadas. */
+.md-sidebar--primary .md-search__button::before,
+.md-sidebar--primary .md-search__button::after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.md-sidebar--primary .md-search__button::after {
+  line-height: 1;
+}
+
+/* Botones — calcado de gul-Button.astro (bg-gul-blue/invert para
+   primary; borde gul-line/invert para secondary). Sin el glifo $/>, el
+   cursor parpadeante ni el PixelDissolve del componente real — son
+   adornos vía JS/canvas propios, fuera de alcance para contenido Markdown. */
+.md-typeset .md-button {
+  border-radius: var(--radius-md);
+  border-color: var(--color-gul-line);
+  color: var(--color-gul-ink);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  transition: color 0.1s, background-color 0.1s, border-color 0.1s;
+}
+.md-typeset .md-button:hover,
+.md-typeset .md-button:focus-visible {
+  border-color: var(--color-gul-ink);
+  background-color: var(--color-gul-ink);
+  color: var(--color-gul-bg);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--color-gul-blue);
+  color: var(--color-gul-ink);
+}
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus-visible {
+  background-color: var(--color-gul-ink);
+  color: var(--color-gul-blue);
+  border-color: transparent;
 }
