@@ -20,6 +20,7 @@ Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.
 - Si eres principiante, te recomendamos [Linux Mint](https://linuxmint.com/) o [Ubuntu](https://ubuntu.com/desktop), basadas en [Debian](https://www.debian.org/), ya que son "estables" y fáciles de usar _out of the box_.
 - Si quieres paquetes algo más actualizados, te recomendamos [Fedora](https://fedoraproject.org/workstation).
 - Si te gusta trastear y estar a la última, échale un vistazo a [Manjaro](https://manjaro.org/products/download/x86) o [EndevourOS](https://endeavouros.com/), ambas basadas en [Arch Linux](https://wiki.archlinux.org/title/Installation_guide). Si te interesa esta última pero no sabes por donde empezar, consulta esta [guía](install/arch.md).
+- Otra alternativa (europea) bastante sólida es [OpenSUSE](https://www.opensuse.org/), con versión _rolling release_ ([OpenSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/)) y versión _stable release_ ([OpenSUSE Leap](https://get.opensuse.org/leap/)).
 
 ??? info "¿_Rolling release_? ¿_Fixed/stable release_? ¿_LTS_? ¿_Inmutable_?"
     Hay distintos tipos de _distros_, dependiendo de cómo gestionan los paquetes:
