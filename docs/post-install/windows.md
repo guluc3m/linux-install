@@ -8,7 +8,7 @@ Al igual que puedes [ejecutar Linux en una VM desde Windows](../install/vm-win.m
 
 Aparte de la virtualización "tradicional" que ofrecen plataformas como [VirtualBox](https://www.virtualbox.org/) o [VMware](https://www.vmware.com/), en Linux existe [KVM](https://linux-kvm.org/), una virtualización basada en _kernel_, la cual es altamente eficiente. Para utilizar este tipo de VMs, te recomendamos usar [virt-manager](https://github.com/virt-manager/virt-manager).
 
-> [!TIP]
-> Te dejamos aquí también un par de install para configurar KVM y Windows:
-> - [How Do I Properly Install KVM on Linux](https://sysguides.com/install-kvm-on-linux)
-> - [How to Properly Install a Windows 11 Virtual Machine on KVM](https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm)
+!!! tip
+    Te dejamos aquí también un par de install para configurar KVM y Windows:
+    - [How Do I Properly Install KVM on Linux](https://sysguides.com/install-kvm-on-linux)
+    - [How to Properly Install a Windows 11 Virtual Machine on KVM](https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm)
