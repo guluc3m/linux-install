@@ -145,14 +145,14 @@ arch-chroot -S /mnt
 Ahora podrás manejar el sistema de ficheros como si estuvieras en tu sistema, pero aún faltan unas cuantas cosas.
 
 ## 10. Instalar paquetes esenciales.
-Aunque hayas usado `iwd`, éste no viene instalado por defecto, por lo que te recomiendo instalar estos paquetes esenciales para evitar problemas:
+Aunque hayas usado `iwd`, el gestor de red no viene instalado por defecto, por lo que te recomiendo instalar estos paquetes esenciales para evitar problemas:
 ```bash
-pacman -S nano iwd sudo dhcpcd man
+pacman -S nano networkmanager wpa_supplicant sudo man
 ```
 `nano` es un editor de archivos para el terminal.
-`iwd` es una herramienta (de terminal) para poder conectarte a redes WiFi.
+`netowrkmanager` es un gestor de redes WiFi.
+`wpa_supplicant` es el que gestiona las conexiones, dhcp, etc bajo Network Manager.
 `sudo` te permite ejecutar comandos que requieran permiso de administrador sin ser `root`.
-`dhcpcd` te permite resolver los *dynamic host* y acceder a internet.
 `man` te permite ver los manuales de Unix de los comandos.
 
 ## 11. Zona horaria
@@ -232,9 +232,9 @@ pacman -S grub efibootmgr
 
 ### 18.2. Instala [GRUB](https://wiki.archlinux.org/title/GRUB)
 ```bash
-grub-install --target=x86_64-efi --efi-directory=/dev/sdaX --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 ```
-Recuerda que sdaX es la partición /boot que hemos formateado antes en el paso **6**.
+Recuerda que hemos montado /boot sobre la partición sdaX que hemos formateado antes en el paso **6**.
 
 !!! note
   En BIOS, el comando cambia, pues no hay directorio efi ni partición boot.
@@ -286,11 +286,11 @@ Hay muchos entornos de escritorio, según tus gustos o necesidades puedes instal
 
 ## 20. Listo
 Sal del *chroot* con `exit` o `ctrl+D`. Después haz `reboot` y repite el paso de abrir el selector de arranque. Si lo has hecho bien, en mac te saldrá un nuevo disco interno bajo el nombre "EFI Boot", minertras que en windows te saldrá como GRUB o similar. Entra en esa opción y comprueba que todo vaya bien.
-Una vez en el nuevo sistema, haz login, abre un terminal y ejecuta estos comandos:
+Una vez en el nuevo sistema, haz login, abre un terminal y ejecuta este comandos:
 ```bash
-sudo systemctl enable dhcpcd.service
+sudo systemctl enable --now NetworkManager
 ```
-Con esto, cada vez que te conectes a una red, se resolverá solo el cliente dhcp.
+Ten en cuenta las Mayúsculas.
 
 ## Links de utilidad
 - [Guía de instalación base](https://wiki.archlinux.org/title/Installation_guide)
