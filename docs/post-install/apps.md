@@ -7,7 +7,7 @@ Aquí te dejamos una lista de aplicaciones que pueden ser útiles a la hora de s
 
 Hay diversas formas de instalar _paquetes_ en Linux:
 
-- Usando la aplicación GUI de tu _distro_ (en las _distros_ que las traigan). Es la forma más cómoda para principiantes, y normalmente te ofrece varios de los distintos métodos de instalación que verás a continuación.
+- Usando la aplicación GUI de tu _distro_ (en las _distros_ que las traigan, normalmente se llama algo como "Software", "Software Manager" o "App Center"). Es la forma más cómoda para principiantes, y normalmente te ofrece varios de los distintos métodos de instalación que verás a continuación.
 - Utilizando el [gestor de paquetes](#gestores-de-paquetes) de tu _distro_ en la terminal. Lo que usamos el 90% del GUL. La aplicación debe estar en los repositorios de la _distro_, y la versión que te bajes es la del _repo_ (puede no ser la última), pero a cambio, puedes actualizarlo con un comando.
 - Instalando el paquete usando el [formato de paquetes de tu _distro_](#formatos-distro-specific). Muchas aplicaciones te ofrecen bajarte desde su página web estos formatos. Al contrario que cuando usas el gestor de paquetes, no se actualizan solos (a no ser que lo haga la propia aplicación).
 - Instalando el paquete usando un [formato de paquetes genérico](#formatos-genericos). Son la aplicación autocontenida, por lo que ocupan más espacio. Toca actualizarlos manualmente, pero suelen funcionar siempre.
@@ -94,6 +94,7 @@ Estas aplicaciones mejoran tu experiencia gestionando paquetes en Linux.
 - [nala](https://gitlab.com/volian/nala): _Frontend_ alternativo para APT
 
 #### Arch y derivados
+- [Shelly](https://www.seafoam-labs.org/shelly-alpm): Aplicación GUI para gestionar paquetes. También gestiona paquetes de AUR, Flatpak, y AppImages
 - [yay](https://jguer.github.io/yay/) y [paru](https://github.com/Morganamilo/paru): _Helpers_ para instalar paquetes de AUR. También funcionan como _wrappers_ de Pacman, permitiéndote gestionar con un solo comando todos tus paquetes
 - [downgrade](https://github.com/archlinux-downgrade/downgrade): _Rollback_ de versiones de paquetes de Pacman
 - [informant](https://github.com/bradford-smith94/informant): Lector de [Arch Linux News](https://archlinux.org/news/) en terminal, extremadamente útil para distros basadas en Arch Linux, ya que te avisa de cuándo las actualizaciones te van a romper cosas
@@ -102,7 +103,7 @@ Estas aplicaciones mejoran tu experiencia gestionando paquetes en Linux.
 - [Bazaar](https://flathub.org/es/apps/io.github.kolunmi.Bazaar): GUI para buscar e instalar _flatpaks_
 - [Flatseal](https://flathub.org/en/apps/com.github.tchx84.Flatseal): GUI para gestionar los permisos de otros _flatpaks_
 
-#### Appimage
+#### AppImage
 - [Gear Lever](https://github.com/mijorus/gearlever) (o, para los _Apple fanboys_, [AppManager](https://github.com/kem-a/AppManager)): Gestor de AppImages; permite instalar, desinstalar, y actualizar AppImages.
 
 
