@@ -130,7 +130,6 @@ Para cosas del día a día.
 - [Redshift](https://github.com/jonls/redshift): _Screen filter_ (protector de vista)
 - [fwupd](https://github.com/fwupd/fwupd) (A.K.A. [Linux Vendor Firmware Service](https://fwupd.org/)): Utilidad para actualizar el _firmware_ de una [gran variedad de dispositivos](https://fwupd.org/lvfs/devices/), incluyendo portátiles
 - [gestures](https://gitlab.com/nokun/gestures): Aplicación para ejecutar comandos a partir de gestos en el _trackpad_
-- [mpv](https://mpv.io/): Reproductor de vídeo con soporte para _todo_ (alternativa a [VLC](https://www.videolan.org/vlc/))
 - [wayland-scroll-factor](https://github.com/daniel-g-carrasco/wayland-scroll-factor): Permite controlar la sensibilidad del _touchpad_ en Gnome con Wayland (porque no hay otra forma, ver [Gnome #18097](https://discourse.gnome.org/t/add-touchpad-scroll-sensitivity-adjustment-feature/18097/36))
 
 
