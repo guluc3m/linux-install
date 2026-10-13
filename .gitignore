@@ -1,3 +1,8 @@
 .vscode/
 .idea/
 /site
+
+# Generado por scripts/sync_webpage_styles.py a partir de guluc3m/webpage
+/docs/assets/webpage/
+/overrides/partials/header.html
+/overrides/partials/footer.html
