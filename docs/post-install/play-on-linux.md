@@ -229,3 +229,8 @@ Esta herramienta permite correr videojuegos con _framerates_ limitados a más FP
     ¡Funciona incluso en los emuladores y aplicaciones que no son juegos, como el reproductor de videos [MPV](https://mpv.io/)!
 
 Para instalarla, se puede seguir o la [guía de instalación del repositorio oficial](https://github.com/PancakeTAS/lsfg-vk/wiki), o instalando el [paquete de AUR](https://aur.archlinux.org/packages/lsfg-vk-git) (en el caso de usar Arch, _btw_).
+
+
+## Más información
+- [Bazzite Gaming Guides](https://docs.bazzite.gg/Gaming/index.html)
+- [Arch Linux Gaming Guide](https://wiki.archlinux.org/title/Gaming)
