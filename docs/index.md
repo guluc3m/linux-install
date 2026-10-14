@@ -30,7 +30,7 @@ Hay muchísimas, y puedes verlas todas en [DistroWatch.com](https://distrowatch.
         - Una **_LTS_** (_Long Term Service_) es una _fixed/stable release_ con más soporte, típicamente 5-10 años. Paquetes menos actualizados, pero más estables.  
         Ejemplos de estas _distros_ son Ubuntu LTS o Debian LTS.
     - Las **_rolling release_**, por el contrario, no tienen versiones. Los paquetes se van actualizando _sobre la marcha_ (_rolling_), por lo que te conviene actualizar el sistema con frecuencia. Son algo menos estables, pero te dan acceso al _bleeding edge_ de Linux.  
-    Ejemplos son Arch Linux y sus derivados, [Nobara Linux](https://nobaraproject.org/), y [OpenSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/).
+    Ejemplos son [Arch Linux](https://wiki.archlinux.org/title/Installation_guide) y sus derivados, [Nobara Linux](https://nobaraproject.org/), y [OpenSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/).
     - Las **_inmutables_** son distribuciones en las que el sistema principal no se puede modificar. Puedes instalar aplicaciones, siempre que estén [_sandboxed_](https://en.wikipedia.org/wiki/Sandbox_(computer_security)). Esto las hace muchísimo más seguras y resistentes, pero a cambio son menos flexibles, y no las recomendamos para usarlas en tu ordenador principal.  
     Ejemplos son [Fedora Silverblue](https://silverblue.fedoraproject.org/) o [Bazzite](https://bazzite.gg/).
 
