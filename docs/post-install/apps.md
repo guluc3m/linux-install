@@ -113,7 +113,7 @@ Para cosas del día a día.
 
 - [LibreOffice](https://www.libreoffice.org/): _Suite_ ofimática (alternativa a Microsoft Office). 
 - [Vesktop](https://github.com/Vencord/Vesktop): Discord para Linux, pero bien hecho
-- [ZapZap](https://rtosta.com/zapzap/): Cliente de WhatsApp para Linux
+- [ZapZap](https://rtosta.com/zapzap/): Cliente de WhatsApp para Linux (alternativamente, también está [ZapFast](https://zapfast.rocks/))
 - [mpv](https://mpv.io/): Reproductor de vídeo con soporte para _todo_ (alternativa a [VLC](https://www.videolan.org/vlc/))
 - [Vicinae](https://github.com/vicinaehq/vicinae): _Launcher_ de aplicaciones con extensiones y funcionalidades extra ([Raycast](https://www.raycast.com/) para Linux)
 - [Kdenlive](https://kdenlive.org/es/): Editor de vídeo FOSS
@@ -121,6 +121,7 @@ Para cosas del día a día.
 - [Newsflash](https://apps.gnome.org/es/NewsFlash/): Lector y agregador de _feeds_ [RSS](https://es.wikipedia.org/wiki/RSS)
 - [Localsend](https://localsend.org): Aplicación para compartir archivos entre dispositivos en la misma red, compatible con MacOS, Windows, Android, IOS, etc.
 - [scrcpy](https://github.com/Genymobile/scrcpy): Control y _streaming_ de móviles Android directamente al ordenador (no requiere de una aplicación extra ya que se basa en el ADB de Android)
+- [Flameshot](https://flameshot.org/): Capturas de pantalla con editor (para GNOME, recomiendamos [Gradia](https://gradia.alexandervanhee.be/) en su lugar)
 
 
 ## Aplicaciones para controlar el _hardware_
