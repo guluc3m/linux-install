@@ -38,9 +38,9 @@ La sintaxis varía un poco dependiendo del gestor, pero por lo general:
 
 
 #### Repositorios
-Cada _distro_ (y cada versión de la _distro_) viene con sus repositorios de paquetes, las cuales determinan no sólo qué paquetes incluyen, sino las versiones específicas de esos paquetes. Algunas tienen distintos _channels_ o _ramas_ si quieres paquetes más actualizados, normalmente tienen una rama `stable` y otra `testing`, aunque solemos recomendar bajarte el paquete específico a través de otro método antes que cambiarte de rama.
+Cada _distro_ (y cada versión de la _distro_) viene con sus repositorios de paquetes, las cuales determinan no sólo qué paquetes incluyen, sino las versiones específicas de esos paquetes. Algunas tienen distintos _channels_ o _ramas_, si quieres paquetes más actualizados; normalmente tienen una rama `stable` y otra `testing`, aunque solemos recomendar bajarte el paquete específico que quieras a través de otro método antes que cambiarte de rama.
 
-También existen **repositorios de la comunidad**, que son repositorios alternativos no-oficiales donde se suelen incluír paquetes que por algún motivo no están en los _repos_ oficiales (temas de licencias, aplicaciones muy recientes, versiones beta, etc.).
+También existen **repositorios de la comunidad**, que son repositorios alternativos **no oficiales** donde se suelen incluír paquetes que por algún motivo no están en los _repos_ oficiales (temas de licencias, aplicaciones muy recientes, versiones beta, etc.).
 
 !!! warning
     Estos repositorios alternativos no cumplen con los mismos niveles de seguridad y escrutinio que los oficiales. Te puedes comer cosas malas. Recomendamos tener precaución y asegurarte de que viene de una fuente reputable antes de instalar.
@@ -49,7 +49,7 @@ Aquí te dejamos algunos:
 
 - En Ubuntu tienes las [PPAs](https://ubuntu.com/docs/launchpad/user/how-to/packaging/ppa-install/), repositorios alternativos
 - Para Fedora tienes [RPM Fusion](https://rpmfusion.org/), un repositorio único mantenido por la comunidad, y los [COPR](https://copr.fedorainfracloud.org/coprs/) (similares a los PPAs), que son otra serie de repositorios alternativos
-- En Arch y derivados tienes el maravilloso [AUR](https://aur.archlinux.org/), que proporciona unos _scripts_ llamados [PKGBUILD](https://wiki.archlinux.org/title/PKGBUILD) para automatizar la instalación de paquetes (en ocasiones te los compila desde fuente, en otras ocasiones -- `-bin` -- te instala las aplicaciones ya compiladas)
+- En Arch y derivados tienes el maravilloso [AUR](https://aur.archlinux.org/), que proporciona unos _scripts_ llamados [PKGBUILD](https://wiki.archlinux.org/title/PKGBUILD) para automatizar la instalación de paquetes (en ocasiones te los compila desde fuente, en otras ocasiones — nombres acabados en `-bin` — te instala las aplicaciones ya compiladas)
 
 
 ### Formatos de paquetes
@@ -57,7 +57,7 @@ Linux siendo Linux, hay ochocientos estándares para empaquetar paquetes (valga 
 
 #### Formatos _distro-specific_
 - `.deb`: Formato de paquetes de Debian, para usarse en Debian y derivados (Ubuntu, Mint, etc.). Para instalarlos, con APT, basta con ejecutar `sudo apt install mi_paquete.deb`.
-- `.rpm`: Formato de RedHat, para usarse en Fedora (y derivados) ó OpenSUSE (y derivados). Para instalarlos, con DNF, `sudo dnf install mi_paquete.rpm` y con Zypper, `sudo zypper install mi_paquete.rpm`.
+- `.rpm`: Formato de RedHat, para usarse en Fedora (y derivados) ó OpenSUSE (y derivados). Para instalarlos, con DNF, `sudo dnf install mi_paquete.rpm`; y con Zypper, `sudo zypper install mi_paquete.rpm`.
 - `.pkg.tar.zst`: Formato Arch, para usarse en Arch Linux y derivados. Para instalarlos, con Pacman, `sudo pacman -U mi_paquete.pkg.tar.zst`.
 
 !!! tip
@@ -79,7 +79,7 @@ Linux siendo Linux, hay ochocientos estándares para empaquetar paquetes (valga 
     Para habilitarlos:
 
     ```
-    chmod +x ./mi_archivo.loquesea
+    chmod u+x ./mi_archivo.loquesea
     ```
 
     También puedes editar los permisos desde el explorador de archivos.
@@ -122,13 +122,15 @@ Para cosas del día a día.
 - [Localsend](https://localsend.org): Aplicación para compartir archivos entre dispositivos en la misma red, compatible con MacOS, Windows, Android, IOS, etc.
 - [scrcpy](https://github.com/Genymobile/scrcpy): Control y _streaming_ de móviles Android directamente al ordenador (no requiere de una aplicación extra ya que se basa en el ADB de Android)
 - [Flameshot](https://flameshot.org/): Capturas de pantalla con editor (para GNOME, recomiendamos [Gradia](https://gradia.alexandervanhee.be/) en su lugar)
+- [Shortwave](https://apps.gnome.org/Shortwave/): Radio online
+- [Sonora](https://sonorahq.org/): Aplicación para música en _streaming_ (Spotify, Apple Music, YouTube Music, Tidal, Deezer, Subsonic) y archivos locales
 
 
 ## Aplicaciones para controlar el _hardware_
 - [EnvyControl](https://github.com/bayasdev/envycontrol): Aplicación para configurar el uso de GPUs dedicadas, integradas, e híbridas, extremadamente útil para cuando tienes tanto gráfica integrada como gráfica dedicada
 - [OpenRGB](https://github.com/CalcProgrammer1/OpenRGB): Controlador para luces RGB
-- [OpenTabletDriver](https://opentabletdriver.net/): Drivers para controlar la tablet gráfica. Recomendado/Necesario incluso para distribuciones como KDE que vienen con configuradores nativos.
-- [Dual Function Keys](https://gitlab.com/interception/linux/plugins/dual-function-keys): Plugin para [interception tools](https://gitlab.com/interception/linux) que permite configurar teclas del teclado con múltiples funciones (e.g. Caps Lock si lo pulsas funciona como Caps Lock, pero si lo mantienes funciona como Control).
+- [OpenTabletDriver](https://opentabletdriver.net/): Drivers para controlar la tablet gráfica. Recomendado/necesario para DEs como KDE que no vienen con configuradores nativos
+- [Dual Function Keys](https://gitlab.com/interception/linux/plugins/dual-function-keys): Plugin para [interception tools](https://gitlab.com/interception/linux) que permite configurar teclas del teclado con múltiples funciones (e.g. Caps Lock si lo pulsas funciona como Caps Lock, pero si lo mantienes funciona como Control)
 - [Redshift](https://github.com/jonls/redshift): _Screen filter_ (protector de vista)
 - [fwupd](https://github.com/fwupd/fwupd) (A.K.A. [Linux Vendor Firmware Service](https://fwupd.org/)): Utilidad para actualizar el _firmware_ de una [gran variedad de dispositivos](https://fwupd.org/lvfs/devices/), incluyendo portátiles
 - [gestures](https://gitlab.com/nokun/gestures): Aplicación para ejecutar comandos a partir de gestos en el _trackpad_
@@ -142,11 +144,12 @@ Muchos dispositivos vienen con herramientas específicas para controlar aspectos
 - [xpadneo](https://github.com/atar-axis/xpadneo): Drivers para los mandos _wireless_ de XBox
 - [Piper](https://github.com/libratbag/piper): Aplicación para configurar ratones _gaming_ de diferentes marcas
 - [Solaar](https://github.com/pwr-Solaar/Solaar): Herramienta para configurar dispositivos de Logitech (ratones, teclados, etc.)
-  - [OpenLogi](https://github.com/AprilNEA/OpenLogi): Alternativa más _user-friendly_
+    - [OpenLogi](https://github.com/AprilNEA/OpenLogi): Alternativa más _user-friendly_
 - [Framework System TUI](https://github.com/grouzen/framework-tool-tui) /
   [Framework System](https://github.com/FrameworkComputer/framework-system):
   Herramienta de configuración para ordenadores [Framework](https://frame.work)
 - [GalaxyBudsClient](https://github.com/timschneeb/GalaxyBudsClient): Aplicación para configurar auriculares de Samsung Galaxy
+<!-- - [Boatswain](https://apps.gnome.org/Boatswain/): Configuración de ElGato StreamDeck -->
 
 
 
@@ -172,11 +175,11 @@ El programa que ejecuta la terminal en sí se llama _shell_. La mayoría de dist
 
 ### Prompt
 El _prompt_ es lo que aparece antes de ejecutar cada comando, y muestra información sobre el estado de la shell, e.g.:
-```bash
+```
 gul@corneja:~$ 
  ^     ^    ^^
- |     |    |└- user mode
- |     |    └- current directory
+ |     |    |└- user mode ($ = usuario; # = superusuario)
+ |     |    └- directorio actual (~ = /home/tuusuario)
  |     └- hostname
  └- username
 ```
@@ -185,7 +188,7 @@ Cada una de las _shells_ te permite configurarlo hasta cierto punto, pero si qui
 
 
 ## Aplicaciones de terminal
-Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Unix:
+Aquí os dejamos algunas aplicaciones para sacar el máximo de vuestra terminal, distintas utilidades y versiones mejoradas de comandos de Unix.
 
 ### Comandos de shell
 - [eza](https://github.com/eza-community/eza): Versión mejorada de `ls`

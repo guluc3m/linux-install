@@ -90,21 +90,19 @@ Si tienes _secure boot_ activado, échale un vistazo al repositorio [roworu/nvid
 
 #### Arch
 Según [Arch Wiki](https://wiki.archlinux.org/title/NVIDIA):
-Ejecuta el comando `lspci -k -d ::03xx` y fíjate en el resultado, por ejemplo:
-```
-VGA compatible controller: NVIDIA Corporation AD107 [GeForce RTX 4060] (rev a1)
-```
-Mira tu tarjeta (en este caso, *AD107*) y [en la web](https://wiki.archlinux.org/title/NVIDIA#Installation) comprueba a qué gráfica se corresponde. En el caso general,
 
-```bash
-sudo pacman -Syu nvidia-open
-```
+1. Ejecuta el comando `lspci -k -d ::03xx` y fíjate en el resultado, por ejemplo:
+    ```
+    VGA compatible controller: NVIDIA Corporation AD107 [GeForce RTX 4060] (rev a1)
+    ```
+2. Mira tu tarjeta (en este caso, `AD107`) y [en la web](https://wiki.archlinux.org/title/NVIDIA#Installation) comprueba a qué gráfica se corresponde. En el caso general:
+    ```bash
+    sudo pacman -Syu nvidia-open
+    ```
 
 
 #### EndeavourOS
-Según la [documentación de Endeavouros discovery](https://discovery.endeavouros.com/nvidia/new-nvidia-driver-installer-nvidia-inst/2022/03/), puedes usar `nvidia-inst`.
-
-Este instala la versión _closed source_, proporcionada por NVIDIA.
+Según la [documentación de Endeavouros discovery](https://discovery.endeavouros.com/nvidia/new-nvidia-driver-installer-nvidia-inst/2022/03/), puedes usar `nvidia-inst`. Este instala la versión _closed source_, proporcionada por NVIDIA.
 ```bash
 nvidia-inst
 ```
