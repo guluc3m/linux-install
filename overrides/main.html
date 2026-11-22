@@ -1,0 +1,73 @@
+{#-
+  El buscador vive aquí (panel de navegación izquierdo) en vez de en el
+  header, que ahora es el de webpage y no trae hueco para él. Ver issue #22.
+  Copiado de zensical/templates/base.html (bloque site_nav) + el buscador
+  (antes en partials/header.html) insertado al principio del sidebar
+  primario. Si zensical cambia esta plantilla en una futura versión, revisar
+  este override contra la nueva.
+-#}
+{% extends "base.html" %}
+
+{#- Los dos paneles van dentro del markup de gul-Frame.astro (borde gul-line,
+    rounded-md y el canvas PixelDissolve en su variante por defecto,
+    "corner", que pinta el script del header sincronizado). -#}
+{% macro gul_frame() %}
+  <div class="gul-sidebar-frame relative overflow-hidden rounded-md border border-gul-line">
+    <canvas data-pixel-dissolve data-cell="3" data-color="0, 117, 176" data-alpha="0.4" data-max-density="0.5" data-x-bias="0.5" data-falloff="10" data-ordered-mix="0.85" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full [image-rendering:pixelated]"></canvas>
+    <div class="relative z-10 py-3">{{ caller() }}</div>
+  </div>
+{% endmacro %}
+
+{% block site_nav %}
+  {% if nav %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "navigation" in page.meta.hide %}
+    {% endif %}
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% call gul_frame() %}
+          {% if "search" in config.plugins %}
+            {% set search = config.plugins["search"] | attr("config") %}
+            {% if search.enabled %}
+              <label class="md-header__button md-icon" for="__search" aria-label="{{ lang.t('search') }}">
+                {% set icon = config.theme.icon.search or "material/magnify" %}
+                {% include ".icons/" ~ icon ~ ".svg" %}
+              </label>
+              {% include "partials/search.html" %}
+            {% endif %}
+          {% endif %}
+          {% include "partials/nav.html" %}
+          {% endcall %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if "toc.integrate" not in features %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "toc" in page.meta.hide %}
+    {% endif %}
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" {{ hidden }}>
+      <div class="md-sidebar__scrollwrap">
+        {% if config.theme.variant != "classic" %}
+          {% set toc = page.toc %}
+          {% set first = toc | first %}
+          {% if first and first.level == 1 %}
+            {% set toc = first.children %}
+          {% endif %}
+          {% if toc %}
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+            <div class="md-sidebar-button__wrapper">
+              <label class="md-sidebar-button" for="__toc"></label>
+            </div>
+          {% endif %}
+        {% endif %}
+        <div class="md-sidebar__inner">
+          {% call gul_frame() %}
+          {% include "partials/toc.html" %}
+          {% endcall %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

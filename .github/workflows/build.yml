@@ -1,0 +1,24 @@
+name: Build
+
+# Comprueba que la guía compila con los estilos del último release de
+# guluc3m/webpage (scripts/sync_webpage_styles.py los descarga y genera).
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Estilos de webpage
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: uv run python scripts/sync_webpage_styles.py
+      - name: Build
+        run: uv run zensical build
